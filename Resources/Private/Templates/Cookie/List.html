@@ -15,9 +15,8 @@
 	<f:section name="content">
 		
 		<f:flashMessages />
-
 <div class="cookie-set"><f:translate key="cookiefreigabe.setcookie" /></div>
-<div class="waconcookiemanagement">
+<f:if condition="{cookieanzeige}"><div class="waconcookiemanagement">
 <div id="CookieBox" class="cookiemanagement">
   <div class="middle-center">
 <div class="intro">
@@ -189,6 +188,6 @@
   </div>
 </div>
 
-			</div>
+			</div></f:if>
 			</f:section>
 </html>

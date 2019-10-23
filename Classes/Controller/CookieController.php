@@ -37,7 +37,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('imprint', $imprint);
  	$dataprotection = $this->settings['dataProtection'];
         $this->view->assign('dataprotection', $dataprotection );
-
+        $nurlink = $this->settings['nurLink'];
+        if(!$nurlink){
         $cookies0 = $this->cookieRepository->findByKategorie(0);
         $this->view->assign('cookies0', $cookies0);
         $cookies1 = $this->cookieRepository->findByKategorie(1);
@@ -46,6 +47,9 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('cookies2', $cookies2);
         $cookies3 = $this->cookieRepository->findByKategorie(3);
         $this->view->assign('cookies3', $cookies3);
+        $this->view->assign('cookieanzeige', '1');
+        }
+
 
     }
 
