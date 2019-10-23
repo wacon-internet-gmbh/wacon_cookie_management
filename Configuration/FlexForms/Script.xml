@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:extkey/Resources/Private/Language/Backend.xlf:settings.registration.title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.cookie>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie</label>
+                           <config>
+  <type>select</type>
+  <items type="array">
+    <numIndex index="0" type="array">
+      <numIndex index="0"></numIndex>
+      <numIndex index="1"></numIndex>
+    </numIndex>
+  </items>
+  <foreign_table>tx_waconcookiemanagement_domain_model_cookie</foreign_table>
+ <foreign_table_where>
+     AND kategorie  > 0
+  </foreign_table_where>
+ </config>                      
+  </TCEforms>
+                    </settings.cookie>
+                    <settings.script>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script</label>
+                           <config>
+  				<type>text</type>
+				<cols>24</cols>
+  				<rows>8</rows>
+			   </config>
+                        </TCEforms>
+                    </settings.script>
+
+    <settings.text>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.text</label>
+                           <config>
+  				<type>input</type>
+			   </config>
+                        </TCEforms>
+                    </settings.text>
+                    <settings.bild>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.bild</label>
+                                      <config>
+                <type>inline</type>
+                <maxitems>99</maxitems>
+                <foreign_table>sys_file_reference</foreign_table>
+                <!--<foreign_field>uid_foreign</foreign_field>-->
+                <foreign_table_field>tablenames</foreign_table_field>
+                <foreign_label>uid_local</foreign_label>
+                <foreign_sortby>sorting_foreign</foreign_sortby>
+                <foreign_selector>uid_local</foreign_selector>
+                <foreign_selector_fieldTcaOverride type="array">
+                    <config>
+                        <appearance>
+                            <elementBrowserType>file</elementBrowserType>
+                            <elementBrowserAllowed>jpg,png</elementBrowserAllowed>
+                        </appearance>
+                    </config>
+                </foreign_selector_fieldTcaOverride>
+                <foreign_match_fields type="array">
+                    <fieldname>image</fieldname>
+                </foreign_match_fields>
+                <appearance type="array">
+                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+                    <headerThumbnail>
+                        <field>uid_local</field>
+                        <height>64</height>
+                        <width>64</width>
+                    </headerThumbnail>
+                </appearance>
+            </config>                        </TCEforms>
+                    </settings.bild>
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

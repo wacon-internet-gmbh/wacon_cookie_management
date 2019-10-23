@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
+		<header/>
+		<body>
+			<trans-unit id="bezeichnung.description">
+				<source>bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="kategorie.description">
+				<source>kategorie</source>
+			</trans-unit>
+			<trans-unit id="anbieter.description">
+				<source>anbieter</source>
+			</trans-unit>
+			<trans-unit id="zweck.description">
+				<source>zweck</source>
+			</trans-unit>
+			<trans-unit id="cookiename.description">
+				<source>cookiename</source>
+			</trans-unit>
+			<trans-unit id="laufzeit.description">
+				<source>laufzeit</source>
+			</trans-unit>
+			<trans-unit id="datenschutzlink.description">
+				<source>datenschutzlink</source>
+			</trans-unit>
+			<trans-unit id="host.description">
+				<source>host</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

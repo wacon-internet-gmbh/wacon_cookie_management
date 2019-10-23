@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
+		<header/>
+		<body>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+				<source>Cookie</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+				<source>Anbieter</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+				<source>Zweck</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+				<source>Cookiename</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+				<source>Laufzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+				<source>Datenschutzlink</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+				<source>Host</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.name">
+				<source>Cookie - Freigabe</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.description">
+				<source>Freigabe der Cookies</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_script.name">
+				<source>Externes Script einbinden</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_script.description">
+				<source>Externes Script einbinden, wenn entsprechender Cookie erlaubt, sonst Link zu  Cookiefreigabe.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

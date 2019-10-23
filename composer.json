@@ -1,0 +1,28 @@
+{
+    "name": "waconcookiemanagement/wacon-cookie-management",
+    "type": "typo3-cms-extension",
+    "description": "Verschiedene Cookies k\u00f6nnen individuell zugelassen werden. Unterscheidung in notwendige und optionale Cookies",
+    "authors": [
+        {
+            "name": "Kerstin Schmitt",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Waconcookiemanagement\\WaconCookieManagement\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Waconcookiemanagement\\WaconCookieManagement\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "wacon_cookie_management": "self.version",
+        "typo3-ter/wacon-cookie-management": "self.version"
+    }
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
+		<header/>
+		<body>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+				<source>Cookie</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+				<source>Categorie</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+				<source>Provider</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+				<source>Purpose</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+				<source>Cookiename</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+				<source>Runtime</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+				<source>Privacy source url (Extern)</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+				<source>Host</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.header">
+				<source>We are using cookies.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.intro">
+				<source>We are using cookies on this web page. Some of them are required to run this page, some are useful to provide you the best web experience.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.header2">
+				<source>Privacy settings</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.intro2">
+				<source>Here is an overview of all cookies use</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.dataprotection">
+				<source>Privacy Notes</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.imprint">
+				<source>Imprint</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.cookiehide">
+				<source>Hide Cookie Information</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.cookieshow">
+				<source>Show Cookie Informationen</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.extern">
+				<source>Cookies for external Content</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.externdesc">
+				<source>Content for Videoplatforms und Social Media Platforms will be disabled automaticly. To see content from external sources, you need to enable it in the cookie settings.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.marketing">
+				<source>Cookies for Marketing</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.marketingdesc">
+				<source>Marketing cookies from thrid parties will be used to show personal advertisment. They use them to track users outside of their own web page.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.statistik">
+				<source>Cookies for Statistics</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.statistikdesc">
+				<source>Statistic cookies anonymize your data and use it. These information will help us to learn, how the users are using our website.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.notwendig">
+				<source>Required Cookies</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.notwendigdesc">
+				<source>These cookies are needed to let the basic page functionallity work correctly.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.linkn">
+				<source>required</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.links">
+				<source>statistic</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.linke">
+				<source>external</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.linkm">
+				<source>marketing</source>
+			</trans-unit>
+
+			<trans-unit id="cookiefreigabe.cookieon">
+				<source>On</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.cookieoff">
+				<source>Off</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.back">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.min">
+				<source>Only accept required cookies.</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.accept">
+				<source>I accept</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.individual">
+				<source>Individual Cookie Settings</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.save">
+				<source>Save settings and close this window.</source>
+			</trans-unit>
+
+			<trans-unit id="cookiefreigabe.setcookie">
+				<source>Cookie Settings</source>
+			</trans-unit>
+			<trans-unit id="cookiefreigabe.close">
+				<source>CLOSE</source>
+			</trans-unit>
+
+
+
+		</body>
+	</file>
+</xliff>

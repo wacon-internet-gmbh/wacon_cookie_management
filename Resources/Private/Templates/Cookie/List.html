@@ -1,0 +1,194 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		
+		<f:flashMessages />
+
+<div class="cookie-set"><f:translate key="cookiefreigabe.setcookie" /></div>
+<div class="waconcookiemanagement">
+<div id="CookieBox" class="cookiemanagement">
+  <div class="middle-center">
+<div class="intro">
+    <div class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
+    <h2><f:translate key="cookiefreigabe.header" /></h2>
+    <p ><f:translate key="cookiefreigabe.intro" /></p>
+    <ul><li class="show-n"><f:translate key="cookiefreigabe.linkn" /></li><li class="show-s"><f:translate key="cookiefreigabe.links" /></li><li  class="show-m"><f:translate key="cookiefreigabe.linkm" /></li><li  class="show-e"><f:translate key="cookiefreigabe.linke" /></li></ul>
+    <p class="cookie-accept"><a class="cookie-btn cursor none" data-cookie-accept><f:translate key="cookiefreigabe.accept" /></a></p>
+    <p class="cookie-management"><a class="cursor" id="data-cookie-individual"><f:translate key="cookiefreigabe.individual" /></a></p>
+    <p class="cookie-refuse"><a class="cursor" if="data-cookie-refuse"><f:translate key="cookiefreigabe.min" /></a></p>   
+
+ </div>  
+
+    <div class="box-cookie-management">
+    <div class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
+<h2><f:translate key="cookiefreigabe.header2" /></h2>
+<p><f:translate key="cookiefreigabe.intro2" /></p>
+
+<p class="text-center cookie-save"><a class="cookie-btn cursor" data-cookie-accept><f:translate key="cookiefreigabe.save" /></a></p>
+    <p class="text-back-right"><a class="cookieback"><f:translate key="cookiefreigabe.back" /></a><a class="cookie-refuse"" ><f:translate key="cookiefreigabe.min" /></a></p>   
+<div class="category">      
+<h3><f:translate key="cookiefreigabe.notwendig" /></h3>
+      <p><f:translate key="cookiefreigabe.notwendigdesc" /></p>
+      <p class="text-center info-show cookie-n"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+<div class="info-text">
+      <p class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
+      <f:for each="{cookies0}" as="cookie">
+<div class="cookie-info">
+        <p><b>{cookie.bezeichnung}</b></p>
+        <f:if condition="{cookie.zweck}"><p>{cookie.zweck}</p></f:if>
+        <table>
+	  <tr>
+	    <f:if condition="{cookie.anbieter}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.anbieter" />:</td><td>{cookie.anbieter}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.cookiename}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.cookiename" />:</td><td>{cookie.cookiename}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.laufzeit}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.laufzeit" />:</td><td>{cookie.laufzeit}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.datenschutzlink}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink" />:</td><td>{cookie.datenschutzlink}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.host}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.host" />:</td><td>{cookie.host}</td></f:if>
+ 	  </tr>
+        </table>
+</div>
+      </f:for>
+</div>
+</div>
+      <f:if condition="{cookies1}">
+<div class="category">
+<div class="cookie-off cookiecat cookiecat-s"><div class="deactivated"><span class="off"></span></div></div>
+<div class="cookie-on cookiecat cookiecat-s"><div class="activated"><span class="on"></span></div></div>
+
+<h3><f:translate key="cookiefreigabe.statistik" /></h3>
+<p><f:translate key="cookiefreigabe.statistikdesc" /></p>
+
+      <p class="text-center info-show cookie-s" ><f:translate key="cookiefreigabe.cookieshow" /> <span class="arrow down"></span></p>
+<div class="info-text">
+      <p class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
+
+      <f:for each="{cookies1}" as="cookie">
+<div class="cookie-info">
+
+<div class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
+<div class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+
+        <p><b>{cookie.bezeichnung}</b></p>
+        <f:if condition="{cookie.zweck}"><p>{cookie.zweck}</p></f:if>
+        <table>
+	  <tr>
+	    <f:if condition="{cookie.anbieter}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.anbieter" />:</td><td>{cookie.anbieter}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.cookiename}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.cookiename" />:</td><td>{cookie.cookiename}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.laufzeit}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.laufzeit" />:</td><td>{cookie.laufzeit}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.datenschutzlink}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink" />:</td><td>{cookie.datenschutzlink}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.host}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.host" />:</td><td>{cookie.host}</td></f:if>
+ 	  </tr>
+        </table>
+</div>
+      </f:for>
+</div>
+</div>
+</f:if>
+      <f:if condition="{cookies2}">
+<div class="category">
+<div class="cookie-off  cookiecat cookiecat-m"><div class="deactivated"><span class="off"></span></div></div>
+<div class="cookie-on cookiecat cookiecat-m"><div class="activated"><span class="on"></span></div></div>
+<h3><f:translate key="cookiefreigabe.marketing" /></h3>
+<p><f:translate key="cookiefreigabe.marketingdesc" /></p>
+ <p class="text-center info-show" cookie-m><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+<div class="info-text">
+      <p class="text-center info-hide"><f:translate key="cookiefreigabe.hide" /><span class="arrow up"></span></p>
+
+
+      <f:for each="{cookies2}" as="cookie">
+<div class="cookie-info">
+
+<div class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
+<div class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+
+        <p><b>{cookie.bezeichnung}</b></p>
+        <f:if condition="{cookie.zweck}"><p>{cookie.zweck}</p></f:if>
+        <table>
+	  <tr>
+	    <f:if condition="{cookie.anbieter}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.anbieter" />:</td><td>{cookie.anbieter}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.cookiename}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.cookiename" />:</td><td>{cookie.cookiename}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.laufzeit}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.laufzeit" />:</td><td>{cookie.laufzeit}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.datenschutzlink}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink" />:</td><td>{cookie.datenschutzlink}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.host}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.host" />:</td><td>{cookie.host}</td></f:if>
+ 	  </tr>
+        </table>
+      </f:for>
+</div>
+</div>
+</div>
+ </f:if>
+
+      <f:if condition="{cookies3}">
+<div class="category">
+<div class="cookie-off cookiecat cookiecat-e"> <div class="deactivated"><span class="off"></span></div></div>
+<div class="cookie-on cookiecat cookiecat-e"> <div class="activated"><span class="on"></span></div></div>
+<h3><f:translate key="cookiefreigabe.extern" /></h3>
+<p><f:translate key="cookiefreigabe.externdesc" /></p>
+ <p class="text-center info-show cookie-e"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+<div class="info-text">
+      <p class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
+
+
+
+      <f:for each="{cookies3}" as="cookie">
+<div class="cookie-info">
+
+<div class="cookie-off cookie{cookie.uid}"> <div class="deactivated"><span class="off"></span></div></div>
+<div class="cookie-on cookie{cookie.uid}"> <div class="activated"><span class="on"></span></div></div>
+
+        <p><b>{cookie.bezeichnung}</b></p>
+        <f:if condition="{cookie.zweck}"><p>{cookie.zweck}</p></f:if>
+
+        <table>
+	  <tr>
+	    <f:if condition="{cookie.anbieter}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.anbieter" />:</td><td>{cookie.anbieter}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.cookiename}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.cookiename" />:</td><td>{cookie.cookiename}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.laufzeit}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.laufzeit" />:</td><td>{cookie.laufzeit}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.datenschutzlink}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink" />:</td><td>{cookie.datenschutzlink}</td></f:if>
+</tr><tr>
+	    <f:if condition="{cookie.host}"><td><f:translate key="tx_waconcookiemanagement_domain_model_cookie.host" />:</td><td>{cookie.host}</td></f:if>
+ 	  </tr>
+        </table>
+</div>
+      </f:for>
+</div>
+</div>
+ </f:if>
+
+
+
+    </div>
+    <p class="text-right cookie-legal"><f:if condition="dataprotection"><f:link.page pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if> 
+<f:if condition="imprint"><f:link.page pageUid="{imprint}"><f:translate key="cookiefreigabe.imprint" /></f:link.page></f:if></p>
+  </div>
+</div>
+
+			</div>
+			</f:section>
+</html>
