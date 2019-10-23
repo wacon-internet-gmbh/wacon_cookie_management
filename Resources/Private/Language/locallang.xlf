@@ -25,7 +25,7 @@
 				<source>Runtime</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
-				<source>Privacy source url (Extern)</source>
+				<source>Privacy source url</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
 				<source>Host</source>

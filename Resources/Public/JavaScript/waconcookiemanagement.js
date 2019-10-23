@@ -162,4 +162,11 @@ $( ".info-hide" ).click(function() {
 $( ".cookieclose" ).click(function() {
 $(".waconcookiemanagement").hide();
 });
+var $menu = $('#CookieBox');
+$(".waconcookiemanagement").on('click', function (e) {
 
+    // If element is opened and click target is outside it, hide it
+    if ($menu.is(':visible') && !$menu.is(e.target) && !$menu.has(e.target).length) {
+      $(".waconcookiemanagement").hide();
+    }
+});

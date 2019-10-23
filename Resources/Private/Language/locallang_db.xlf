@@ -13,10 +13,10 @@
 				<source>Kategorie</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
-				<source>Anbieter</source>
+				<source>Anbieter des Cookies</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
-				<source>Zweck</source>
+				<source>Zweck: eine kurze Beschreibung, wofür der Cookie benötigt wird</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
 				<source>Cookiename</source>
@@ -25,10 +25,10 @@
 				<source>Laufzeit</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
-				<source>Datenschutzlink</source>
+				<source>Datenschutzlink (externer Link zur Datenschutzerklärung des Anbieters)</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
-				<source>Host</source>
+				<source>Host der den Cookie setzt (bei externen Cookies)</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.name">
 				<source>Cookie - Freigabe</source>

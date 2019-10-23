@@ -33,7 +33,7 @@
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
 					<source>Privacy source url</source>
-<target>Datenschutzlink (Externe Url)</target>
+<target>Datenschutzlink</target>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
 				<source>Host</source>

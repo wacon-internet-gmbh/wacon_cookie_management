@@ -29,7 +29,8 @@ cursor:pointer;
 }
 .cookie-accept{text-align:center;cursor:pointer;}
 .cookie-set {cursor:pointer}
-.cookieclose{cursor:pointer;float:right;}
+.cookieclose{cursor:pointer;float:right;border-radius: 4px;border:1px solid #333;background:#333;padding:4px 8px;}
+.cookieclose{font-family:Verdana, sans-serif;font-size:26px;color:#fff;}
 .cookie-set.script {cursor:pointer;position:relative;min-height:50px;background:#ffffff;text-align:center;}
 .cookie-set.script p{position:absolute;top:45%;color:#333333;text-align:center;width:100%;}
 .cookie-management{text-align:center;cursor:pointer;}
