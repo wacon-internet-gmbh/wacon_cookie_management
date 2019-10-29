@@ -23,7 +23,22 @@
     <div class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
     <h2><f:translate key="cookiefreigabe.header" /></h2>
     <p ><f:translate key="cookiefreigabe.intro" /></p>
-    <ul><li class="show-n"><f:translate key="cookiefreigabe.linkn" /></li><li class="show-s"><f:translate key="cookiefreigabe.links" /></li><li  class="show-m"><f:translate key="cookiefreigabe.linkm" /></li><li  class="show-e"><f:translate key="cookiefreigabe.linke" /></li></ul>
+	
+    <ul>
+		<f:if condition="{cookies0}">
+			<li class="show-n"><f:translate key="cookiefreigabe.linkn" /></li>
+		</f:if>
+		<f:if condition="{cookies1}">
+			<li  class="show-m"><f:translate key="cookiefreigabe.links" /></li>
+		</f:if>
+		<f:if condition="{cookies2}">
+			<li  class="show-m"><f:translate key="cookiefreigabe.linkm" /></li>
+		</f:if>
+		<f:if condition="{cookies3}">
+			<li  class="show-e"><f:translate key="cookiefreigabe.linke" /></li>
+		</f:if>
+	</ul>
+	
     <p class="cookie-accept"><a class="cookie-btn cursor none" data-cookie-accept><f:translate key="cookiefreigabe.accept" /></a></p>
     <p class="cookie-management"><a class="cursor" id="data-cookie-individual"><f:translate key="cookiefreigabe.individual" /></a></p>
     <p class="cookie-refuse"><a class="cursor" if="data-cookie-refuse"><f:translate key="cookiefreigabe.min" /></a></p>   
