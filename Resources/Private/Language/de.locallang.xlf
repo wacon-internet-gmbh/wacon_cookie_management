@@ -157,8 +157,8 @@
 				<target>Individuelle Cookie Einstellungen</target>
 			</trans-unit>
 			<trans-unit id="cookiefreigabe.save">
-<source>Save settings and close this window.</source>
-				<target>Einstellungen speichern und schließen</target>
+<source>Save</source>
+				<target>Speichern</target>
 			</trans-unit>
 
 			<trans-unit id="cookiefreigabe.setcookie">

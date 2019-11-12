@@ -15,7 +15,7 @@
 	<f:section name="content">
 <f:if condition="{content1}">
 <f:then><f:format.raw>{content1}</f:format.raw></f:then>
-<f:else><div class="cookie-set script"><f:if condition="{content2}"><f:image src="{content2}" treatIdAsReference="1"/></f:if><p>{cookietext}</p></div></f:else>
+<f:else><f:if condition="{cookietext}"><div class="cookie-set script"><f:if condition="{content2}"><f:image src="{content2}" treatIdAsReference="1"/></f:if><p>{cookietext}</p></div></f:if></f:else>
 </f:if>
 	</f:section>
 </html>

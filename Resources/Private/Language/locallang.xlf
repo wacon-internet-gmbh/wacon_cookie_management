@@ -110,7 +110,7 @@
 				<source>Individual Cookie Settings</source>
 			</trans-unit>
 			<trans-unit id="cookiefreigabe.save">
-				<source>Save settings and close this window.</source>
+				<source>Save</source>
 			</trans-unit>
 
 			<trans-unit id="cookiefreigabe.setcookie">

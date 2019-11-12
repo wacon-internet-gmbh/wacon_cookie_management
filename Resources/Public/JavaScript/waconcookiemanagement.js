@@ -42,6 +42,7 @@ setCookie("waconcookiemanagement", "min", Date.now());
 $("cookieclose").hide();
 
   }
+    
 });
 
 $(".cookie-set").click(function(){ 
@@ -95,11 +96,20 @@ location.reload();
 
 $( ".cookie-management" ).click(function() {
   $( ".box-cookie-management" ).show();
+  $( ".cookie-fix" ).show();
+  var varGes = $('#CookieBox').height();
+  var varFix = $('.cookie-fix').height();
+  var neuHeight = varGes - varFix - 100;
+  if(neuHeight >= 300){$('.box-cookie-management').height(neuHeight);}
+  if(neuHeight < 300){$('#CookieBox').css("overflow","auto");}
+  
   $(".intro").hide();
 });
 $( ".cookieback" ).click(function() {
   $( ".box-cookie-management" ).hide();
-  $(".intro").show();
+  $( ".cookie-fix" ).hide();
+  
+ $(".intro").show();
 });
 
 $( ".show-n" ).click(function() {
