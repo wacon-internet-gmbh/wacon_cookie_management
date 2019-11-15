@@ -266,6 +266,13 @@
 .box-cookie-management-in {
     margin-bottom: 0px;
     padding-top: 30px;
+	box-shadow:inset 0px 0px 0px 1px #e5e7e9;
+	border-radius: 3px;
+}
+
+.box-cookie-management-in p{
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .deactivated {
