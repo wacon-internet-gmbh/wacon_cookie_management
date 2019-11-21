@@ -28,3 +28,6 @@ WCM ist eine TYPO3 Extension, die es den Besuchern Ihrer Website erlaubt, die be
 
 ## Lizenz
 Diese Extension ist eine Erweiterung des Content Management System TYPO3 und unterliegt der GNU GPL Version 2.
+
+## Weitere Infos
+[Weitere Informationen auf unserer Homepage](https://www.wacon.de/typo3-service/eigene-extensions/wacon-cookie-management.html "Informationen zu unserer TYPO3 Extension wacon_cookie_management")
