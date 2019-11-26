@@ -77,7 +77,9 @@ for (i = 0; i < 30; i++) {
 if($(".cookie-on.cookie"+i).css("display") == "block"){
   wert += "c" + i;
 }
+
 }
+if (wert == "") {wert = "min";}
 setCookie("waconcookiemanagement", wert, Date.now());
 $(".waconcookiemanagement").hide();
 location.reload();
