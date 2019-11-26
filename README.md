@@ -25,3 +25,9 @@ WCM ist eine TYPO3 Extension, die es den Besuchern Ihrer Website erlaubt, die be
 2. Wählen Sie den benötigten Cookie aus, der später aktiviert werden muss um den Script zu aktivieren
 3. Fügen Sie nun den Script ein, den Sie durch das Cookie aktivieren möchten
 4. (optional) Wenn es sich um ein Content-Element handelt, das der Benutzer auch sieht (z.B. Twitter Timeline), können Sie auch einen Text und ein Bild anzeigen lassen, welches stattdessen dort zu sehen ist
+
+## Lizenz
+Diese Extension ist eine Erweiterung des Content Management System TYPO3 und unterliegt der GNU GPL Version 2.
+
+## Weitere Infos
+[Weitere Informationen auf unserer Homepage](https://www.wacon.de/typo3-service/eigene-extensions/wacon-cookie-management.html "Informationen zu unserer TYPO3 Extension wacon_cookie_management")
