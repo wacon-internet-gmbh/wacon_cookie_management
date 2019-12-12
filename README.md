@@ -8,7 +8,7 @@ WCM ist eine TYPO3 Extension, die es den Besuchern Ihrer Website erlaubt, die be
 * Typo3 V7.6.32 - **Bedingt kompatibel**
 
 ## Installation & Konfiguration
-1. Laden Sie sich die WCM Extension aus der Repository oder TER herunter, installieren Sie die Extension und aktivieren Sie diese in Ihrem Extension Manager
+1. Laden Sie sich die WCM Extension aus der Repository herunter, installieren Sie die Extension und aktivieren Sie diese in Ihrem Extension Manager
 2. Binden Sie das Template "Wacon Cookie Management" in Ihr Seitentemplate ein
 
 ## Cookies anlegen
