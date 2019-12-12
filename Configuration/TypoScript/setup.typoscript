@@ -41,7 +41,7 @@ plugin.tx_waconcookiemanagement_script {
     }
 }
 page.includeJS{
-ajquery = https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+#ajquery = https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
 }
 page.includeJSFooter{
 waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js 
