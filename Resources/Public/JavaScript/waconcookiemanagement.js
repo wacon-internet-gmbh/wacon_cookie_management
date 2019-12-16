@@ -37,10 +37,12 @@ $(document).ready(function(){
     }
    
   } else {
-    $(".waconcookiemanagement").show();
-setCookie("waconcookiemanagement", "min", Date.now());
-$("cookieclose").hide();
+if(!$(".waconcookiemanagement").hasClass("firsthidden")){
 
+    $(".waconcookiemanagement").show();
+    setCookie("waconcookiemanagement", "min", Date.now());
+$("cookieclose").hide();
+}
   }
     
 });
