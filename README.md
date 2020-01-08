@@ -32,4 +32,5 @@ Diese Extension ist eine Erweiterung des Content Management System TYPO3 und unt
 
 ## Weitere Infos
 [Weitere Informationen auf unserer Homepage](https://www.wacon.de/typo3-service/eigene-extensions/wacon-cookie-management.html "Informationen zu unserer TYPO3 Extension wacon_cookie_management")
+
 [PDF-Handout für TYPO3-Redakteure](https://www.wacon.de/internetagentur/downloads/typo3_extension_wcm.pdf)
