@@ -5,7 +5,7 @@ WCM ist eine TYPO3 Extension, die es den Besuchern Ihrer Website erlaubt, die be
 * Typo3 V10 - **Bald verfügbar**
 * Typo3 V9.X - **Kompatibel**
 * Typo3 V8.X - **Kompatibel**
-* Typo3 V7.6.32 - **Kompatibel**
+* Typo3 V7.6.31 - **Kompatibel**
 
 ## Installation & Konfiguration
 1. Laden Sie sich die WCM Extension aus der Repository oder TER herunter, installieren Sie die Extension und aktivieren Sie diese in Ihrem Extension Manager
