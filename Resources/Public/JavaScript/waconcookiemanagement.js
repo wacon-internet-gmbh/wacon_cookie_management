@@ -20,6 +20,7 @@ function getCookie(cname) {
 }
 
 $(document).ready(function(){ 
+$('.waconcookiemanagement').prependTo("body");
  var wert = getCookie("waconcookiemanagement");
   if (wert != "") {
     if (wert == "max") {
