@@ -18,25 +18,25 @@ v7 | yes
 
 ## Cookies 
 1. Create a folder in your page tree(e.g. "cookies")
-2. Switch to the list module and add a new record(Wacon Cookie Management -> Cookie) in thus folder
-3. Fill out the fields according to the used cookie
+2. Switch to the list module and add a new record(Wacon Cookie Management -> Cookie) for each used cookie
+3. Fill out the fields according for each cookie
 
 ## Include plugin
 1. Create a "plugin"-content element "Cookie Freigabe"
 As this content element is responsible for the first pop-up & represents the button to open the cookie consent box, make sure it is part of the main template, e.g. by including it in the footer.
 
 2. Configure the plugin
-2.1 Force Pop-Up for first visitors (e.g. due to tracking code, )
-2.2 Link to the imprint page
-2.3 Link to the legal notice page
-2.4 The cookie folder
+* force pop-up for first visitors (e.g. due to tracking code)
+* link to the imprint page
+* link to the legal notice page
+* the cookie folder
 
 ## Include external scripts
 Each external script that is used by the website and is responsible for a cookie you defined in your cookie folder has to be encapsulated with the plugin "Externes Script einbinden":
 1. Create a plugin content element "Externes Script einbinden"
 2. Define the needed cookie
 3. Define the JavaScript-Code that is proposed to be added to the page if this cookie is enabled
-4. If you wish to show disabled element(e.g. represented by a frosted glas effect) like googleMaps, Twitter Time etc. you can define an appropriate image and a short text(e.g. "click here to enable me")
+4. If you wish to show disabled elements(e.g. represented by a frosted glas effect) like googleMaps, Twitter Time etc. you can define an appropriate image and a short text(e.g. "click here to enable me")
 
 ## License
 The extension is licensed unter the GNU General Public License v2
