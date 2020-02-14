@@ -1,36 +1,45 @@
-# Wacon Cookie Management
-WCM ist eine TYPO3 Extension, die es den Besuchern Ihrer Website erlaubt, die benutzten Cookie-Einstellungen selber zu kontrollieren.
-
-## Kompatibilität
-* Typo3 V10 - **Bald verfügbar**
-* Typo3 V9.X - **Kompatibel**
-* Typo3 V8.X - **Kompatibel**
-* Typo3 V7.6.31 - **Kompatibel**
-
-## Installation & Konfiguration
-1. Laden Sie sich die WCM Extension aus der Repository oder TER herunter, installieren Sie die Extension und aktivieren Sie diese in Ihrem Extension Manager
-2. Binden Sie das Template "Wacon Cookie Management" in Ihr Seitentemplate ein
-
-## Cookies anlegen
-1. Erstellen Sie einen Ordner im Seitenbaum
-2. Wechseln Sie im angelegten Ordner auf die Listenansicht und fügen Sie einen neuen Datensatz hinzu (Wacon Cookie Management -> Cookie)
-3. Füllen Sie die benötigten Felder Ihren Cookies entsprechend aus, die Sie auf der Seite nutzen und speichern Sie Ihre Einstellungen (Erklärungen der einzelnen Eingabefeldern finden Sie im Wiki)
-
-## WCM Script einbinden
-1. Erstellen Sie ein Content-Element Plugin auf einer Seite oder einem Teil der Seite, die immer beim Aufruf Ihrer Website mitgeladen wird und wählen Sie das Plugin "Cookie Freigabe" aus
-2. Wechseln Sie nun in den Reiter "Plugin" und füllen Sie die Eingabefelder aus und wählen Sie unter "Datensatzsammlung" Ihren Cookie Ordner aus, den Sie vorher angelegt haben
+![](https://www.wacon.de/fileadmin/template/img/wacon_logo.svg)
+# Wacon Cookie Management(WCM)
+WCM is a typo3 extension that enables website visitors to control and manage the usage of cookies on the website(commonly known as "cookie consent box"). Thus it helps website owner to be in line with the rules of the General Data Protection Regulation (GDPR) which took effect on 25 May 2018.
 
 
-## Externe Scripte einbinden
-1. Erstellen Sie ein Content-Element Plugin auf einer Seite oder einem Teil der Seite, die immer beim Aufruf Ihrer Website mitgeladen wird und wählen Sie das Plugin "Externes Script einbinden" aus
-2. Wählen Sie den benötigten Cookie aus, der später aktiviert werden muss um den Script zu aktivieren
-3. Fügen Sie nun den Script ein, den Sie durch das Cookie aktivieren möchten
-4. (optional) Wenn es sich um ein Content-Element handelt, das der Benutzer auch sieht (z.B. Twitter Timeline), können Sie auch einen Text und ein Bild anzeigen lassen, welches stattdessen dort zu sehen ist
+## Compatibility
+TYPO3 version  | compatibility
+------------- | -------------
+v10  |  coming soon
+v9  | yes
+v8 | yes
+v7 | yes
 
-## Lizenz
-Diese Extension ist eine Erweiterung des Content Management System TYPO3 und unterliegt der GNU GPL Version 2.
+## Installation & Configuration
+1. Download the extension wacon_cookie-management from the TYPO3 Repository or gitHub. Install the extension and activate it with the extension manager.
 
-## Weitere Infos
-[Weitere Informationen auf unserer Homepage](https://www.wacon.de/typo3-service/eigene-extensions/wacon-cookie-management.html "Informationen zu unserer TYPO3 Extension wacon_cookie_management")
+2. Include the template "Wacon Cookie Management" in your root template
 
-[PDF-Handout für TYPO3-Redakteure](https://www.wacon.de/internetagentur/downloads/typo3_extension_wcm.pdf)
+## Cookies 
+1. Create a folder in your page tree(e.g. "cookies")
+2. Switch to the list module and add a new record(Wacon Cookie Management -> Cookie) for each used cookie
+3. Fill out the fields according for each cookie
+
+## Include plugin
+1. Create a "plugin"-content element "Cookie Freigabe"
+As this content element is responsible for the first pop-up & represents the button to open the cookie consent box, make sure it is part of the main template, e.g. by including it in the footer.
+
+2. Configure the plugin
+* force pop-up for first visitors (e.g. due to tracking code)
+* link to the imprint page
+* link to the legal notice page
+* the cookie folder
+
+## Include external scripts
+Each external script that is used by the website and is responsible for a cookie you defined in your cookie folder has to be encapsulated with the plugin "Externes Script einbinden":
+1. Create a plugin content element "Externes Script einbinden"
+2. Define the needed cookie
+3. Define the JavaScript-Code that is proposed to be added to the page if this cookie is enabled
+4. If you wish to show disabled elements(e.g. represented by a frosted glas effect) like googleMaps, Twitter Time etc. you can define an appropriate image and a short text(e.g. "click here to enable me")
+
+## License
+The extension is licensed unter the GNU General Public License v2
+
+## More information
+[Find more information on our website](https://www.wacon.de/typo3-service/eigene-extensions/wacon-cookie-management.html "information about the TYPO3 Extension wacon_cookie_management")
