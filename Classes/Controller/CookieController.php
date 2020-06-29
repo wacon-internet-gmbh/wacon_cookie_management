@@ -1,6 +1,6 @@
 <?php
 namespace Waconcookiemanagement\WaconCookieManagement\Controller;
-
+use TYPO3\CMS\Extbase\Annotation\Inject;
 /***
  *
  * This file is part of the "Wacon Cookie Management" Extension for TYPO3 CMS.
@@ -21,7 +21,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * cookieRepository
      *
      * @var \Waconcookiemanagement\WaconCookieManagement\Domain\Repository\CookieRepository
-     * @inject
+ * @Inject
      */
     protected $cookieRepository = null;
 
