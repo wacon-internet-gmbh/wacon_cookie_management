@@ -13,6 +13,7 @@
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie</label>
                            <config>
   <type>select</type>
+  <renderType>selectSingle</renderType>
   <items type="array">
     <numIndex index="0" type="array">
       <numIndex index="0"></numIndex>
