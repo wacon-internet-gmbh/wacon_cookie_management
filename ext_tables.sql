@@ -7,7 +7,7 @@ CREATE TABLE tx_waconcookiemanagement_domain_model_cookie (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	bezeichnung varchar(255) DEFAULT '' NOT NULL,
-	kategorie varchar(255) DEFAULT '' NOT NULL,
+	kategorie int(11) DEFAULT '0' NOT NULL,
 	anbieter varchar(255) DEFAULT '' NOT NULL,
 	zweck text,
 	cookiename varchar(255) DEFAULT '' NOT NULL,
