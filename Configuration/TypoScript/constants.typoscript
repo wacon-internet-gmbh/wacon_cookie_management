@@ -8,7 +8,6 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:wacon_cookie_management/Resources/Private/Layouts/
     }
- 
 }
 
 plugin.tx_waconcookiemanagement_script {
@@ -20,5 +19,4 @@ plugin.tx_waconcookiemanagement_script {
         # cat=plugin.tx_waconcookiemanagement_script/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:wacon_cookie_management/Resources/Private/Layouts/
     }
-   
 }

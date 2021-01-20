@@ -1,32 +1,31 @@
 <?php
 defined('TYPO3_MODE') || die('Access denied.');
 
-call_user_func(
-    function()
-    {
+call_user_func(function () {
 
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
-            'Cookiefreigabe',
-            [
-                'Cookie' => 'list',
-            ],
-            // non-cacheable actions
-            [
-                'Cookie' => ''
-            ]
-        );
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
-            'Script',
-            [
-                'Cookie' => 'show',
-            ],
-            // non-cacheable actions
-            [
-                'Cookie' => 'show',
-            ]
-        );
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Waconcookiemanagement.WaconCookieManagement',
+        'Cookiefreigabe',
+        [
+            'Cookie' => 'list',
+        ],
+        // non-cacheable actions
+        [
+            'Cookie' => '',
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Waconcookiemanagement.WaconCookieManagement',
+        'Script',
+        [
+            'Cookie' => 'show',
+        ],
+        // non-cacheable actions
+        [
+            'Cookie' => 'show',
+        ]
+    );
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -57,19 +56,17 @@ call_user_func(
             }
        }'
     );
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
-			$iconRegistry->registerIcon(
-				'wacon_cookie_management-plugin-cookiefreigabe',
-				\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-				['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
-			);
-		
-			$iconRegistry->registerIcon(
-				'wacon_cookie_management-plugin-script',
-				\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-				['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
-			);
-		
-    }
-);
+
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+        'wacon_cookie_management-plugin-cookiefreigabe',
+        \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+        ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
+    );
+    $iconRegistry->registerIcon(
+        'wacon_cookie_management-plugin-script',
+        \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+        ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
+    );
+
+});

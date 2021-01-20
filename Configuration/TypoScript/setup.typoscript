@@ -40,20 +40,19 @@ plugin.tx_waconcookiemanagement_script {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-page.includeJS{
-ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
+page.includeJS {
+    ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
 }
-page.includeJSFooter{
-waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js 
+page.includeJSFooter {
+    waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
 }
 
-page.includeCSS{
-waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/Css/waconcookiemanagement.css 
+page.includeCSS {
+    waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/Css/waconcookiemanagement.css
 }
 
 # these classes are only used in auto-generated templates
 plugin.tx_waconcookiemanagement._CSS_DEFAULT_STYLE (
-
     textarea.f3-form-error {
         background-color:#FF9F9F;
         border: 1px #FF0000 solid;

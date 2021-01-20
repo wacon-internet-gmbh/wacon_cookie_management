@@ -13,7 +13,7 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		
+
 		<f:flashMessages />
 <div class="cookie-set"><f:translate key="cookiefreigabe.setcookie" /></div>
 <div class="waconcookiemanagement <f:if condition="{cookieanzeige}"><f:then>firsthidden</f:then><f:else></f:else></f:if>">
@@ -23,22 +23,22 @@
     <div class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
     <h2><f:translate key="cookiefreigabe.header" /></h2>
     <p ><f:translate key="cookiefreigabe.intro" /></p>
-	
+
 
     <p class="cookie-accept"><a class="cookie-btn cursor none" data-cookie-accept><f:translate key="cookiefreigabe.accept" /></a></p>
     <p class="cookie-management"><a class="cursor" id="data-cookie-individual"><f:translate key="cookiefreigabe.individual" /></a></p>
-    <p class="cookie-refuse"><a class="cursor" if="data-cookie-refuse"><f:translate key="cookiefreigabe.min" /></a></p>   
+    <p class="cookie-refuse"><a class="cursor" if="data-cookie-refuse"><f:translate key="cookiefreigabe.min" /></a></p>
 <p class="text-right cookie-legal">
-     <f:if condition="dataprotection"><f:link.page pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if> 
+     <f:if condition="dataprotection"><f:link.page pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if>
      <f:if condition="imprint"><f:link.page pageUid="{imprint}"><f:translate key="cookiefreigabe.imprint" /></f:link.page></f:if>
    </p>
-  </div>  
+  </div>
   <div class="box-cookie-management">
     <div class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
 	<div class="box-cookie-management-in">
     <h2><f:translate key="cookiefreigabe.header2" /></h2>
     <p><f:translate key="cookiefreigabe.intro2" /></p>
-    <div class="category">      
+    <div class="category">
       <h3><f:translate key="cookiefreigabe.notwendig" /></h3>
       <p><f:translate key="cookiefreigabe.notwendigdesc" /></p>
       <p class="text-center info-show cookie-n"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
@@ -142,15 +142,15 @@
     </f:if>
     </div>
    </div>
-   <div class="cookie-fix">  
+   <div class="cookie-fix">
 	  <p class="text-center cookie-save"><a class="cookie-btn cursor" data-cookie-accept><f:translate key="cookiefreigabe.save" /></a></p>
-      <p class="text-back-right"><a class="cookieback"><f:translate key="cookiefreigabe.back" /></a><a class="cookie-refuse"" ><f:translate key="cookiefreigabe.min" /></a></p>   
+      <p class="text-back-right"><a class="cookieback"><f:translate key="cookiefreigabe.back" /></a><a class="cookie-refuse"" ><f:translate key="cookiefreigabe.min" /></a></p>
 	  <p class="text-right cookie-legal">
-     <f:if condition="dataprotection"><f:link.page pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if> 
+     <f:if condition="dataprotection"><f:link.page pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if>
      <f:if condition="imprint"><f:link.page pageUid="{imprint}"><f:translate key="cookiefreigabe.imprint" /></f:link.page></f:if>
    </p>
     </div>
-   
+
   </div>
 </div>
 </div>

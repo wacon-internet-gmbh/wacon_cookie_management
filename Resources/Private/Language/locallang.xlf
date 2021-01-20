@@ -90,7 +90,6 @@
 			<trans-unit id="cookiefreigabe.linkm">
 				<source>marketing</source>
 			</trans-unit>
-
 			<trans-unit id="cookiefreigabe.cookieon">
 				<source>On</source>
 			</trans-unit>
@@ -112,16 +111,12 @@
 			<trans-unit id="cookiefreigabe.save">
 				<source>Save</source>
 			</trans-unit>
-
 			<trans-unit id="cookiefreigabe.setcookie">
 				<source>Cookie Settings</source>
 			</trans-unit>
 			<trans-unit id="cookiefreigabe.close">
 				<source>CLOSE</source>
 			</trans-unit>
-
-
-
 		</body>
 	</file>
 </xliff>

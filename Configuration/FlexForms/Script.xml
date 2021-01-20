@@ -4,53 +4,62 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:extkey/Resources/Private/Language/Backend.xlf:settings.registration.title</sheetTitle>
+                    <sheetTitle>LLL:EXT:extkey/Resources/Private/Language/Backend.xlf:settings.registration.title
+                    </sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
                     <settings.cookie>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie</label>
-                           <config>
-  <type>select</type>
-  <renderType>selectSingle</renderType>
-  <items type="array">
-    <numIndex index="0" type="array">
-      <numIndex index="0"></numIndex>
-      <numIndex index="1"></numIndex>
-    </numIndex>
-  </items>
-  <foreign_table>tx_waconcookiemanagement_domain_model_cookie</foreign_table>
- <foreign_table_where>
-     AND kategorie  > 0
-  </foreign_table_where>
- </config>                      
-  </TCEforms>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                                <foreign_table>tx_waconcookiemanagement_domain_model_cookie</foreign_table>
+                                <foreign_table_where>
+                                    AND kategorie > 0
+                                </foreign_table_where>
+                            </config>
+                        </TCEforms>
                     </settings.cookie>
                     <settings.script>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script</label>
-                           <config>
-  				<type>text</type>
-				<cols>24</cols>
-  				<rows>8</rows>
-			   </config>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script
+                            </label>
+                            <config>
+                                <type>text</type>
+                                <cols>24</cols>
+                                <rows>8</rows>
+                            </config>
                         </TCEforms>
                     </settings.script>
 
-    <settings.text>
+                    <settings.text>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.text</label>
-                           <config>
-  				<type>input</type>
-			   </config>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.text
+                            </label>
+                            <config>
+                                <type>input</type>
+                            </config>
                         </TCEforms>
                     </settings.text>
                     <settings.bild>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.bild</label>
-                                      <config>
-                                               <type>inline</type>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.bild
+                            </label>
+                            <config>
+                                <type>inline</type>
                                 <foreign_table>sys_file_reference</foreign_table>
                                 <foreign_field>uid_foreign</foreign_field>
                                 <foreign_sortby>sorting_foreign</foreign_sortby>
@@ -67,17 +76,18 @@
                                             <config>
                                                 <appearance>
                                                     <elementBrowserType>file</elementBrowserType>
-                                                    <elementBrowserAllowed></elementBrowserAllowed>
+                                                    <elementBrowserAllowed/>
                                                 </appearance>
                                             </config>
                                         </uid_local>
                                     </columns>
                                 </overrideChildTca>
                                 <filter>
-                                    <userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren</userFunc>
+                                    <userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren
+                                    </userFunc>
                                     <parameters>
-                                        <allowedFileExtensions></allowedFileExtensions>
-                                        <disallowedFileExtensions></disallowedFileExtensions>
+                                        <allowedFileExtensions/>
+                                        <disallowedFileExtensions/>
                                     </parameters>
                                 </filter>
                                 <appearance>
@@ -96,10 +106,9 @@
                                         <delete>1</delete>
                                     </enabledControls>
                                 </appearance>
-            </config>                        </TCEforms>
+                            </config>
+                        </TCEforms>
                     </settings.bild>
-
-
                 </el>
             </ROOT>
         </sDEF>

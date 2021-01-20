@@ -4,49 +4,111 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:extkey/Resources/Private/Language/Backend.xlf:settings.registration.title</sheetTitle>
+                    <sheetTitle>LLL:EXT:extkey/Resources/Private/Language/Backend.xlf:settings.registration.title
+                    </sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <settings.nurLink>
+                    <settings.cookie>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.nurlink</label>
-                          <config>
-  <type>check</type>
- 
-</config> 
- </TCEforms>
-                    </settings.nurLink>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"/>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                                <foreign_table>tx_waconcookiemanagement_domain_model_cookie</foreign_table>
+                                <foreign_table_where>
+                                    AND kategorie > 0
+                                </foreign_table_where>
+                            </config>
+                        </TCEforms>
+                    </settings.cookie>
+                    <settings.script>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script
+                            </label>
+                            <config>
+                                <type>text</type>
+                                <cols>24</cols>
+                                <rows>8</rows>
+                            </config>
+                        </TCEforms>
+                    </settings.script>
 
-                    <settings.dataProtection>
+                    <settings.text>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.dataprotection</label>
-                          <config>
-  <type>group</type>
-  <internal_type>db</internal_type>
-  <allowed>pages</allowed>
-  <size>1</size>
-  <maxitems>1</maxitems>
-  <minitems>0</minitems>
-  <show_thumbs>1</show_thumbs>
-</config> 
- </TCEforms>
-                    </settings.dataProtection>
-                          <settings.imprint>
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.text
+                            </label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.text>
+                    <settings.bild>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.imprint</label>
-                          <config>
-  <type>group</type>
-  <internal_type>db</internal_type>
-  <allowed>pages</allowed>
-  <size>1</size>
-  <maxitems>1</maxitems>
-  <minitems>0</minitems>
-  <show_thumbs>1</show_thumbs>
-</config>
-  </TCEforms>
-                    </settings.imprint>
-            
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.bild
+                            </label>
+                            <config>
+                                <type>inline</type>
+                                <foreign_table>sys_file_reference</foreign_table>
+                                <foreign_field>uid_foreign</foreign_field>
+                                <foreign_sortby>sorting_foreign</foreign_sortby>
+                                <foreign_table_field>tablenames</foreign_table_field>
+                                <foreign_match_fields>
+                                    <!-- this will be stored in sys_file_reference.fieldname -->
+                                    <fieldname>image</fieldname>
+                                </foreign_match_fields>
+                                <foreign_label>uid_local</foreign_label>
+                                <foreign_selector>uid_local</foreign_selector>
+                                <overrideChildTca>
+                                    <columns>
+                                        <uid_local>
+                                            <config>
+                                                <appearance>
+                                                    <elementBrowserType>file</elementBrowserType>
+                                                    <elementBrowserAllowed/>
+                                                </appearance>
+                                            </config>
+                                        </uid_local>
+                                    </columns>
+                                </overrideChildTca>
+                                <filter>
+                                    <userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren
+                                    </userFunc>
+                                    <parameters>
+                                        <allowedFileExtensions/>
+                                        <disallowedFileExtensions/>
+                                    </parameters>
+                                </filter>
+                                <appearance>
+                                    <useSortable>1</useSortable>
+                                    <headerThumbnail>
+                                        <field>uid_local</field>
+                                        <width>45</width>
+                                        <height>45c</height>
+                                    </headerThumbnail>
+                                    <enabledControls>
+                                        <info>1</info>
+                                        <new>0</new>
+                                        <dragdrop>1</dragdrop>
+                                        <sort>0</sort>
+                                        <hide>1</hide>
+                                        <delete>1</delete>
+                                    </enabledControls>
+                                </appearance>
+                            </config>
+                        </TCEforms>
+                    </settings.bild>
                 </el>
             </ROOT>
         </sDEF>

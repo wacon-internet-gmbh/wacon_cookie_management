@@ -9,7 +9,7 @@
                 <source>Benötigter Cookie</source>
             </trans-unit>
             <trans-unit id="settings.script.text">
-                <source>Text  (wird angezeigt, wenn Cookie nicht erlaubt)</source>
+                <source>Text (wird angezeigt, wenn Cookie nicht erlaubt)</source>
             </trans-unit>
 
             <trans-unit id="settings.script.script">
@@ -18,10 +18,10 @@
             <trans-unit id="settings.script.bild">
                 <source>Bild (wird angezeigt, wenn Cookie nicht erlaubt)</source>
             </trans-unit>
- <trans-unit id="settings.cookiefreigabe.nurlink">
+            <trans-unit id="settings.cookiefreigabe.nurlink">
                 <source>Nur Link zur Cookiefreigabe einfügen</source>
             </trans-unit>
- <trans-unit id="settings.cookiefreigabe.imprint">
+            <trans-unit id="settings.cookiefreigabe.imprint">
                 <source>Link zum Impressum</source>
             </trans-unit>
 
@@ -29,7 +29,6 @@
                 <source>Link zur Datenschutzerklärung</source>
             </trans-unit>
 
-
-   </body>
+        </body>
     </file>
 </xliff>
