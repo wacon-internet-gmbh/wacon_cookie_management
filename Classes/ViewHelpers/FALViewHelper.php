@@ -1,5 +1,4 @@
 <?php
-
 namespace Waconcookiemanagement\WaconCookieManagement\ViewHelpers;
 
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
