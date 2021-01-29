@@ -61,13 +61,13 @@ call_user_func(
 		
 			$iconRegistry->registerIcon(
 				'wacon_cookie_management-plugin-cookiefreigabe',
-				\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 				['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
 			);
 		
 			$iconRegistry->registerIcon(
 				'wacon_cookie_management-plugin-script',
-				\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 				['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
 			);
 		

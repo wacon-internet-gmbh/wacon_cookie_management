@@ -1,6 +1,6 @@
 <?php
 namespace Waconcookiemanagement\WaconCookieManagement\Controller;
-use TYPO3\CMS\Extbase\Annotation\Inject;
+
 /***
  *
  * This file is part of the "Wacon Cookie Management" Extension for TYPO3 CMS.
@@ -21,7 +21,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * cookieRepository
      *
      * @var \Waconcookiemanagement\WaconCookieManagement\Domain\Repository\CookieRepository
-     * @Inject
+     * @inject
      */
     protected $cookieRepository = null;
 
@@ -59,22 +59,20 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function showAction()
     {
-      $cookie = $_COOKIE['waconcookiemanagement']; 
-      $content2 = $this->settings['bild'];
+$cookie = $_COOKIE['waconcookiemanagement']; 
+$content2 = $this->settings['bild'];
 
-      $cObj = $this->configurationManager->getContentObject();
-      $uid = $cObj->data['uid'];
+if ($cookie=='max') $content1=$this->settings['script'];
+else{
+$res=explode("c",$cookie);
+foreach($res as $value){
 
-      if ($cookie=='max') $content1=$this->settings['script'];
-      else{
-       $res=explode("c",$cookie);
-         foreach($res as $value){
-           if($value == $this->settings['cookie'])$content1=$this->settings['script'];
-         }
-       }
+if($value == $this->settings['cookie'])$content1=$this->settings['script'];
+}
+}
         $this->view->assign('cookietext', $this->settings['text']);
         $this->view->assign('content1', $content1);
         $this->view->assign('content2', $content2);
-        $this->view->assign('uid', $uid);
+
     }
 }

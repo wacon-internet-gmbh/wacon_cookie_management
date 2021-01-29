@@ -19,11 +19,7 @@
     font-weight: 300;
 }
 
-.cookie-set.script img {
-    filter: grayscale(100%) blur(10px) brightness(160%) saturate(0%) contrast(120%);
-    -webkit-filter: grayscale(100%) blur(10px) brightness(160%) saturate(0%) contrast(120%);
-    -moz-filter: grayscale(100%) blur(10px) brightness(160%) saturate(0%) contrast(120%);
-}
+
 
 #CookieBox p,
 #CookieBox h1,

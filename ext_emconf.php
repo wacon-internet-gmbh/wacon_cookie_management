@@ -11,7 +11,7 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Wacon Cookie Management v7',
+    'title' => 'Wacon Cookie Management',
     'description' => 'WCM is a typo3 extension that enables website visitors to control and manage the usage of cookies on the website(commonly known as "cookie consent box"). Thus it helps website owner to be in line with the rules of the General Data Protection Regulation (GDPR) which took effect on 25 May 2018.',
     'category' => 'plugin',
     'author' => 'Kerstin Schmitt',
@@ -21,10 +21,10 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.0.7',
+    'version' => '1.1.7',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.20-10.4.99',
+            'typo3' => '7.6.31-9.5.99',
         ],
         'conflicts' => [],
         'suggests' => [],
