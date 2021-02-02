@@ -49,11 +49,13 @@
                                                           <settings.change>
                         <TCEforms>
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.change</label>
-    <config>
-        <type>input</type>
-        <renderType>inputDateTime</renderType>
-        <eval>datetime</eval>
-    </config>
+<config>
+  <type>input</type>
+  <size>10</size>
+  <max>10</max>
+  <eval>date</eval>
+  <checkbox>1</checkbox>
+</config>
   </TCEforms>
                     </settings.change>
                 </el>
