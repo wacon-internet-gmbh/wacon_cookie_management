@@ -46,7 +46,16 @@
 </config>
   </TCEforms>
                     </settings.imprint>
-            
+                                                          <settings.change>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.change</label>
+    <config>
+        <type>input</type>
+        <renderType>inputDateTime</renderType>
+        <eval>datetime</eval>
+    </config>
+  </TCEforms>
+                    </settings.change>
                 </el>
             </ROOT>
         </sDEF>
