@@ -24,7 +24,9 @@
  <trans-unit id="settings.cookiefreigabe.imprint">
                 <source>Link zum Impressum</source>
             </trans-unit>
-
+             <trans-unit id="settings.cookiefreigabe.change">
+                <source>Letzte Änderung an den Cookies</source>
+            </trans-unit>
             <trans-unit id="settings.cookiefreigabe.dataprotection">
                 <source>Link zur Datenschutzerklärung</source>
             </trans-unit>
