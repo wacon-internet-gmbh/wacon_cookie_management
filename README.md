@@ -6,10 +6,10 @@ WCM is a typo3 extension that enables website visitors to control and manage the
 ## Compatibility
 TYPO3 version  | compatibility
 ------------- | -------------
-v10  |  coming soon
+v10  |  yes
 v9  | yes
-v8 | yes
-v7 | yes
+v8 | use v7 branch
+v7 | use v7 branch
 
 ## Installation & Configuration
 1. Download the extension wacon_cookie-management from the TYPO3 Repository or gitHub. Install the extension and activate it with the extension manager.
