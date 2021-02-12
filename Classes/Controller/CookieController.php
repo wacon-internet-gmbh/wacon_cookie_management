@@ -67,18 +67,17 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function showAction()
     {
-$cookie = $_COOKIE['waconcookiemanagement']; 
-$content2 = $this->settings['bild'];
+	$cookie = $_COOKIE['waconcookiemanagement']; 
+	$content2 = $this->settings['bild'];
+	$cookiearray = explode('ts',$cookie);
+	if ($cookiearray[0]=='max') $content1=$this->settings['script'];
+	else{
+		$res=explode("c",$cookiearray[0]);
+		foreach($res as $value){
 
-if ($cookie=='max') $content1=$this->settings['script'];
-else{
-    $cookiearray = explode('ts',$cookie);
-$res=explode("c",$cookiearray[0]);
-foreach($res as $value){
-
-if($value == $this->settings['cookie'])$content1=$this->settings['script'];
-}
-}
+			if($value == $this->settings['cookie'])$content1=$this->settings['script'];
+		}
+	}
         $this->view->assign('cookietext', $this->settings['text']);
         $this->view->assign('content1', $content1);
         $this->view->assign('content2', $content2);
