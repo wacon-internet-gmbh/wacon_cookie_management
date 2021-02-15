@@ -30,7 +30,8 @@ $('.waconcookiemanagement').prependTo("body");
      }
     }
     else{
-      res= wert.split("c");
+      resc= wert.split("ts");
+      res= resc[0].split("c");
        jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
@@ -58,7 +59,8 @@ $(".cookie-set").click(function(){
      }
     }
     else{
-      res= wert.split("c");
+      resc= wert.split("ts");
+      res= resc[0].split("c");
        jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
