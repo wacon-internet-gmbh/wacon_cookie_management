@@ -30,11 +30,12 @@ $('.waconcookiemanagement').prependTo("body");
      }
     }
     else{
-      res= wert.split("c");
-       jQuery.each( res, function( i, val ) {
+      resc= wert.split("ts");
+      res= resc[0].split("c");
+      jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
-       });
+      });
     }
    
   } else {
@@ -58,11 +59,13 @@ $(".cookie-set").click(function(){
      }
     }
     else{
-      res= wert.split("c");
-       jQuery.each( res, function( i, val ) {
+      resc= wert.split("ts");
+      res= resc[0].split("c");
+      jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
-       });
+      });
+
     }
    
   } else {

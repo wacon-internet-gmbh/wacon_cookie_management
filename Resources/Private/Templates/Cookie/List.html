@@ -61,8 +61,8 @@
     </div>
     <f:if condition="{cookies1}">
       <div class="category">
-        <div class="cookie-off cookiecat cookiecat-s"><div class="deactivated"><span class="off"></span></div></div>
-        <div class="cookie-on cookiecat cookiecat-s"><div class="activated"><span class="on"></span></div></div>
+        <div class="cookie-off cookiecat cookiecat-s" <f:if condition="{cookie1check}">style="display:none"</f:if>><div class="deactivated"><span class="off"></span></div></div>
+        <div class="cookie-on cookiecat cookiecat-s" <f:if condition="{cookie1check}">style="display:block"</f:if>><div class="activated"><span class="on"></span></div></div>
         <h3><f:translate key="cookiefreigabe.statistik" /></h3>
         <p><f:translate key="cookiefreigabe.statistikdesc" /></p>
         <p class="text-center info-show cookie-s" ><f:translate key="cookiefreigabe.cookieshow" /> <span class="arrow down"></span></p>
@@ -88,8 +88,8 @@
     </f:if>
     <f:if condition="{cookies2}">
       <div class="category">
-        <div class="cookie-off cookiecat cookiecat-m"><div class="deactivated"><span class="off"></span></div></div>
-        <div class="cookie-on cookiecat cookiecat-m"><div class="activated"><span class="on"></span></div></div>
+        <div class="cookie-off cookiecat cookiecat-m" <f:if condition="{cookie2check}">style="display:none"</f:if>><div class="deactivated"><span class="off"></span></div></div>
+        <div class="cookie-on cookiecat cookiecat-m" <f:if condition="{cookie2check}">style="display:block"</f:if>><div class="activated"><span class="on"></span></div></div>
         <h3><f:translate key="cookiefreigabe.marketing" /></h3>
         <p><f:translate key="cookiefreigabe.marketingdesc" /></p>
         <p class="text-center info-show" cookie-m><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
@@ -115,8 +115,8 @@
     </f:if>
     <f:if condition="{cookies3}">
       <div class="category">
-        <div class="cookie-off cookiecat cookiecat-e"> <div class="deactivated"><span class="off"></span></div></div>
-        <div class="cookie-on cookiecat cookiecat-e"> <div class="activated"><span class="on"></span></div></div>
+        <div class="cookie-off cookiecat cookiecat-e" <f:if condition="{cookie3check}">style="display:none"</f:if>> <div class="deactivated"><span class="off"></span></div></div>
+        <div class="cookie-on cookiecat cookiecat-e" <f:if condition="{cookie3check}">style="display:block"</f:if>> <div class="activated"><span class="on"></span></div></div>
         <h3><f:translate key="cookiefreigabe.extern" /></h3>
         <p><f:translate key="cookiefreigabe.externdesc" /></p>
         <p class="text-center info-show cookie-e"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
