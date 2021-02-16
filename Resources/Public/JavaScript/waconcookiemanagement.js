@@ -193,18 +193,8 @@ $( ".cookie-info .cookie-on" ).click(function() {
 $( ".cookie-info .cookie-off" ).click(function() {
   $(this).next().show();
   $(this).hide();
-  var children=$(this).parent().parent().children();
-  var cookieoff = 0;
-  for(var i=0;i<children.length;i++){
-    if(children.eq(i).find(".cookie-on").css("display") == "none"){
-      cookieoff += 1;
-    }
-  }
-  if(cookieoff==0){
-    $(this).parent().parent().parent().find(".cookie-off.cookiecat").hide();
-    $(this).parent().parent().parent().find(".cookie-on.cookiecat").show();
-  }
-
+  $(this).parent().parent().parent().find(".cookie-off.cookiecat").hide();
+  $(this).parent().parent().parent().find(".cookie-on.cookiecat").show();
 });
 
 $( ".info-show" ).click(function() {
