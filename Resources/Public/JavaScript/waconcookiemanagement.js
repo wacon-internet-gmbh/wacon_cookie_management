@@ -108,19 +108,7 @@ location.reload();
 });
 
 $( ".cookie-accept" ).click(function() {
-  wert = "";
-  var i;
-  for (i = 0; i < 40; i++) {
-    if($(".cookie-on.cookie"+i).css("display") == "block"){
-      wert += "c" + i;
-    }
-    if($(".cookie-off.cookie"+i).css("display") == "block"){
-      wert += "c" + i;
-    }
-  }
-  if (wert == "") {wert = "min";}
-  
-  setCookie("waconcookiemanagement", wert, Date.now());
+  setCookie("waconcookiemanagement", "max", Date.now());
   $(".waconcookiemanagement").hide();
   location.reload();
 });
