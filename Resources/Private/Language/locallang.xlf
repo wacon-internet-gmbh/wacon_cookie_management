@@ -117,7 +117,7 @@
 				<source>Cookie Settings</source>
 			</trans-unit>
 			<trans-unit id="cookiefreigabe.close">
-				<source>CLOSE</source>
+				<source>X</source>
 			</trans-unit>
 
 

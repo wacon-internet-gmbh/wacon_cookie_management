@@ -39,12 +39,12 @@ $('.waconcookiemanagement').prependTo("body");
     }
    
   } else {
-if(!$(".waconcookiemanagement").hasClass("firsthidden")){
+  if(!$(".waconcookiemanagement").hasClass("firsthidden")){
 
     $(".waconcookiemanagement").show();
-    setCookie("waconcookiemanagement", "min", Date.now());
-$(".cookieclose").hide();
-}
+    //setCookie("waconcookiemanagement", "min", Date.now());
+    //$(".cookieclose").hide();
+  }
   }
     
 });
@@ -210,9 +210,11 @@ $(".waconcookiemanagement").hide();
 });
 var $menu = $('#CookieBox');
 $(".waconcookiemanagement").on('click', function (e) {
-
+  var wert = getCookie("waconcookiemanagement");
+  if (wert != "") {
     // If element is opened and click target is outside it, hide it
     if ($menu.is(':visible') && !$menu.is(e.target) && !$menu.has(e.target).length) {
       $(".waconcookiemanagement").hide();
     }
+  }
 });
