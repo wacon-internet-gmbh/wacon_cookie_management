@@ -17,12 +17,18 @@
 	<f:section name="content">
 <f:if condition="{content1}">
 <f:then><f:format.raw>{content1}</f:format.raw></f:then>
-<f:else><f:if condition="{cookietext}"><div class="cookie-set script"><f:if condition="{content2}">
-<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
-        <f:image src="{f:uri.image(image=preview)}" title="{preview.title}" />
-
-</f:for>
-</f:if><p>{cookietext}</p></div></f:if></f:else>
+<f:else>
+	<f:if condition="{cookietext}">
+		<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
+			<f:if condition="{content2}">
+				<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
+        			<f:image src="{f:uri.image(image=preview)}" title="{preview.title}" />
+				</f:for>	
+			</f:if>
+			<p>{cookietext}</p>
+		</div>
+	</f:if>
+</f:else>
 </f:if>
 	</f:section>
 </html>

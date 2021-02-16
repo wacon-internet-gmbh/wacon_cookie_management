@@ -101,5 +101,6 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('content1', $content1);
         $this->view->assign('content2', $content2);
         $this->view->assign('uid', $uid);
+  	$this->view->assign('cookieuid', $this->settings['cookie']);
     }
 }
