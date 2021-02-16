@@ -43,7 +43,7 @@ $('.waconcookiemanagement').prependTo("body");
 
     $(".waconcookiemanagement").show();
     //setCookie("waconcookiemanagement", "min", Date.now());
-    //$(".cookieclose").hide();
+    $(".cookieclose").hide();
   }
   }
     
