@@ -1,7 +1,8 @@
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   var maxage = "max-age="+ 24 * 60 * 60 * 365;
-  document.cookie = cname + "=" + cvalue + "ts" + Date.now() + ";" + maxage + ";path=/";
+
+  document.cookie = cname + "=" + cvalue + "ts" + Date.now() +   ";" + maxage + ";path=/";
 }
 
 function getCookie(cname) {
@@ -21,9 +22,9 @@ function getCookie(cname) {
 
 $(document).ready(function(){ 
 $('.waconcookiemanagement').prependTo("body");
-var res = getCookie("waconcookiemanagement");
-resc= res.split("ts");
-wert= resc[0];
+ var res = getCookie("waconcookiemanagement");
+ resc= res.split("ts");
+ wert= resc[0];
   if (wert != "") {
     if (wert == "max") {
   
@@ -32,23 +33,23 @@ wert= resc[0];
 
     }
     else{
-      
+
       res= wert.split("c");
        jQuery.each( res, function( i, val ) {
-         $( ".cookie-on.cookie" + val ).show();
-         $( ".cookie-off.cookie" + val ).hide();
+         if(val=='max'){}
+         else{
+           $( ".cookie-on.cookie" + val ).show();
+           $( ".cookie-off.cookie" + val ).hide();
+         }
        });
     }
-   
   } else {
-  if(!$(".waconcookiemanagement").hasClass("firsthidden")){
-
-    $(".waconcookiemanagement").show();
-    //setCookie("waconcookiemanagement", "min", Date.now());
-    $(".cookieclose").hide();
+    if(!$(".waconcookiemanagement").hasClass("firsthidden")){
+      $(".waconcookiemanagement").show();
+      //setCookie("waconcookiemanagement", "min", Date.now());
+      $(".cookieclose").hide();
+    }
   }
-  }
-    
 });
 
 $(".cookie-set").click(function(){ 
@@ -63,52 +64,48 @@ $(".cookie-set").click(function(){
 
     }
     else{
-   
+
       res= wert.split("c");
        jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
        });
     }
-   
-  } else {
+  } 
+  $(".waconcookiemanagement").show();
+  if($(this).hasClass('cookiecontent')){
+    $( ".box-cookie-management" ).show();
+    $( ".cookie-fix" ).show();
+    var varGes = $('#CookieBox').height();
+    var varFix = $('.cookie-fix').height();
+    var neuHeight = varGes - varFix - 100;
+    if(neuHeight >= 300){$('.box-cookie-management').height(neuHeight);}
+    if(neuHeight < 300){$('#CookieBox').css("overflow","auto");}
     
-
+    $(".intro").hide();
+    for (i = 0; i < 30; i++) {
+      if($(this).hasClass("cookieuid-" + i)){
+        $(".cookieinfo-" + i).parent().show();
+      }
+      
+     }
   }
-$(".waconcookiemanagement").show();
-if($(this).hasClass('cookiecontent')){
-  $( ".box-cookie-management" ).show();
-  $( ".cookie-fix" ).show();
-  var varGes = $('#CookieBox').height();
-  var varFix = $('.cookie-fix').height();
-  var neuHeight = varGes - varFix - 100;
-  if(neuHeight >= 300){$('.box-cookie-management').height(neuHeight);}
-  if(neuHeight < 300){$('#CookieBox').css("overflow","auto");}
-  
-  $(".intro").hide();
-  for (i = 0; i < 30; i++) {
-    if($(this).hasClass("cookieuid-" + i)){
-      $(".cookieinfo-" + i).parent().show();
-    }
-    
-   }
-}
+
 });
 
 
 $( ".cookie-save" ).click(function() {
-wert = "";
-var i;
-for (i = 0; i < 30; i++) {
-if($(".cookie-on.cookie"+i).css("display") == "block"){
-  wert += "c" + i;
-}
-
-}
-if (wert == "") {wert = "min";}
-setCookie("waconcookiemanagement", wert, Date.now());
-$(".waconcookiemanagement").hide();
-location.reload();
+  wert = "";
+  var i;
+  for (i = 0; i < 40; i++) {
+    if($(".cookie-on.cookie"+i).css("display") == "block"){
+      wert += "c" + i;
+    }
+  }
+  if (wert == "") {wert = "min";}
+  setCookie("waconcookiemanagement", wert, Date.now());
+  $(".waconcookiemanagement").hide();
+  location.reload();
 });
 
 $( ".cookie-accept" ).click(function() {
@@ -117,9 +114,9 @@ $( ".cookie-accept" ).click(function() {
   location.reload();
 });
 $( ".cookie-refuse" ).click(function() {
-setCookie("waconcookiemanagement", "min", Date.now());
-$(".waconcookiemanagement").hide();
-location.reload();
+  setCookie("waconcookiemanagement", "min", Date.now());
+  $(".waconcookiemanagement").hide();
+  location.reload();
 });
 
 $( ".cookie-management" ).click(function() {
@@ -178,14 +175,36 @@ $( ".cookie-off.cookiecat" ).click(function() {
 });
 
 
-$( ".cookie-on" ).click(function() {
+$( ".cookie-info .cookie-on" ).click(function() {
   $(this).prev().show();
   $(this).hide();
-
+  var children=$(this).parent().parent().children();
+  var cookieoff = 0;
+  for(var i=0;i<children.length;i++){
+    if(children.eq(i).find(".cookie-off").css("display") == "none"){
+      cookieoff += 1;
+    }
+  }
+  if(cookieoff==0){
+    $(this).parent().parent().parent().find(".cookie-off.cookiecat").show();
+    $(this).parent().parent().parent().find(".cookie-on.cookiecat").hide();
+  }
 });
-$( ".cookie-off" ).click(function() {
+$( ".cookie-info .cookie-off" ).click(function() {
   $(this).next().show();
   $(this).hide();
+  var children=$(this).parent().parent().children();
+  var cookieoff = 0;
+  for(var i=0;i<children.length;i++){
+    if(children.eq(i).find(".cookie-on").css("display") == "none"){
+      cookieoff += 1;
+    }
+  }
+  if(cookieoff==0){
+    $(this).parent().parent().parent().find(".cookie-off.cookiecat").hide();
+    $(this).parent().parent().parent().find(".cookie-on.cookiecat").show();
+  }
+
 });
 
 $( ".info-show" ).click(function() {
