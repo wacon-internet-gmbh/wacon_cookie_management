@@ -21,7 +21,9 @@ function getCookie(cname) {
 
 $(document).ready(function(){ 
 $('.waconcookiemanagement').prependTo("body");
- var wert = getCookie("waconcookiemanagement");
+var res = getCookie("waconcookiemanagement");
+resc= res.split("ts");
+wert= resc[0];
   if (wert != "") {
     if (wert == "max") {
   
@@ -30,8 +32,8 @@ $('.waconcookiemanagement').prependTo("body");
 
     }
     else{
-      resc= wert.split("ts");
-      res= resc[0].split("c");
+      
+      res= wert.split("c");
        jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
@@ -50,7 +52,9 @@ $('.waconcookiemanagement').prependTo("body");
 });
 
 $(".cookie-set").click(function(){ 
-  var wert = getCookie("waconcookiemanagement");
+  var res = getCookie("waconcookiemanagement");
+  resc= res.split("ts");
+  wert= resc[0];
   if (wert != "") {
     if (wert == "max") {
     
@@ -59,8 +63,8 @@ $(".cookie-set").click(function(){
 
     }
     else{
-      resc= wert.split("ts");
-      res= resc[0].split("c");
+   
+      res= wert.split("c");
        jQuery.each( res, function( i, val ) {
          $( ".cookie-on.cookie" + val ).show();
          $( ".cookie-off.cookie" + val ).hide();
