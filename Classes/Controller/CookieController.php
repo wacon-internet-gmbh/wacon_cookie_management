@@ -56,6 +56,12 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('cookies2', $cookies2);
         $cookies3 = $this->cookieRepository->findByKategorie(3);
         $this->view->assign('cookies3', $cookies3);
+        if($cookiearray['0']=="max"){
+          $cookie1check = 1;
+          $cookie2check = 1;
+          $cookie3check = 1;
+        }
+        else{
 
         $cookies = explode('c',$cookiearray['0']);
         $cookie1check = 1;
@@ -70,6 +76,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         foreach($cookies3 as $check){
            if (!in_array ( $check->getUid() , $cookies)) $cookie3check = 0;
         }
+}
         $this->view->assign('cookie1check', $cookie1check);
         $this->view->assign('cookie2check', $cookie2check);
         $this->view->assign('cookie3check', $cookie3check);
