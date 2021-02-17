@@ -13,7 +13,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Cookie' => ''
+                'Cookie' => 'list'
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
