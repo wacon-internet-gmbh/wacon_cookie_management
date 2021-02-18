@@ -4,38 +4,39 @@
           product-name="bootstrap_package">
         <header/>
         <body>
+
             <trans-unit id="settings.script.cookie">
-                <source>Required Cookie</source>
+                <target>Benötigter Cookie</target>
             </trans-unit>
             <trans-unit id="settings.script.text">
-                <source>Show text if Cookie is not accepted</source>
+                <target>Text (wird angezeigt, wenn Cookie nicht erlaubt)</target>
             </trans-unit>
             <trans-unit id="settings.script.script">
-                <source>Script</source>
+                <target>Eingebundenes Script</target>
             </trans-unit>
             <trans-unit id="settings.script.bild">
-                <source>Show image if Cookie is not accepted</source>
+                <target>Bild (wird angezeigt, wenn Cookie nicht erlaubt)</target>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.nurlink">
-                <source>Show link to Cookiebox</source>
+                <target>Nur Link zur Cookiefreigabe einfügen</target>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.imprint">
-                <source>Imprint url</source>
+                <target>Link zum Impressum</target>
             </trans-unit>
              <trans-unit id="settings.cookiefreigabe.change">
-                <source>Last change in cookie-configuration</source>
+                <target>Letzte Änderung an den Cookies</target>
             </trans-unit>
              <trans-unit id="settings.cookiefreigabe.header">
-                <source>Header in cookiebox</source>
+                <target>Überschrift in Cookiebox</target>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.teaser">
-                <source>Teaser in cookiebox</source>
+                <target>Einleitender Text in Cookiebox</target>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.linktext">
-                <source>Text (link to Cookiesettings)</source>
+                <target>Text für Link zu Cookiefreigabe</target>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.dataprotection">
-                <source>Privacy source url</source>
+                <target>Link zur Datenschutzerklärung</target>
             </trans-unit>
 
 

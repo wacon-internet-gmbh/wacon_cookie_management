@@ -15,14 +15,14 @@
 	<f:section name="content">
 		
 		<f:flashMessages />
-<div class="cookie-set"><f:translate key="cookiefreigabe.setcookie" /></div>
+    <div class="cookie-set"><f:if condition="{linktext}"><f:then>{linktext}</f:then><f:else><f:translate key="cookiefreigabe.setcookie" /></f:else></f:if></div>
 <div class="waconcookiemanagement <f:if condition="{cookieanzeige}"><f:then>firsthidden</f:then><f:else></f:else></f:if>">
 <div id="CookieBox" class="cookiemanagement">
   <div class="middle-center">
    <div class="intro">
     <div class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
-    <h2><f:translate key="cookiefreigabe.header" /></h2>
-    <p ><f:translate key="cookiefreigabe.intro" /></p>
+    <h2><f:if condition="{header}"><f:then>{header}</f:then><f:else><f:translate key="cookiefreigabe.header" /></f:else></f:if></h2>
+    <p ><f:if condition="{teaser}"><f:then>{teaser}</f:then><f:else><f:translate key="cookiefreigabe.intro" /></f:else></f:if></p>
 	
 
     <p class="cookie-accept"><a class="cookie-btn cursor none" data-cookie-accept><f:translate key="cookiefreigabe.accept" /></a></p>
