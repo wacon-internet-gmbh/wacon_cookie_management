@@ -41,7 +41,12 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         	if (substr($cookiearray['1'],0,10)<$change)  setcookie("waconcookiemanagement", "",time()-1);
       	}
           
-
+      $header = $this->settings['header'];
+      $this->view->assign('header', $header);
+      $teaser = $this->settings['teaser'];
+      $this->view->assign('teaser', $teaser);
+      $linktext = $this->settings['linktext'];
+      $this->view->assign('linktext', $linktext);
  	$imprint = $this->settings['imprint'];
         $this->view->assign('imprint', $imprint);
  	$dataprotection = $this->settings['dataProtection'];
