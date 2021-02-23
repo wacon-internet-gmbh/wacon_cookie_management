@@ -3,39 +3,39 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
 		<header/>
 		<body>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+			<trans-unit id="cookiefreigabe">
 				<source>Cookie</source>
                                 <target>Cookie</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+			<trans-unit id="cookiefreigabe.bezeichnung">
 				<source>Description</source>
 <target>Bezeichnung</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+			<trans-unit id="cookiefreigabe.kategorie">
 				<source>Categorie</source>
 <target>Kategorie</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+			<trans-unit id="cookiefreigabe.anbieter">
 				<source>Provider</source>
 <target>Anbieter</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+			<trans-unit id="cookiefreigabe.zweck">
 				<source>Purpose</source>
 <target>Zweck</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+			<trans-unit id="cookiefreigabe.cookiename">
 <source>Cookiename</source>				
 <target>Cookiename</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+			<trans-unit id="cookiefreigabe.laufzeit">
 					<source>Runtime</source>
 <target>Laufzeit</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+			<trans-unit id="cookiefreigabe.datenschutzlink">
 					<source>Privacy source url</source>
 <target>Datenschutzlink</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+			<trans-unit id="cookiefreigabe.host">
 				<source>Host</source>
 <target>Host</target>
 			</trans-unit>
