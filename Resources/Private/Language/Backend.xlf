@@ -5,34 +5,34 @@
         <header/>
         <body>
             <trans-unit id="settings.script.cookie">
-                <source>Required Cookie</source>
+                <source>Required cookie</source>
             </trans-unit>
             <trans-unit id="settings.script.text">
-                <source>Show text if Cookie is not accepted</source>
+                <source>Show text if cookie is not accepted</source>
             </trans-unit>
             <trans-unit id="settings.script.script">
                 <source>Script</source>
             </trans-unit>
             <trans-unit id="settings.script.bild">
-                <source>Show image if Cookie is not accepted</source>
+                <source>Show image if cookie is not accepted</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.nurlink">
-                <source>Show link to Cookiebox</source>
+                <source>Show link to cookie box</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.imprint">
                 <source>Imprint url</source>
             </trans-unit>
              <trans-unit id="settings.cookiefreigabe.change">
-                <source>Last change in cookie-configuration</source>
+                <source>Last change in cookie configuration</source>
             </trans-unit>
              <trans-unit id="settings.cookiefreigabe.header">
-                <source>Header in cookiebox</source>
+                <source>Header in cookie box</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.teaser">
-                <source>Teaser in cookiebox</source>
+                <source>Teaser in cookie box</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.linktext">
-                <source>Text (link to Cookiesettings)</source>
+                <source>Text link to cookie settings</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.dataprotection">
                 <source>Privacy source url</source>
