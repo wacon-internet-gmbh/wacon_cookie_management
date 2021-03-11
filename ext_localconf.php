@@ -57,19 +57,19 @@ call_user_func(
             }
        }'
     );
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		
-			$iconRegistry->registerIcon(
-				'wacon_cookie_management-plugin-cookiefreigabe',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
-			);
-		
-			$iconRegistry->registerIcon(
-				'wacon_cookie_management-plugin-script',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png']
-			);
+    $iconRegistry->registerIcon(
+        'wacon_cookie_management-plugin-cookiefreigabe',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_cookiefreigabe.svg']
+    );
+
+    $iconRegistry->registerIcon(
+        'wacon_cookie_management-plugin-script',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_script.svg']
+    );
 		
     }
 );
