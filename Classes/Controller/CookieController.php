@@ -97,6 +97,9 @@ $cookie1check = 0;
     {
 	$cookie = $_COOKIE['waconcookiemanagement']; 
 	$content2 = $this->settings['bild'];
+  	$cObj = $this->configurationManager->getContentObject();
+      	$uid = $cObj->data['uid'];
+
 	$cookiearray = explode('ts',$cookie);
 	if ($cookiearray[0]=='max') $content1=$this->settings['script'];
 	else{
