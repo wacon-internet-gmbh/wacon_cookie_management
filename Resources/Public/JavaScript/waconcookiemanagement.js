@@ -2,7 +2,7 @@ function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   var maxage = "max-age="+ 24 * 60 * 60 * 365;
 
-  document.cookie = cname + "=" + cvalue + "ts" + Date.now() +   ";" + maxage + ";path=/";
+  document.cookie = cname + "=setwcm" + cvalue + "ts" + Date.now() +   ";" + maxage + ";path=/";
 }
 
 function getCookie(cname) {

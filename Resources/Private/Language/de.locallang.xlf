@@ -3,7 +3,75 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
 		<header/>
 		<body>
-			<trans-unit id="cookiefreigabe">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+				<source>Cookie</source>
+                                <target>Cookie</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+				<source>Description</source>
+<target>Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+				<source>Categorie</source>
+<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+				<source>Provider</source>
+<target>Anbieter</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+				<source>Purpose</source>
+<target>Zweck</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+<source>Cookiename</source>				
+<target>Cookiename</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+					<source>Runtime</source>
+<target>Laufzeit</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+					<source>Privacy source url</source>
+<target>Datenschutzlink</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+				<source>Host</source>
+<target>Host</target>
+			</trans-unit>
+			<trans-unit id="stats.month">
+				<source>Month</source>
+				<target>Monat</target>
+			</trans-unit>
+			<trans-unit id="stats.year">
+				<source>Year</source>
+				<target>Jahr</target>
+			</trans-unit>
+			<trans-unit id="stats.intro">
+				<source>The following is an overview of the selected cookie settings:</source>
+				<target>Im Folgenden erhalten Sie einen Überblick über die ausgewählten Cookieeinstellungen:</target>
+			</trans-unit>
+			<trans-unit id="stats.submit">
+				<source>refresh</source>
+				<target>aktualisieren</target>
+			</trans-unit>
+			<trans-unit id="stats.all">
+				<source>Allow all cookies</source>
+				<target>Alle Cookies erlauben</target>
+			</trans-unit>
+			<trans-unit id="stats.custom">
+				<source>Individual cookie settings</source>
+				<target>Individuelle Cookie-Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="stats.none">
+				<source>Allow only necessary cookie</source>
+				<target>Nur notwendige Cookies erlauben</target>
+			</trans-unit>
+			<trans-unit id="stats.noresults">
+				<source>No Results</source>
+				<target>Keine Ergebnisse</target>
+			</trans-unit>
+					<trans-unit id="cookiefreigabe">
 				<source>Cookie</source>
                                 <target>Cookie</target>
 			</trans-unit>

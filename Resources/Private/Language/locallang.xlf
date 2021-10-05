@@ -3,6 +3,65 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
 		<header/>
 		<body>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
+				<source>Cookie Reports</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
+				<source>Cookie Konfiguration</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+				<source>Cookie</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+				<source>Categorie</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+				<source>Provider</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+				<source>Purpose</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+				<source>Cookiename</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+				<source>Runtime</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+				<source>Privacy source url</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+				<source>Host</source>
+			</trans-unit>
+
+		
+			<trans-unit id="stats.month">
+				<source>Month</source>
+			</trans-unit>
+			<trans-unit id="stats.year">
+				<source>Year</source>
+			</trans-unit>
+			<trans-unit id="stats.intro">
+				<source>The following is an overview of the selected cookie settings:</source>
+			</trans-unit>
+			<trans-unit id="stats.submit">
+				<source>refresh</source>
+			</trans-unit>
+			<trans-unit id="stats.all">
+				<source>Allow all cookies</source>
+			</trans-unit>
+			<trans-unit id="stats.custom">
+				<source>Individual cookie settings</source>
+			</trans-unit>
+			<trans-unit id="stats.none">
+				<source>Allow only necessary cookie</source>
+			</trans-unit>
+			<trans-unit id="stats.noresults">
+				<source>No Results</source>
+			</trans-unit>
 			<trans-unit id="cookiefreigabe">
 				<source>Cookie</source>
 			</trans-unit>
@@ -119,8 +178,6 @@
 			<trans-unit id="cookiefreigabe.close">
 				<source>X</source>
 			</trans-unit>
-
-
 
 		</body>
 	</file>

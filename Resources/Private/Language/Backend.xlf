@@ -4,7 +4,8 @@
           product-name="bootstrap_package">
         <header/>
         <body>
-            <trans-unit id="settings.script.cookie">
+
+ <trans-unit id="settings.script.cookie">
                 <source>Required Cookie</source>
             </trans-unit>
             <trans-unit id="settings.script.text">
@@ -17,7 +18,7 @@
                 <source>Show image if Cookie is not accepted</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.nurlink">
-                <source>Show link to cookie box</source>
+                <source>Only Show link to cookie box</source>
             </trans-unit>
             <trans-unit id="settings.cookiefreigabe.imprint">
                 <source>Imprint url</source>
@@ -37,7 +38,6 @@
             <trans-unit id="settings.cookiefreigabe.dataprotection">
                 <source>Privacy source url</source>
             </trans-unit>
-
 
    </body>
     </file>

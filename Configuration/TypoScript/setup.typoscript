@@ -40,6 +40,19 @@ plugin.tx_waconcookiemanagement_script {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
+
+# Module configuration
+module.tx_waconcookiemanagement_report {
+    persistence {
+        storagePid = {$module.tx_waconcookiemanagement_report.persistence.storagePid}
+    }
+    view {
+        templateRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Templates/
+        partialRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Partials/
+        layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Layouts/
+    }
+}
+
 page.includeJS{
 ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
 }
@@ -85,3 +98,4 @@ plugin.tx_waconcookiemanagement._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+

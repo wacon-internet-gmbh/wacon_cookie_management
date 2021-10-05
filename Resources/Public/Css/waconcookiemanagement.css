@@ -50,7 +50,7 @@
     width: 60%;
     max-width: 100%;
     max-height: 80%;
-    overflow: hidden;
+    overflow: auto;
     background: #fff;
     padding: 70px 20px 20px;
     border-radius: 5px;
@@ -357,7 +357,7 @@
 @media(max-width: 1000px) {
     #CookieBox {
         left: 2%;
-        width: 88%;
+        width: 96%;
         top: 5%;
         max-height: 90%;
         min-height: 90%;
