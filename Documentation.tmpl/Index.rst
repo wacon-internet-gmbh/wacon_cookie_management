@@ -1,64 +1,60 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+.. every .rst file should include Includes.txt
+.. use correct path!
 
 .. include:: Includes.txt
+
+.. Every manual should have a start label for cross-referencing to
+.. start page. Do not remove this!
 
 .. _start:
 
 =============================================================
-Wacon Cookie Management
+Extension Name
 =============================================================
 
-.. only:: html
+:Version:
+   |2.1.0|
 
-	:Classification:
-		wacon_cookie_management
+:Language:
+   en
 
-	:Version:
-		|release|
+:Authors:
+   WACON Internet GmbH
 
-	:Language:
-		en
+:Email:
+   info@wacon.de
 
-	:Description:
-		Verschiedene Cookies können individuell zugelassen werden. Unterscheidung in notwendige und optionale Cookies
+:License:
+   This extension documentation is published under the
+   `CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__ (Creative Commons)
+   license
 
-	:Keywords:
-		comma,separated,list,of,keywords
+wacon_cookie_extension(WCM) is a typo3 extension that enables website visitors to control and manage the usage of cookies and other external resources(e.g. youtube, analytics, social media timelines etc.) on the website(commonly known as "cookie consent box"). Thus it helps website owner to be in line with the rules of the General Data Protection Regulation (GDPR) which took effect on 25 May 2018.
 
-	:Copyright:
-		2019
+**TYPO3**
 
-	:Author:
-		Kerstin Schmitt
+The content of this document is related to TYPO3 CMS,
+a GNU/GPL CMS/Framework available from `typo3.org <https://typo3.org/>`_ .
 
-	:Email:
-		info@wacon.de
+**Community Documentation**
 
-	:License:
-		This document is published under the Open Content License
-		available from http://www.opencontent.org/opl.shtml
+This documentation is community documentation for the TYPO3 extension {extension.name}
 
-	:Rendered:
-		|today|
+It is maintained as part of this third party extension.
 
-	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
+**Extension Manual**
 
-	**Table of Contents**
+This documentation is for the TYPO3 extension wacon_cookie_management.
+
 
 .. toctree::
-	:maxdepth: 3
-	:titlesonly:
+   :maxdepth: 3
 
-	Introduction/Index
-	User/Index
-	Administrator/Index
-	Configuration/Index
-	Developer/Index
-	KnownProblems/Index
-	ToDoList/Index
-	ChangeLog/Index
-	Links
+   Introduction/Index
+   Editor/Index
+   Installation/Index
+   Configuration/Index
+   Developer/Index
+   KnownProblems/Index
+   Changelog/Index
+   Sitemap

@@ -1,46 +1,73 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
 .. include:: ../Includes.txt
-
 
 .. _introduction:
 
+============
 Introduction
 ============
 
-
-.. _what-it-does:
-
 What does it do?
-----------------
+================
+wacon_cookie_management(WCM) is a TYPO3 extension that enables website owner to comply to the General Data Protection Regulation(GDPR) in terms of the usage of cookies an the inclusion of external ressources. The PlugIn displays a cookie consent box whenever the permission of a website visitor is necessary(so called "opt-in" method), saves the settings and generates a cookie to identify the user in further page requests.
 
-This chapter should give a brief overview of the extension. What does it do? What problems does it solve?
-Who is interested in this? Basically, this section includes everything people need to know to decide whether they
-should go on with this extension or not.
+Types of cookies
+================
+If you run a website you have to consider at least two types of cookies:
 
-.. important::
+- **necessary cookies** are those which are essential for a website to run properly(e.g. session cookies for a shopping cart or a password protected login area)
+- **non-essential cookies** like tracking or third party cookies. These cookies are usually not necessary(in a technical sense) to run a website  and are therefore subject to approval.
 
-   Please don't forget to repeat your extension's version number in the
-   :file:`Settings.yml` file, in the :code:`release` property. It will be
-   automatically picked up on the cover page by the :code:`|release|`
-   substitution.
+Most common external ressources
+================
+Ask the website visitor for consent BEFORE you use: 
 
+- social media plug ins(e.g. "timelines")
+- google Maps
+- external fonts(we recommend to install fonts locally)
+- Youtube videos
+- all other services included via iframe from an external server
+
+Advantages of wacon_cookie_management(WCM)
+============================
+
+- WCM is easy to integrate
+- WCM offers user control not only for cookies but external ressources as well
+- WCM doesn't need third party server or cookies
+- WCM is fully customizable in terms of layout
+- WCM offers TYPO3 editors an easy way to manage cookies, categories of cookies and a plugin for external ressourecs
+- WCM shows reports about the choices vistors made(anonymous by counting every chosen option)
 
 .. _screenshots:
 
 Screenshots
------------
+===========
+The layout, position, content, images and options can be fully customized. Here are some samples:
 
-This chapter should help people figure how the extension works. Remove it
-if not relevant.
-
-.. figure:: ../Images/IntroductionPackage.png
+.. figure:: ../Images/wcm_screenshot1.jpg
+   :class: with-shadow
+   :alt: Sample of wacon_cookie_consent_box 
    :width: 500px
-   :alt: Introduction Package
 
-   Introduction Package just after installation (caption of the image)
+   Frontend view of the cookie consent box
+   
+.. figure:: ../Images/wcm_screenshot2.jpg
+   :class: with-shadow
+   :alt: Link to open the cookie consent box 
+   :width: 500px
 
-   How the Frontend of the Introduction Package looks like just after installation (legend of the image)
+   Visitors can change their preferences on any page via footer link
+     
+.. figure:: ../Images/wcm_screenshot3.jpg
+   :class: with-shadow
+   :alt: "frosted glass effect"
+   :width: 500px
+
+   "Frosted glass effect" to visualize a required consent
+   
+.. figure:: ../Images/wcm_screenshot4.jpg
+   :class: with-shadow
+   :alt: Dashboard integration
+   :width: 500px
+
+   Dashboard integration with counter for "Allow all cookies", "Allow only necessary cokkies", "Individual cookie settings"
+

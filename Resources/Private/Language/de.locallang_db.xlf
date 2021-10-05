@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
+		<header/>
+		<body>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+				<source>Cookie</source>
+				<target>Cookie</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+				<source>Short description</source>
+				<target>Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+				<source>Category</source>
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie.0">
+				<source>Essential</source>
+				<target>Notwendig</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie.1">
+				<source>Statistics</source>
+				<target>Statistik</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie.2">
+				<source>Marketing</source>
+				<target>Marketing</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie.3">
+				<source>External Ressources</source>
+				<target>Externe Inhalte</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+				<source>Vendor</source>
+				<target>Anbieter des Cookies</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+				<source>Purpose</source>
+				<target>Zweck: eine kurze Beschreibung, wofür der Cookie benötigt wird</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+				<source>Cookie name</source>
+				<target>Cookiename</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+				<source>Duration</source>
+				<target>Laufzeit</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+				<source>Link to Privacy Policy</source>
+				<target>Datenschutzlink (externer Link zur Datenschutzerklärung des Anbieters)</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+				<source>Server name</source>
+				<target>Host der den Cookie setzt (bei externen Cookies)</target>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.name">
+				<source>Cookie - Freigabe</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.description">
+				<source>Freigabe der Cookies</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_script.name">
+				<source>Include external ressource</source>
+				<target>Externe Ressource einbinden</target>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_script.description">
+				<source>Include external ressource</source>
+				<source>Externe Ressource einbinden</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

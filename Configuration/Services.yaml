@@ -1,0 +1,29 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Waconcookiemanagement\WaconCookieManagement\Widgets\:
+    resource: '../Classes/Widgets/*'
+  dashboard.buttons.wcmstat:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'more'
+      $link: 'https://typo3.org/project/news'
+      $target: '_blank'
+  dashboard.widget.wcmstat:
+    class: 'Waconcookiemanagement\WaconCookieManagement\Widgets\DoughnutChartWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $dataProvider: '@Waconcookiemanagement\WaconCookieManagement\Widgets\Provider\TypeOfUsersChartDataProvider'
+      $buttonProvider: '@Waconcookiemanagement\WaconCookieManagement\Widgets\Provider\WCMButtonProvider'
+    tags:
+      - name: dashboard.widget
+        identifier: 'wcmstat'
+        groupNames: 'general'
+        title: 'WCM Statistik'
+        description: 'Welche Option wählen Ihre Besucher?'
+        iconIdentifier: 'content-widget-chart-pie'
+        height: 'medium'
+        width: 'medium'
