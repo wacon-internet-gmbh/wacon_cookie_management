@@ -47,9 +47,9 @@ class TypeOfUsersChartDataProvider implements ChartDataProviderInterface
         
         return [
             'labels' => [
-                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:stats.all'),
-                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:stats.custom'),
-                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:stats.none')
+                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:stats.all').'('.$maxCookies.')',
+                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:stats.custom').'('.$customCookies.')',
+                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:stats.none').'('.$minCookies.')'
             ],
             'datasets' => [
                 [
