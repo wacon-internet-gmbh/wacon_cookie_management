@@ -1,27 +1,38 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext: "wacon_cookie_management"
+ * Extension Manager/Repository config file for ext "wacon_cookie_management".
  *
+ * Auto generated 13-10-2021 09:09
+ *
+ * Manual updates:
+ * Only the data in the array - everything else is removed by next
+ * writing. "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = [
-    'title' => 'Wacon Cookie Management',
-    'description' => 'WCM is a typo3 extension that enables website visitors to control and manage the usage of cookies on the website (commonly known as "cookie consent box"). Thus it helps website owner to be in line with the rules of the General Data Protection Regulation (GDPR) which took effect on 25 May 2018.',
-    'category' => 'plugin',
-    'author' => 'Kerstin Schmitt',
-    'author_email' => 'info@wacon.de',
-    'author_company' => 'WACON Internet GmbH',
-    'state' => 'stable',
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'clearCacheOnLoad' => 0,
-    'version' => '3.2.1',
-    'constraints' => [
-        'depends' => [
-            'typo3' => '10.4.0-11.5.99',
-        ],
-        'conflicts' => [],
-        'suggests' => [],
-    ],
-];
+$EM_CONF[$_EXTKEY] = array (
+  'title' => 'Wacon Cookie Management',
+  'description' => 'WCM is a typo3 extension that enables website visitors to control and manage the usage of cookies on the website (commonly known as "cookie consent box"). Thus it helps website owner to be in line with the rules of the General Data Protection Regulation (GDPR) which took effect on 25 May 2018.',
+  'category' => 'plugin',
+  'version' => '3.2.1',
+  'state' => 'stable',
+  'uploadfolder' => false,
+  'clearcacheonload' => false,
+  'author' => 'Kerstin Schmitt',
+  'author_email' => 'info@wacon.de',
+  'author_company' => 'WACON Internet GmbH',
+  'constraints' => 
+  array (
+    'depends' => 
+    array (
+      'typo3' => '10.4.0-11.5.99',
+    ),
+    'conflicts' => 
+    array (
+    ),
+    'suggests' => 
+    array (
+    ),
+  ),
+);
+
