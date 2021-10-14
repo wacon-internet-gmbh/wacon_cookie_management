@@ -62,6 +62,15 @@
 			<trans-unit id="stats.none">
 				<source>Allow only necessary cookie</source>
 			</trans-unit>
+			<trans-unit id="stats.total">
+				<source>Total cookie settings</source>
+			</trans-unit>
+			<trans-unit id="stats.link">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="stats.entry">
+				<source>Entry points</source>
+			</trans-unit>
 			<trans-unit id="stats.noresults">
 				<source>No Results</source>
 			</trans-unit>

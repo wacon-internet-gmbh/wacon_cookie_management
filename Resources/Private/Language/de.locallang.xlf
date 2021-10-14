@@ -79,6 +79,18 @@
 				<source>Allow only necessary cookie</source>
 				<target>Nur notwendige Cookies erlauben</target>
 			</trans-unit>
+				<trans-unit id="stats.total">
+				<source>Total cookie settings</source>
+				<target>Cookies gesamt</target>
+			</trans-unit>
+			<trans-unit id="stats.link">
+				<source>Page</source>
+				<target>Seite</target>
+			</trans-unit>
+			<trans-unit id="stats.entry">
+				<source>Entry points</source>
+					<target>Entry points</target>
+			</trans-unit>
 			<trans-unit id="stats.noresults">
 				<source>No Results</source>
 				<target>Keine Ergebnisse</target>
