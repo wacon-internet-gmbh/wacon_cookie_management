@@ -86,6 +86,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
                           <td>{reports.2-> f:count()}</td>
                          </tr>
                     </table>
+                    
+                    <table class="table">
+                      <f:for each="{pages}" as="page">
+                        <tr>
+                          <td>{page.page}</td>
+                          <td>{page.count}</td>
+                         </tr>
+                      </f:for>
+                   </table>
+                    
    </f:then><f:else><p><f:translate key="stats.noresult" /></p></f:else></f:if>
    <p class="text-muted text-center">powered by WACON Internet GmbH</p>
       </f:be.container>

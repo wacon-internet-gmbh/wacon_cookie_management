@@ -77,7 +77,33 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $reports[] = $this->statRepository->findReports($jahr,$monat,'max');
         $reports[] = $this->statRepository->findReports($jahr,$monat,'custom');
         $reports[] = $this->statRepository->findReports($jahr,$monat,'min');
+
+        $reportpages = $this->statRepository->findReports($jahr,$monat,'');
+       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($reportpages);
+        $pages = array();
+        foreach($reportpages as $reportpage){
+            if($reportpage->getSeite()){
+                $pages[$reportpage->getSeite()]+=1;
+             
+            }
+        }
+        arsort($pages);
+        $i=0;
+        foreach($pages as $key => $value){
+            if($i<10){
+               
+                $site = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Site\SiteFinder::class)->getSiteByPageId($key);
+                $url = (string)$site->getRouter()->generateUri(2);
+                if($url)$shortpage['page'] = $url;
+                else $shortpage['page'] = $key;
+                $shortpage['count'] = $value;
+                $shortpages[]=$shortpage;
+                $i+=1;
+            }
+        }
+         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($shortpages);
         $this->view->assign('reports', $reports);
+        $this->view->assign('pages', $shortpages);
        
     }
 

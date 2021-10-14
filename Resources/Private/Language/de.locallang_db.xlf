@@ -69,6 +69,18 @@
 				<source>Include external ressource</source>
 				<source>Externe Ressource einbinden</source>
 			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
+				<source>Cookie Reports</source>
+				<source>Cookie Reports</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
+				<source>Cookie Konfiguration</source>
+				 <target>Cookie Konfiguration</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
+				<source>Page</source>
+				 <target>Seite</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

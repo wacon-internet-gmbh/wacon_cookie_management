@@ -3,6 +3,18 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
 		<header/>
 		<body>
+		<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
+				<source>Cookie Reports</source>
+				<source>Cookie Reports</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
+				<source>Cookie Konfiguration</source>
+				 <target>Cookie Konfiguration</target>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
+				<source>Page</source>
+				 <target>Seite</target>
+			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
 				<source>Cookie</source>
                                 <target>Cookie</target>

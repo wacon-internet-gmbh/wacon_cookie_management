@@ -24,6 +24,13 @@ class Stat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $cookieconfig = '';
 
+        /**
+     * seite
+     *
+     * @var string
+     */
+    protected $seite = '';
+
    
     /**
      * Returns the cookieconfig
@@ -44,6 +51,28 @@ class Stat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCookieconfig($cookieconfig)
     {
         $this->cookieconfig = $cookieconfig;
+    }
+
+   
+    /**
+     * Returns the seite
+     *
+     * @return string $seite
+     */
+    public function getSeite()
+    {
+        return $this->seite;
+    }
+
+    /**
+     * Sets the seite
+     *
+     * @param string $seite
+     * @return void
+     */
+    public function setSeite($seite)
+    {
+        $this->seite = $seite;
     }
 
 /**

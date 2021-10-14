@@ -9,6 +9,9 @@
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
 				<source>Cookie Konfiguration</source>
 			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
+				<source>Page</source>
+			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
 				<source>Cookie</source>
 			</trans-unit>

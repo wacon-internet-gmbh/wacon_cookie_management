@@ -75,6 +75,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         if($cookieneu=='min') $newStat->setCookieconfig('min');
         elseif($cookieneu=='max') $newStat->setCookieconfig('max');
         else $newStat->setCookieconfig('custom');
+        $newStat->setSeite($GLOBALS["TSFE"]->id);
  
         $newStat->setPid($GLOBALS['TSFE']->rootLine[0]['uid']);
         $cookies0 = $this->cookieRepository->findByKategorie(0);
