@@ -6,6 +6,7 @@ WCM is a typo3 extension that enables website visitors to control and manage the
 ## Compatibility
 TYPO3 version  | compatibility
 ------------- | -------------
+v11  |  yes
 v10  |  yes
 v9  | yes
 v8 | yes
