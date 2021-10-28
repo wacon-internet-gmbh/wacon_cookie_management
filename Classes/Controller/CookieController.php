@@ -81,7 +81,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $cookies0 = $this->cookieRepository->findByKategorie(0);
         $this->statRepository->add($newStat);
          //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newStat);
-        setcookie("waconcookiemanagement", $cookieneu,time()+(3600*24*365));
+        //setcookie("waconcookiemanagement", $cookieneu,time()+(3600*24*365));
       }
       $cookie = $_COOKIE['waconcookiemanagement'];
       $cookiearray = explode('ts',$cookie);
@@ -158,7 +158,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       if ($cookiearray[0]=='max') 
       $content1=$this->settings['script'];
       else{
-       $res=explode("c",$cookie);
+       $res=explode("c",$cookiearray[0]);
          foreach($res as $value){
            if($value == $this->settings['cookie'])$content1=$this->settings['script'];
          }
