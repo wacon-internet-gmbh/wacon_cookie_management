@@ -47,7 +47,6 @@ $('.waconcookiemanagement').prependTo("body");
     if(!$(".waconcookiemanagement").hasClass("firsthidden")){
       $(".waconcookiemanagement").show();
       $(".waconcookiemanagement").focus();
-      //setCookie("waconcookiemanagement", "min", Date.now());
       $(".cookieclose").hide();
     }
   }
@@ -90,6 +89,9 @@ $(".cookie-set").click(function(event) {
     for (i = 0; i < 30; i++) {
       if($(this).hasClass("cookieuid-" + i)){
         $(".cookieinfo-" + i).parent().show();
+        $(".cookieinfo-" + i).parent().prev().hide();
+        $( ".cookie-on.cookie" + i ).show();
+        $( ".cookie-off.cookie" + i ).hide();
       }
       
      }
@@ -120,6 +122,7 @@ $(".cookie-set").click(function(event) {
     }
   } 
   $(".waconcookiemanagement").show();
+  
   $(".cookie-accept").focus();
   if($(this).hasClass('cookiecontent')){
     $( ".box-cookie-management" ).show();
@@ -134,7 +137,12 @@ $(".cookie-set").click(function(event) {
     $(".intro").hide();
     for (i = 0; i < 30; i++) {
       if($(this).hasClass("cookieuid-" + i)){
+    
         $(".cookieinfo-" + i).parent().show();
+        $(".cookieinfo-" + i).parent().prev().hide();
+        $( ".cookie-on.cookie" + i ).show();
+        $( ".cookie-off.cookie" + i ).hide();
+
       }
       
      }
