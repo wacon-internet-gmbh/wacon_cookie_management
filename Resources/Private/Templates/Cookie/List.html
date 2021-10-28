@@ -38,6 +38,7 @@
 	<div class="box-cookie-management-in">
     <h2><f:translate key="cookiefreigabe.header2" /></h2>
     <p><f:translate key="cookiefreigabe.intro2" /></p>
+    <f:if condition="{cookies0}">
     <div class="category">      
       <h3><f:translate key="cookiefreigabe.notwendig" /></h3>
       <p><f:translate key="cookiefreigabe.notwendigdesc" /></p>
@@ -59,6 +60,7 @@
         </f:for>
       </div>
     </div>
+  </f:if>
     <f:if condition="{cookies1}">
       <div class="category">
         <div tabindex="0" class="cookie-off cookiecat cookiecat-s"  <f:if condition="{cookie1check}">style="display:none"</f:if>><div class="deactivated"><span class="off"></span></div></div>
