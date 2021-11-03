@@ -48,14 +48,14 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $jahr =$this->request->getArgument('jahr'); 
         }
         else{
-            $jahr = date('Y');
+            $jahr = '';
         }
         
         if($this->request->hasArgument('monat')){
             $monat =$this->request->getArgument('monat'); 
         }
         else{
-            $monat = date('n');
+            $monat = '';
         }
         $firstyear = $this->statRepository->findFirstReports();
          // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($firstyear);
@@ -92,7 +92,8 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         foreach($pages as $key => $value){
             if($i<10){
                 $site = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Site\SiteFinder::class)->getSiteByPageId($key);
-                $url = (string)$site->getRouter()->generateUri(2);
+                $url = (string)$site->getRouter()->generateUri($key);
+                //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($url);
                 if($url)$shortpage['page'] = $url;
                 else $shortpage['page'] = $key;
                 $shortpage['count'] = $value;
@@ -103,7 +104,7 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                 $i+=1;
             }
         }
-         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($shortpages);
+         
         $this->view->assign('reports', $reports);
         $this->view->assign('reportpages', $reportpages);
         $this->view->assign('pages', $shortpages);

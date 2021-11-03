@@ -26,22 +26,21 @@ class StatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findReports(string $jahr, string $monat, string $cookieconfig)
     {
         $query = $this->createQuery();
-
+        $constraints = [];
         if($jahr){
             if($monat){
-       $monthstart=mktime ( 0 , 0 , 0 , intval($monat) ,1 , intval($jahr) );
-       $monthend=mktime ( 0 , 0 , 0 , intval($monat)+1 ,1 , intval($jahr) );
+                $monthstart=mktime ( 0 , 0 , 0 , intval($monat) ,1 , intval($jahr) );
+                $monthend=mktime ( 0 , 0 , 0 , intval($monat)+1 ,1 , intval($jahr) );
+            }
+            else{ $monthstart=mktime ( 0 , 0 , 0 , 1 ,1 , intval($jahr) );
+                $monthend=mktime ( 0 , 0 , 0 , 13 ,1 , intval($jahr) );
+            }
+            $constraints[] = $query->greaterThanOrEqual('crdate', $monthstart);
+            $constraints[] = $query->lessThan('crdate', $monthend);
         }
-        else{ $monthstart=mktime ( 0 , 0 , 0 , 1 ,1 , intval($jahr) );
-            $monthend=mktime ( 0 , 0 , 0 , 13 ,1 , intval($jahr) );}
-        }
-       $constraints = [];
-       if($jahr){
-       $constraints[] = $query->greaterThanOrEqual('crdate', $monthstart);
-       $constraints[] = $query->lessThan('crdate', $monthend);
-       if($cookieconfig)$constraints[] = $query->like('cookieconfig', $cookieconfig);
-    }
-
+        if($cookieconfig)$constraints[] = $query->like('cookieconfig', $cookieconfig);
+    
+        if($constraints)
         $query->matching($query->logicalAnd($constraints));
         return $query->execute();
     }
@@ -49,23 +48,22 @@ class StatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findReportspage(string $jahr, string $monat, string $cookieconfig, int $page)
     {
         $query = $this->createQuery();
-
+        $constraints = [];
         if($jahr){
             if($monat){
-       $monthstart=mktime ( 0 , 0 , 0 , intval($monat) ,1 , intval($jahr) );
-       $monthend=mktime ( 0 , 0 , 0 , intval($monat)+1 ,1 , intval($jahr) );
+                $monthstart=mktime ( 0 , 0 , 0 , intval($monat) ,1 , intval($jahr) );
+                $monthend=mktime ( 0 , 0 , 0 , intval($monat)+1 ,1 , intval($jahr) );
+            }
+            else{ $monthstart=mktime ( 0 , 0 , 0 , 1 ,1 , intval($jahr) );
+                $monthend=mktime ( 0 , 0 , 0 , 13 ,1 , intval($jahr) );
+            }
+            $constraints[] = $query->greaterThanOrEqual('crdate', $monthstart);
+            $constraints[] = $query->lessThan('crdate', $monthend);
         }
-        else{ $monthstart=mktime ( 0 , 0 , 0 , 1 ,1 , intval($jahr) );
-            $monthend=mktime ( 0 , 0 , 0 , 13 ,1 , intval($jahr) );}
-        }
-       $constraints = [];
-       if($jahr){
-       $constraints[] = $query->greaterThanOrEqual('crdate', $monthstart);
-       $constraints[] = $query->lessThan('crdate', $monthend);
-       if($cookieconfig)$constraints[] = $query->like('cookieconfig', $cookieconfig);
-       if($page)$constraints[] = $query->like('seite', $page);
-    }
-
+        if($cookieconfig)$constraints[] = $query->like('cookieconfig', $cookieconfig);
+        if($page)$constraints[] = $query->like('seite', $page);
+    
+if($constraints)
         $query->matching($query->logicalAnd($constraints));
         return $query->execute();
     }

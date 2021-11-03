@@ -26,7 +26,8 @@ $('.waconcookiemanagement').prependTo("body");
  resc= res.split("ts");
  wert= resc[0];
   if (wert != "") {
-    if (wert == "max") {
+    
+    if (wert == "setwcmmax") {
   
       $(".cookie-on").show();
       $(".cookie-off").hide();
@@ -75,7 +76,7 @@ $(".cookie-set").click(function(event) {
   } 
   $(".waconcookiemanagement").show();
   $(".waconcookiemanagement").focus();
-  if($(this).hasClass('cookiecontent')){
+  /*if($(this).hasClass('cookiecontent')){
     $( ".box-cookie-management" ).show();
     $( ".box-cookie-management" ).focus();
     $( ".cookie-fix" ).show();
@@ -95,7 +96,7 @@ $(".cookie-set").click(function(event) {
       }
       
      }
-  }
+  }*/
 
 });
 
@@ -210,7 +211,7 @@ $( ".cookie-management" ).click(function() {
   $(".intro").hide();
 });
 $(".cookie-management").keypress(function(event) {
-  event.preventDefault();
+  
   if (event.key === "Enter") {
     event.preventDefault();
     // Trigger the button element with a click
@@ -396,7 +397,7 @@ $(".cookieclose").keypress(function(event) {
 
 var $menu = $('#CookieBox');
 $(".waconcookiemanagement").on('click', function (e) {
-  e.preventDefault();
+ 
   var wert = getCookie("waconcookiemanagement");
   if (wert != "") {
     // If element is opened and click target is outside it, hide it

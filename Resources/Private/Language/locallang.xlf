@@ -68,6 +68,9 @@
 			<trans-unit id="stats.link">
 				<source>Page</source>
 			</trans-unit>
+			<trans-unit id="stats.pleaseselect">
+				<source>Please select</source>
+			</trans-unit>
 			<trans-unit id="stats.entry">
 				<source>Entry points</source>
 			</trans-unit>

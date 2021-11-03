@@ -22,7 +22,7 @@
 		<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
 			<f:if condition="{content2}">
 				<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
-        			<f:image image="{preview}" title="{preview.title}" style="filter: none;" />
+        			<f:image image="{preview}" title="{preview.title}"  />
 				</f:for>	
 			</f:if>
 			<p>{cookietext}</p>

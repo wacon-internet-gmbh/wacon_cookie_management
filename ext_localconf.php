@@ -13,7 +13,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => ''
+                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'list'
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(

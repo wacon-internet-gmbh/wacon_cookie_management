@@ -59,6 +59,10 @@
 				<source>Year</source>
 				<target>Jahr</target>
 			</trans-unit>
+			<trans-unit id="stats.pleaseselect">
+				<source>Please select</source>
+				<target>Bitte auswählen</target>
+			</trans-unit>
 			<trans-unit id="stats.intro">
 				<source>The following is an overview of the selected cookie settings:</source>
 				<target>Im Folgenden erhalten Sie einen Überblick über die ausgewählten Cookieeinstellungen:</target>

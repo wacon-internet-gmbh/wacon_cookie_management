@@ -118,7 +118,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       }
       else{
 
- $cookies = explode('c',$cookiearray['0']);
+      $cookies = explode('c',$cookiearray['0']);
       $cookie1check = 0;
       foreach($cookies1 as $check){
          if (in_array ( $check->getUid() , $cookies)) $cookie1check = 1;

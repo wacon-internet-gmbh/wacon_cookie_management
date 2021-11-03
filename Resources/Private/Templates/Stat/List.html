@@ -40,6 +40,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                         <td><f:translate key="stats.month" /></td>
                         <td>
                           <f:form.select class="form-control"  name="monat" value="{monat}">
+                            <f:form.select.option value="0"><f:translate key='stats.pleaseselect' /></f:form.select.option>
                            <f:form.select.option value="01">01</f:form.select.option>
                            <f:form.select.option value="02">02</f:form.select.option>
                            <f:form.select.option value="03">03</f:form.select.option>
@@ -56,7 +57,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                       </tr>
                       <tr>
                         <td><f:translate key="stats.year" /></td>
-                        <td><f:form.select class="form-control"  name="jahr"  value="{jahr}" ><f:for each="{years}" as="year">
+                        <td><f:form.select class="form-control"  name="jahr"  value="{jahr}" >
+                          <f:form.select.option value="0"><f:translate key='stats.pleaseselect' /></f:form.select.option>
+                          <f:for each="{years}" as="year">
                           <f:form.select.option value="{year}">{year}</f:form.select.option></f:for>
                         </f:form.select></td>
                       </tr>
