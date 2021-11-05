@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "typo3/cms-core": ">=10.4.2 <11.5.99"
+        "typo3/cms-core": ">=10.4.2 <11.5.99",
+	"typo3/cms-dashboard": ">=10.4.2 <11.5.99"
     },
     "autoload": {
         "psr-4": {
