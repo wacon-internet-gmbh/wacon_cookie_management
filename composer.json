@@ -1,7 +1,8 @@
 {
     "name": "waconcookiemanagement/wacon-cookie-management",
     "type": "typo3-cms-extension",
-    "description": "Verschiedene Cookies k\u00f6nnen individuell zugelassen werden. Unterscheidung in notwendige und optionale Cookies",
+    "description": "Verschiedene Cookies werden individuell zugelassen. Unterscheidung in notwendige und optionale Cookies",
+    "license": "GPL-2.0-or-later",    
     "authors": [
         {
             "name": "Kerstin Schmitt",
@@ -9,7 +10,7 @@
         }
     ],
     "require": {
-        "typo3/cms-core": ">=10.4.2 <11.5.99",
+        "typo3/cms-core": "^10.4 || ^11.0",
 	"typo3/cms-dashboard": ">=10.4.2 <11.5.99"
     },
     "extra": {
@@ -19,16 +20,10 @@
     }
     "autoload": {
         "psr-4": {
-            "Waconcookiemanagement\\WaconCookieManagement\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Waconcookiemanagement\\WaconCookieManagement\\Tests\\": "Tests"
+            "Waconcookiemanagement\\WaconCookieManagement\\": "Classes/"
         }
     },
     "replace": {
-        "wacon_cookie_management": "self.version",
         "typo3-ter/wacon-cookie-management": "self.version"
     }
 }
