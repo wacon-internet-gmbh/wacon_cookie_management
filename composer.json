@@ -17,7 +17,7 @@
         "typo3/cms": {
             "extension-key": "wacon_cookie_management"
         }
-    }
+    },
     "autoload": {
         "psr-4": {
             "Waconcookiemanagement\\WaconCookieManagement\\": "Classes/"
