@@ -38,7 +38,9 @@
             <trans-unit id="settings.cookiefreigabe.dataprotection">
                 <target>Link zur Datenschutzerklärung</target>
             </trans-unit>
-
+            <trans-unit id="settings.registration.title">
+                <target>Einstellungen</target>
+            </trans-unit>
 
    </body>
     </file>

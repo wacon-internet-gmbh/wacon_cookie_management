@@ -38,6 +38,9 @@
             <trans-unit id="settings.cookiefreigabe.dataprotection">
                 <source>Privacy source url</source>
             </trans-unit>
+            <trans-unit id="settings.registration.title">
+                <source>Settings</source>
+            </trans-unit>
 
    </body>
     </file>
