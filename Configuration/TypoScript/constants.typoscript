@@ -23,4 +23,4 @@ plugin.tx_waconcookiemanagement_script {
    
 }
 
-module.tx_waconcookiemanagement_report.persistence.storagePid
+

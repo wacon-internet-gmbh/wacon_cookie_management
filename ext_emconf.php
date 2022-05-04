@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "wacon_cookie_management".
  *
- * Auto generated 13-10-2021 09:09
+ * Auto generated 04-05-2022 09:36
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next

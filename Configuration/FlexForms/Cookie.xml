@@ -4,7 +4,7 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:extkey/Resources/Private/Language/Backend.xlf:settings.registration.title</sheetTitle>
+                    <sheetTitle>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.registration.title</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
