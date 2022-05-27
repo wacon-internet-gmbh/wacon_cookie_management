@@ -18,7 +18,6 @@ class FALViewHelper extends AbstractViewHelper
     }
     public static function renderStatic( array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
     {
-        $resFactory = \TYPO3\CMS\Core\Resource\ResourceFactory::getInstance();
         $table = $arguments['table'] != NULL ? $arguments['table'] : 'tt_content';
         $field = $arguments['field'];
         $uid = intval($arguments['uid']);
