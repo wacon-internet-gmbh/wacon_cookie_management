@@ -3,8 +3,7 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
           product-name="bootstrap_package">
         <header/>
-        <body>
-
+            <body>
             <trans-unit id="settings.script.cookie">
                 <target>Benötigter Cookie</target>
             </trans-unit>
@@ -41,7 +40,6 @@
             <trans-unit id="settings.registration.title">
                 <target>Einstellungen</target>
             </trans-unit>
-
-   </body>
+        </body>
     </file>
 </xliff>

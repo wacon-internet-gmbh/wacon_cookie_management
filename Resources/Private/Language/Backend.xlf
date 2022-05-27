@@ -4,8 +4,7 @@
           product-name="bootstrap_package">
         <header/>
         <body>
-
- <trans-unit id="settings.script.cookie">
+            <trans-unit id="settings.script.cookie">
                 <source>Required Cookie</source>
             </trans-unit>
             <trans-unit id="settings.script.text">
@@ -41,6 +40,6 @@
             <trans-unit id="settings.registration.title">
                 <source>Settings</source>
             </trans-unit>
-   </body>
+        </body>
     </file>
 </xliff>
