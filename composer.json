@@ -9,9 +9,14 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://extensions.typo3.org/extension/wacon_cookie_management",
+    "support": {
+        "source": "https://github.com/wacon-internet-gmbh/wacon_cookie_management",
+        "issues": "https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues"
+    },
     "require": {
         "typo3/cms-core": "^10.4 || ^11",
-	"typo3/cms-dashboard": ">=10.4.2 <11.5.99"
+	    "typo3/cms-dashboard": ">=10.4.2 <11.5.99"
     },
     "extra": {
         "typo3/cms": {
