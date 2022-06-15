@@ -1,6 +1,7 @@
 {
     "name": "waconcookiemanagement/wacon-cookie-management",
     "type": "typo3-cms-extension",
+    "version": "3.2.12",
     "description": "Verschiedene Cookies werden individuell zugelassen. Unterscheidung in notwendige und optionale Cookies",
     "license": "GPL-2.0-or-later",    
     "authors": [
