@@ -76,7 +76,7 @@ $(".cookie-set").click(function(event) {
   } 
   $(".waconcookiemanagement").show();
   $(".waconcookiemanagement").focus();
-  /*if($(this).hasClass('cookiecontent')){
+  if($(this).hasClass('cookiecontent')){
     $( ".box-cookie-management" ).show();
     $( ".box-cookie-management" ).focus();
     $( ".cookie-fix" ).show();
@@ -90,13 +90,12 @@ $(".cookie-set").click(function(event) {
     for (i = 0; i < 30; i++) {
       if($(this).hasClass("cookieuid-" + i)){
         $(".cookieinfo-" + i).parent().show();
-        $(".cookieinfo-" + i).parent().prev().hide();
-        $( ".cookie-on.cookie" + i ).show();
-        $( ".cookie-off.cookie" + i ).hide();
+        $(".cookieinfo-" + i).prev().hide();
+        $(".cookieinfo-" + i).find('.cookie-off').click();
       }
       
      }
-  }*/
+  }
 
 });
 
