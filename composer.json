@@ -22,7 +22,6 @@
         }
     },
     "replace": {
-        "wacon_cookie_management": "self.version",
         "typo3-ter/wacon-cookie-management": "self.version"
     }
 }
