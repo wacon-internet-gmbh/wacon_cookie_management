@@ -12,7 +12,7 @@ Install the extension via composer by using the following command
 
 ::
 
-	composer req waconcookiemanagement/wacon_cookie_management
+	composer req waconcookiemanagement/wacon-cookie-management
 
 Installation via Extension Manager
 ===============

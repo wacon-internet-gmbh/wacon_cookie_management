@@ -53,15 +53,18 @@ module.tx_waconcookiemanagement_report {
     }
 }
 
-page.includeJS{
-ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
-}
+[{$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery} == 1]
+    page.includeJS{
+        ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
+    }
+[END]
+
 page.includeJSFooter{
-waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js 
+    waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
 }
 
 page.includeCSS{
-waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/Css/waconcookiemanagement.css 
+    waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/Css/waconcookiemanagement.css
 }
 
 # these classes are only used in auto-generated templates
