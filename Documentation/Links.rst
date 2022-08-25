@@ -12,13 +12,13 @@ Links
 -----
 
 :TER:
-	https://typo3.org/extensions/repository/view/<extension key>
+	https://extensions.typo3.org/extension/wacon_cookie_management
 
 :Bug Tracker:
-	https://forge.typo3.org/projects/extension-<extension key>/issues
+	https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues
 
 :Git Repository:
-	https://github.com/<username>/<extension key>
+	https://github.com/wacon-internet-gmbh/wacon_cookie_management/
 
 :Contact:
 	`@<username> <https://twitter.com/your-username>`__

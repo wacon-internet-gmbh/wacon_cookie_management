@@ -16,7 +16,7 @@ Install the extension via composer by using the following command
 
 Installation via Extension Manager
 ===============
-Serach for wacon_cookie_management and choose the proper version:
+Search for wacon_cookie_management and choose the proper version:
 
 .. figure:: ../Images/wcm_installation1.jpg
    :class: with-shadow
@@ -40,7 +40,7 @@ Include the WCM Template in your Site Template:
 Define your cookies
 ===============
 
-Create a new folder for your cookies and scripts(here "WCM").
+Create a new folder for your cookies and scripts (here "WCM").
 
 Go to the list module an create a "Cookie" record for each cookie you use on your website
 
