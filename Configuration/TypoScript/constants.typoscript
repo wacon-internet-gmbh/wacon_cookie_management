@@ -8,7 +8,7 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         layoutRootPath = EXT:wacon_cookie_management/Resources/Private/Layouts/
     }
     settings {
-        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=boolean; label=Should sjQuery be included inside this extension or not?
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=boolean; label=Load jQuery
         includeJQuery = 1
     }
 }
