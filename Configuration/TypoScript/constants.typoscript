@@ -1,4 +1,3 @@
-
 plugin.tx_waconcookiemanagement_cookiefreigabe {
     view {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/file; type=string; label=Path to template root (FE)
@@ -8,7 +7,10 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:wacon_cookie_management/Resources/Private/Layouts/
     }
- 
+    settings {
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=boolean; label=Load jQuery
+        includeJQuery = 1
+    }
 }
 
 plugin.tx_waconcookiemanagement_script {
