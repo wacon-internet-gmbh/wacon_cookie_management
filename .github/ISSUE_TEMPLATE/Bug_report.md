@@ -26,7 +26,7 @@ Please describe any steps which are necessary.
 <!--- Only if you have suggestions on a fix for the bug -->
 
 **Additional context**
-Are you using any other extensions which should be mentioned here? e.g. other cookie constent tools?
+Are you using any other extensions which should be mentioned here? e.g. other cookie consent tools?
 Can you provide any screenshots?
 Please provide as many informations as needed so we can fix this error as fast as we can.
 
