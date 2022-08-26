@@ -76,7 +76,7 @@ $(".cookie-set").click(function(event) {
   } 
   $(".waconcookiemanagement").show();
   $(".waconcookiemanagement").focus();
-  if($(this).hasClass('cookiecontent')){
+  /*if($(this).hasClass('cookiecontent')){
     $( ".box-cookie-management" ).show();
     $( ".box-cookie-management" ).focus();
     $( ".cookie-fix" ).show();
@@ -90,12 +90,13 @@ $(".cookie-set").click(function(event) {
     for (i = 0; i < 30; i++) {
       if($(this).hasClass("cookieuid-" + i)){
         $(".cookieinfo-" + i).parent().show();
-        $(".cookieinfo-" + i).prev().hide();
-        $(".cookieinfo-" + i).find('.cookie-off').click();
+        $(".cookieinfo-" + i).parent().prev().hide();
+        $( ".cookie-on.cookie" + i ).show();
+        $( ".cookie-off.cookie" + i ).hide();
       }
       
      }
-  }
+  }*/
 
 });
 
@@ -153,12 +154,14 @@ $(".cookie-set").click(function(event) {
 $( ".cookie-save" ).click(function(event) {
   event.preventDefault();
   wert = "";
-  var i;
-  for (i = 0; i < 40; i++) {
-    if($(".cookie-on.cookie"+i).css("display") == "block"){
-      wert += "c" + i;
+  
+  $('.cookie-info').each(function(){
+    if($(this).find(".cookie-on").css("display") == "block"){
+    var className= $(this).attr('class');
+    var classarray = className.split("-");
+    wert += "c" + classarray['2'];
     }
-  }
+   });
   if (wert == "") {wert = "min";}
   setCookie("waconcookiemanagement", wert, Date.now());
   $(".waconcookiemanagement").hide();
