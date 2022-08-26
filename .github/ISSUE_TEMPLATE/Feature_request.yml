@@ -1,0 +1,17 @@
+name: Feature Request
+description: Do you miss any features inside our extension?
+title: "[FEATURE] <title>"
+labels: [feature]
+body:
+  - type: textarea
+    attributes:
+      label: What feature do you miss?
+      description: Please describe your feature with as many information as needed.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the solution you would like
+      description: Please describe how we can implement this feature.
+    validations:
+      required: false
