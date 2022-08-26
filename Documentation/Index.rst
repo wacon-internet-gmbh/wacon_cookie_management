@@ -37,5 +37,6 @@ Extension Name
    Introduction/Index
    Editor/Index
    Installation/Index
-   Changelog/Index
+   ChangeLog/Index
+   Issues/Index
    Sitemap
