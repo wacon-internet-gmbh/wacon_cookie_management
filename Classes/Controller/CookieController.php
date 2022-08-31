@@ -67,7 +67,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function listAction()
     {
       $change = $this->settings['change'];
-      $cookie = $_COOKIE['waconcookiemanagement']; 
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       if(strpos($cookie,'setwcm')===0){
         $cookieneu = substr($cookie,6,3);
         
@@ -83,10 +83,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
          //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newStat);
         //setcookie("waconcookiemanagement", $cookieneu,time()+(3600*24*365));
       }
-      $cookie = $_COOKIE['waconcookiemanagement'];
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       $cookiearray = explode('ts',$cookie);
       if($change){
-        if (substr($cookiearray['1'],0,10)<$change)  setcookie("waconcookiemanagement", "",time()-1);
+        if (substr($cookiearray['1'] ?? null,0,10)<$change)  setcookie("waconcookiemanagement", "",time()-1);
       }
      
      
