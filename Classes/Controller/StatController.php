@@ -106,12 +106,8 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             }
         }
          
-        $this->view->assign('reports', $reports);
-        $this->view->assign('reportpages', $reportpages);
-        $this->view->assign('pages', $shortpages);
-       
+        $this->view->assign('reports', $reports ?? null);
+        $this->view->assign('reportpages', $reportpages ?? null);
+        $this->view->assign('pages', $shortpages ?? null);
     }
-
-    
-    
 }
