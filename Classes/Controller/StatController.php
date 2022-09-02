@@ -83,7 +83,9 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $pages = array();
         foreach($reportpages as $reportpage){
             if($reportpage->getSeite()){
-                $pages[$reportpage->getSeite()]+=1;
+                if(array_key_exists($reportpage->getSeite(), $pages)) {
+                    $pages[$reportpage->getSeite()] +=1;
+                }
             }
         }
         arsort($pages);
