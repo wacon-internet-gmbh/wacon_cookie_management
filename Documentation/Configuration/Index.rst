@@ -6,32 +6,13 @@
 Configuration
 =============
 
-Typical Example
+Loading of jQuery
 ===============
 
-- Does the integrator need to include a static template?
-- For example add a code snippet with comments
-
-Minimal example of TypoScript:
-
-- Code-blocks have support for syntax highlighting
-- Use any supported language
+This extensions loads its own jQuery file. You can disable it by adding the following TypoScript inside your
+`constants.typoscript` or by editing the constants inside the constant editor in the Template module.
 
 .. code-block:: typoscript
 
-	page.theme.cookieconsent.enable = 0
+    plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery = 0
 
-.. _configuration-typoscript:
-
-TypoScript Reference
-====================
-
-Possible subsections: Reference of TypoScript options.
-The construct below show the recommended structure for TypoScript properties listing and description.
-
-When detailing data types or standard TypoScript features,
-don't hesitate to cross-link to the TypoScript Reference as shown below.
-
-See :ref:`h2document:how-to-document-hyperlinks` for information about how to use cross-references.
-
-See the :file:`Settings.cfg` file for the declaration of cross-linking keys.

@@ -35,8 +35,9 @@ Extension Name
    :maxdepth: 3
 
    Introduction/Index
-   Editor/Index
    Installation/Index
+   Configuration/Index
+   Editor/Index
    ChangeLog/Index
    Issues/Index
    Sitemap
