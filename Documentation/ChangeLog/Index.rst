@@ -6,11 +6,12 @@
 Change log
 ==========
 
-Version 3.2.x
+Version 3.2.13
 --------------
 
 - Bugfixes
 - Added a switch to enable/disable the loading of jQuery inside this extension
+- Updated jQuery to current version 3.6.0
 
 Version 3.2.12
 --------------
