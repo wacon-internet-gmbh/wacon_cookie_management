@@ -10,8 +10,8 @@
 conf.py:
   copyright: 2022
   project: Wacon Cookie Management
-  version: 3.2.12
-  release: 3.2.12
+  version: 3.3.0
+  release: 3.3.0
   intersphinx_mapping:
     t3tsref:
     - http://docs.typo3.org/typo3cms/TyposcriptReference/
