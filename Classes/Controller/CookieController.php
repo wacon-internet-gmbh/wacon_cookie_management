@@ -67,8 +67,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function listAction()
     {
       $change = $this->settings['change'];
-      $cookie = $_COOKIE['waconcookiemanagement']; 
-      if(strpos($cookie,'setwcm')===0){
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
+      if(strpos((string) $cookie,'setwcm')===0){
         $cookieneu = substr($cookie,6,3);
         
         $newStat = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Waconcookiemanagement\WaconCookieManagement\Domain\Model\Stat::class);
@@ -83,13 +83,13 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
          //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newStat);
         //setcookie("waconcookiemanagement", $cookieneu,time()+(3600*24*365));
       }
-      $cookie = $_COOKIE['waconcookiemanagement'];
-      $cookiearray = explode('ts',$cookie);
-      if($change){
-        if (substr($cookiearray['1'],0,10)<$change)  setcookie("waconcookiemanagement", "",time()-1);
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
+      $cookiearray = explode('ts',(string) $cookie);
+      if($change && !is_null($cookiearray['1'] ?? null)){
+        if (substr((string) $cookiearray['1'],0,10) < $change)
+            setcookie("waconcookiemanagement", "",time()-1);
       }
-     
-     
+
       $header = $this->settings['header'];
       $this->view->assign('header', $header);
       $teaser = $this->settings['teaser'];

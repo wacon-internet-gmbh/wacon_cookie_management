@@ -83,8 +83,9 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $pages = array();
         foreach($reportpages as $reportpage){
             if($reportpage->getSeite()){
-                $pages[$reportpage->getSeite()]+=1;
-             
+                if(array_key_exists($reportpage->getSeite(), $pages)) {
+                    $pages[$reportpage->getSeite()] +=1;
+                }
             }
         }
         arsort($pages);
@@ -105,12 +106,8 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             }
         }
          
-        $this->view->assign('reports', $reports);
-        $this->view->assign('reportpages', $reportpages);
-        $this->view->assign('pages', $shortpages);
-       
+        $this->view->assign('reports', $reports ?? null);
+        $this->view->assign('reportpages', $reportpages ?? null);
+        $this->view->assign('pages', $shortpages ?? null);
     }
-
-    
-    
 }
