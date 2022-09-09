@@ -31,9 +31,13 @@ For example, it could be located inside `Configuration/RTE/Default.yaml` but thi
                 - { name: "Cookie Set", element: "p", attributes: { 'class': 'cookie-set' } }
 
 With this settings, you get an extra dropdown item inside the Style-dropdown list.
-This example surrounds the `<p>`-Tag with an extra class `cookie-set`.
+This example surrounds the `<p>`-Tag with an extra class `cookie-set`. f.e.: `<p class="cookie-set">Cookie settings</p>`
 
-`<p class="cookie-set">Cookie settings</p>`
+.. figure:: ../Images/Configuration/style-dropdown-configuration.png
+   :alt: Style dropdown example
+
+   Example of the dropdown.
+
 
 .. important::
     You can use any other solution for adding this class to your text. It is important, that the element must have
