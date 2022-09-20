@@ -27,6 +27,17 @@ call_user_func(
                 \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'show',
             ]
         );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Waconcookiemanagement.WaconCookieManagement',
+            'Cookielist',
+            [
+                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'cookielist',
+            ],
+            // non-cacheable actions
+            [
+                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => ''
+            ]
+        );
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -42,7 +53,15 @@ call_user_func(
                             list_type = waconcookiemanagement_cookiefreigabe
                         }
                     }
-
+                    cookielist {
+                        iconIdentifier = wacon_cookie_management-plugin-script
+                        title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.name
+                        description = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = waconcookiemanagement_cookielist
+                        }
+                    }
                     script {
                         iconIdentifier = wacon_cookie_management-plugin-script
                         title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_script.name

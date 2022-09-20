@@ -5,18 +5,6 @@ call_user_func(
     function()
     {
 
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
-            'Cookiefreigabe',
-            'Cookie - Freigabe'
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
-            'Script',
-            'Externes Script einbinden'
-        );
-
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
             'Waconcookiemanagement.WaconCookieManagement',
             'web',

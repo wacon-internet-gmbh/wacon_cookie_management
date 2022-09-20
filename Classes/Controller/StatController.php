@@ -70,7 +70,7 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($jahr);
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($monat);
 
-        $this->view->assign('years', $years);
+        if($years)$this->view->assign('years', $years);
         $this->view->assign('monat', $monat);
         $this->view->assign('jahr', $jahr);
 

@@ -52,7 +52,9 @@ module.tx_waconcookiemanagement_report {
         layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Layouts/
     }
 }
-
+plugin.tx_waconcookiemanagement_cookielist.settings.statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
+plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
+    
 [{$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery} == 1]
     page.includeJS{
         ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
