@@ -19,7 +19,7 @@ This extensions loads its own jQuery file. You can disable it by adding the foll
 Adding links inside bodytext for displaying the cookie consent box
 ==================================================================
 
-In Rich Text Editos you can make some settings inside your `.yaml` file so that you can insert links to the
+In Rich Text Editors you can make some settings inside your `.yaml` file so that you can insert links to the
 cookie consent box inside any bodytext.
 
 Put the following configuration inside your `.yaml` file for your RTE.
@@ -40,7 +40,7 @@ This example surrounds the `<p>`-Tag with an extra class `cookie-set`. f.e.: `<p
 
 
 .. important::
-    You can use any other solution for adding this class to your text. It is important, that the element must have
+    You can use any other solution for adding this class to your text. It is only important, that the element must have
     the class `cookie-set`.
 
     For example you can use a `<span>`-Tag like `<span class="cookie-set">Cookies</span>`.
