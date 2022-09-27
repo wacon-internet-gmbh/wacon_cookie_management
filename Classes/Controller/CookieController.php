@@ -152,19 +152,19 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
         $cObj = $this->configurationManager->getContentObject();
         $uid = $cObj->data['uid'];
-        if(strpos($cookie,'setwcm')===0){
+        if(strpos($cookie,'setwcm') === 0){
             $cookie = substr($cookie,6);
         }
-      $cookiearray = explode('ts',$cookie);
+        $cookiearray = explode('ts', $cookie);
 
-      if ($cookiearray[0]=='max') {
-          $content1=$this->settings['script'];
-      }
-      else{
-        $res=explode("c",$cookiearray[0]);
-            foreach($res as $value){
-                if($value == $this->settings['cookie']) {
-                    $content1=$this->settings['script'];
+        if ($cookiearray[0]=='max') {
+            $content1 = $this->settings['script'];
+        }
+        else{
+            $res = explode("c",$cookiearray[0]);
+            foreach ($res as $value){
+                if ($value == $this->settings['cookie']) {
+                    $content1 = $this->settings['script'];
                 }
             }
         }
