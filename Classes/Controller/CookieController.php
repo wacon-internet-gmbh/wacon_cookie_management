@@ -146,28 +146,33 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function showAction()
     {
-      $cookie = $_COOKIE['waconcookiemanagement']; 
-      $content2 = $this->settings['bild'];
+        $cookie = $_COOKIE['waconcookiemanagement'];
+        $content1 = '';
+        $content2 = $this->settings['bild'];
 
-      $cObj = $this->configurationManager->getContentObject();
-      $uid = $cObj->data['uid'];
-      if(strpos($cookie,'setwcm')===0){
-        $cookie = substr($cookie,6);
-      }
+        $cObj = $this->configurationManager->getContentObject();
+        $uid = $cObj->data['uid'];
+        if(strpos($cookie,'setwcm')===0){
+            $cookie = substr($cookie,6);
+        }
       $cookiearray = explode('ts',$cookie);
-      if ($cookiearray[0]=='max') 
-      $content1=$this->settings['script'];
+
+      if ($cookiearray[0]=='max') {
+          $content1=$this->settings['script'];
+      }
       else{
-       $res=explode("c",$cookiearray[0]);
-         foreach($res as $value){
-           if($value == $this->settings['cookie'])$content1=$this->settings['script'];
-         }
-       }
+        $res=explode("c",$cookiearray[0]);
+            foreach($res as $value){
+                if($value == $this->settings['cookie']) {
+                    $content1=$this->settings['script'];
+                }
+            }
+        }
+
         $this->view->assign('cookietext', $this->settings['text']);
         $this->view->assign('content1', $content1);
         $this->view->assign('content2', $content2);
         $this->view->assign('uid', $uid);
         $this->view->assign('cookieuid', $this->settings['cookie']);
-        
     }
 }
