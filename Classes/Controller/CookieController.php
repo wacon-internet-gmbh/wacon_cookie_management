@@ -69,12 +69,14 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function listAction()
     {
-      $this->statRepository->deleteOldRecords((int)$this->settings['statisticsDays']);
+      if (array_key_exists("statisticsDays",$this->settings)){$statisticDay = (int)$this->settings['statisticsDays'];}
+      else $statisticDay = 0;
+      $this->statRepository->deleteOldRecords($statisticDay);
       $change = $this->settings['change'];
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       if(strpos((string) $cookie,'setwcm')===0){
         
-        if((int)$this->settings['statisticsDays']>0){
+        if($statisticDay>0){
           $cookieneu = substr($cookie,6,3);
           $newStat = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Waconcookiemanagement\WaconCookieManagement\Domain\Model\Stat::class);
           if($cookieneu=='min') $newStat->setCookieconfig('min');
@@ -232,29 +234,24 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function showAction()
     {
-        $cookie = $_COOKIE['waconcookiemanagement'];
-        $content1 = '';
-        $content2 = $this->settings['bild'];
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;; 
+      $content2 = $this->settings['bild']?? null;;
 
-        $cObj = $this->configurationManager->getContentObject();
-        $uid = $cObj->data['uid'];
-        if(strpos($cookie,'setwcm') === 0){
-            $cookie = substr($cookie,6);
-        }
-        $cookiearray = explode('ts', $cookie);
-
-        if ($cookiearray[0]=='max') {
-            $content1 = $this->settings['script'];
-        }
-        else{
-            $res = explode("c",$cookiearray[0]);
-            foreach ($res as $value){
-                if ($value == $this->settings['cookie']) {
-                    $content1 = $this->settings['script'];
-                }
-            }
-        }
-
+      $cObj = $this->configurationManager->getContentObject();
+      $uid = $cObj->data['uid'];
+      if(strpos($cookie,'setwcm')===0){
+        $cookie = substr($cookie,6);
+      }
+      $cookiearray = explode('ts',$cookie);
+      $content1 = '';
+      if ($cookiearray[0]=='max') 
+      $content1=$this->settings['script'];
+      else{
+       $res=explode("c",$cookiearray[0]);
+         foreach($res as $value){
+           if($value == $this->settings['cookie'])$content1=$this->settings['script']?? null;
+         }
+       }
         $this->view->assign('cookietext', $this->settings['text']);
         $this->view->assign('content1', $content1);
         $this->view->assign('content2', $content2);
