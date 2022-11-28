@@ -36,7 +36,8 @@ $affectedRows = $queryBuilder
    ->where(
       $queryBuilder->expr()->lt('crdate',$timestamp )
    )
-   ->executeStatement();
+   //->executeStatement();
+   ->execute();
     }
 
     public function findReports(string $jahr, string $monat, string $cookieconfig)
