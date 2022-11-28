@@ -18,6 +18,9 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+    settings{
+        statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
+    }
 }
 
 plugin.tx_waconcookiemanagement_script {

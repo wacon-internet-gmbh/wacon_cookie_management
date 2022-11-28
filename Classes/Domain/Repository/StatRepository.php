@@ -29,7 +29,7 @@ class StatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function deleteOldRecords($days) {
         
         $timestamp=time()+($days * 24*60*60);
-        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($timestamp);
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($days);
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_waconcookiemanagement_domain_model_stat');
 $affectedRows = $queryBuilder
    ->delete('tx_waconcookiemanagement_domain_model_stat')

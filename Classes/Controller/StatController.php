@@ -57,11 +57,14 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         else{
             $monat = '';
         }
+         
         $firstyear = $this->statRepository->findFirstReports();
+        $time = intval( date('Y',time()));
+        $years[]=$time;
+        $time-=1;
          // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($firstyear);
         if($firstyear['0']){
             $first =intval($firstyear['0']->getCreationDate()->format('Y'));
-            $time = intval( date('Y',time()));
             while($time>=$first){
                 $years[]=$time;
                 $time-=1;
