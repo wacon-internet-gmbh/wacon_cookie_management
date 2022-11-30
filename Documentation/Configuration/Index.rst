@@ -13,8 +13,21 @@ This extensions loads its own jQuery file. You can disable it by adding the foll
 `constants.typoscript` or by editing the constants inside the constant editor in the Template module.
 
 .. code-block:: typoscript
-
     plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery = 0
+
+Limit the amount of days, the cookie consents will be stored inside the database
+================================================================================
+
+You can now set how long user consent is stored in the database.
+This can help to keep the database-tables as small as possible.
+
+This setting is available inside TypoScript
+
+.. code-block:: typoscript
+    plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays = 30
+
+.. info::
+    This is by default set to 365 days.
 
 Adding links inside bodytext for displaying the cookie consent box
 ==================================================================
