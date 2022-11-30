@@ -7,7 +7,7 @@
 				<source>Cookie Reports</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
-				<source>Cookie Konfiguration</source>
+				<source>Cookie Configuration</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
 				<source>Page</source>

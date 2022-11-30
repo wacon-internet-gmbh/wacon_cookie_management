@@ -43,16 +43,22 @@
 				<source>Server name</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.name">
-				<source>Cookie - Freigabe</source>
+				<source>WCM Cookie - configuration</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.description">
-				<source>Freigabe der Cookies</source>
+				<source>WCM Cookie configuration - link and popup</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookielist.name">
+				<source>WCM Cookie -configuration</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookielist.description">
+				<source>WCM Cookie configuration - contentelement</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.name">
-				<source>Include external ressource</source>
+				<source>WCM Include external ressource</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.description">
-				<source>Include external ressource</source>
+				<source>WCM Include external ressource</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
 				<source>Cookie Reports</source>

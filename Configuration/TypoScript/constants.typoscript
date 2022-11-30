@@ -10,6 +10,8 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
     settings {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=boolean; label=Load jQuery
         includeJQuery = 1
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int; label=Activate statistics (Store data für xxx days)
+        statisticsDays = 365
     }
 }
 

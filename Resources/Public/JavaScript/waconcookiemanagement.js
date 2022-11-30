@@ -76,7 +76,7 @@ $(".cookie-set").click(function(event) {
   } 
   $(".waconcookiemanagement").show();
   $(".waconcookiemanagement").focus();
-  /*if($(this).hasClass('cookiecontent')){
+  if($(this).hasClass('cookiecontent')){
     $( ".box-cookie-management" ).show();
     $( ".box-cookie-management" ).focus();
     $( ".cookie-fix" ).show();
@@ -87,7 +87,8 @@ $(".cookie-set").click(function(event) {
     if(neuHeight < 300){$('#CookieBox').css("overflow","auto");}
     
     $(".intro").hide();
-    for (i = 0; i < 30; i++) {
+    var children=$(".waconcookiemanagement .box-cookie-management").find('.cookie-info');
+    for(var i=0;i<children.length;i++){
       if($(this).hasClass("cookieuid-" + i)){
         $(".cookieinfo-" + i).parent().show();
         $(".cookieinfo-" + i).parent().prev().hide();
@@ -96,7 +97,7 @@ $(".cookie-set").click(function(event) {
       }
       
      }
-  }*/
+  }
 
 });
 
@@ -136,7 +137,8 @@ $(".cookie-set").click(function(event) {
     if(neuHeight < 300){$('#CookieBox').css("overflow","auto");}
     
     $(".intro").hide();
-    for (i = 0; i < 30; i++) {
+    var children=$(".waconcookiemanagement .box-cookie-management").find('.cookie-info');
+    for(var i=0;i<children.length;i++){
       if($(this).hasClass("cookieuid-" + i)){
     
         $(".cookieinfo-" + i).parent().show();

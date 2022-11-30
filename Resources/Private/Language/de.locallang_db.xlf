@@ -56,18 +56,28 @@
 				<target>Host der den Cookie setzt (bei externen Cookies)</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.name">
-				<source>Cookie - Freigabe</source>
+				<source>WCM Cookie - Freigabe</source>
+				<target>WCM Cookie - Freigabe</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookiefreigabe.description">
-				<source>Freigabe der Cookies</source>
+				<source>WCM Cookie - Freigabe</source>
+				<target>WCM Cookie - Freigabe</target>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookielist.name">
+				<source>WCM Cookie - Freigabe</source>
+				<target>WCM Cookie - Freigabe in Contentelement</target>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_cookielist.description">
+				<source>WCM Freigabe der Cookies</source>
+				<target>WCM Cookie - Freigabe</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.name">
-				<source>Include external ressource</source>
-				<target>Externe Ressource einbinden</target>
+				<source>WCM Include external ressource</source>
+				<target>WCM Externe Ressource einbinden</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.description">
-				<source>Include external ressource</source>
-				<source>Externe Ressource einbinden</source>
+				<source>WCM Include external ressource</source>
+				<source>WCM Externe Ressource einbinden</source>
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
 				<source>Cookie Reports</source>

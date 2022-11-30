@@ -5,6 +5,10 @@
 ==========
 Change log
 ==========
+Version 3.4.0
+-------------
+- PHP 8.1 Bugfixes
+- Added possibility to limit the amount of days the cookie-consents will be stored in database
 
 Version 3.3.1
 -------------

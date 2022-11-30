@@ -57,20 +57,21 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         else{
             $monat = '';
         }
+         
         $firstyear = $this->statRepository->findFirstReports();
+        $time = intval( date('Y',time()));
+        $years[]=$time;
+        $time-=1;
          // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($firstyear);
         if($firstyear['0']){
             $first =intval($firstyear['0']->getCreationDate()->format('Y'));
-            $time = intval( date('Y',time()));
             while($time>=$first){
                 $years[]=$time;
                 $time-=1;
             }
         }
-        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($jahr);
-        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($monat);
-
-        $this->view->assign('years', $years);
+       
+        if($years)$this->view->assign('years', $years);
         $this->view->assign('monat', $monat);
         $this->view->assign('jahr', $jahr);
 
@@ -79,15 +80,18 @@ class StatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $reports[] = $this->statRepository->findReports($jahr,$monat,'min');
 
         $reportpages = $this->statRepository->findReports($jahr,$monat,'');
-       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($reportpages);
+        
         $pages = array();
         foreach($reportpages as $reportpage){
+           // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($reportpage->getSeite());
             if($reportpage->getSeite()){
                 if(array_key_exists($reportpage->getSeite(), $pages)) {
                     $pages[$reportpage->getSeite()] +=1;
                 }
+                else $pages[$reportpage->getSeite()] =1;
             }
         }
+       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($pages);
         arsort($pages);
         $i=0;
         foreach($pages as $key => $value){

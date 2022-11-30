@@ -1,6 +1,9 @@
 <?php
 namespace Waconcookiemanagement\WaconCookieManagement\Domain\Repository;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
+
 /***
  *
  * This file is part of the "Wacon Cookie Management" Extension for TYPO3 CMS.
@@ -21,6 +24,20 @@ class StatRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $querySettings = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings::class);
         $querySettings->setRespectStoragePage(false);
         $this->setDefaultQuerySettings($querySettings);
+    }
+
+    public function deleteOldRecords($days) {
+        
+        $timestamp=time()-($days * 24*60*60);
+
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_waconcookiemanagement_domain_model_stat');
+$affectedRows = $queryBuilder
+   ->delete('tx_waconcookiemanagement_domain_model_stat')
+   ->where(
+      $queryBuilder->expr()->lt('crdate',$timestamp )
+   )
+   
+   ->execute();
     }
 
     public function findReports(string $jahr, string $monat, string $cookieconfig)

@@ -25,7 +25,7 @@
     -webkit-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
     -moz-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);*/
 }
-
+.cookie-information{margin-bottom:20px;}
 
 #CookieBox p,
 #CookieBox h1,
@@ -56,6 +56,20 @@
     background: #fff;
     padding: 70px 20px 20px;
     border-radius: 5px;
+}
+
+.waconcookiemanagementlist #CookieBox {
+    z-index: 201;
+    position: relative;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    max-width: 100%;
+    max-height: auto;
+    overflow: auto;
+    background: #fff;
+    padding: 0px;
+    border-radius: 0px;
 }
 
 #CookieBox h2 {
@@ -95,6 +109,7 @@
     color: white;
     text-decoration: none;
 }
+#CookieBox .cookie-refuse .cookie-btn {background:#ccc;}
 
 #CookieBox .cookie-accept {
     text-align: center;
@@ -130,10 +145,12 @@
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
-    padding: 5px;
+    padding: px;
     background-color: #ccc;
 }
-
+.waconcookiemanagementlist #CookieBox .cookie-refuse {
+    background-color: transparent;
+}
 #CookieBox .text-center {
     text-align: center;
 }
@@ -211,7 +228,11 @@
     padding: 10px;
     margin:25px 30px;
 }
-
+.waconcookiemanagementlist #CookieBox .category {
+    background: #eeeeee;
+    padding: 10px;
+    margin:25px 0px;
+}
 #CookieBox .category h3 {
     margin-top: 0;
     font-size: 1.25rem;
@@ -247,7 +268,14 @@
 #CookieBox .box-cookie-management-in > p {
     width:80%;
 }
+.waconcookiemanagementlist #CookieBox  .box-cookie-management{
+    display:block;
+}
+.waconcookiemanagementlist #CookieBox .box-cookie-management-in > p {
+width:100%;margin:25px 0 0 0;
+}
 
+.waconcookiemanagementlist  #CookieBox .intro p {width:100%;}
 #CookieBox .deactivated,
 #CookieBox .activated {
     width: 40px;
@@ -307,7 +335,9 @@
     overflow: auto;
     padding:20px 0 0 0;
 }
-
+.waconcookiemanagementlist #CookieBox .cookie-fix {
+    display:block;
+}
 #CookieBox .cookie-fix .cookie-save {
     float: left;
     margin-left:30px;
