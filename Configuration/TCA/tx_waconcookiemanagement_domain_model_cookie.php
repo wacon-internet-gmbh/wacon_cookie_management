@@ -1,4 +1,5 @@
 <?php
+
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie',
@@ -195,6 +196,6 @@ return [
                 'eval' => 'trim'
             ],
         ],
-    
+
     ],
 ];

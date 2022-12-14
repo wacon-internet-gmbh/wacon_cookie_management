@@ -18,7 +18,6 @@ declare(strict_types=1);
 namespace Waconcookiemanagement\WaconCookieManagement\Widgets;
 
 use TYPO3\CMS\Fluid\View\StandaloneView;
-use TYPO3\CMS\Dashboard\Widgets;
 
 /**
  * Concrete Doughnut Chart widget implementation

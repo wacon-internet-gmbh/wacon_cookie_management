@@ -1,10 +1,9 @@
 <?php
+
 defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
-    function()
-    {
-
+    function () {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Waconcookiemanagement.WaconCookieManagement',
             'Cookiefreigabe',
@@ -39,9 +38,9 @@ call_user_func(
             ]
         );
 
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     cookiefreigabe {
@@ -75,20 +74,19 @@ call_user_func(
                 show = *
             }
        }'
-    );
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
-    $iconRegistry->registerIcon(
-        'wacon_cookie_management-plugin-cookiefreigabe',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_cookiefreigabe.svg']
-    );
+        );
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
-    $iconRegistry->registerIcon(
-        'wacon_cookie_management-plugin-script',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_script.svg']
-    );
-		
+        $iconRegistry->registerIcon(
+            'wacon_cookie_management-plugin-cookiefreigabe',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_cookiefreigabe.svg']
+        );
+
+        $iconRegistry->registerIcon(
+            'wacon_cookie_management-plugin-script',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_script.svg']
+        );
     }
 );

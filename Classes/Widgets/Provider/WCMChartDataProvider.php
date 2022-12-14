@@ -17,7 +17,6 @@
 
 namespace Waconcookiemanagement\WaconCookieManagement\Widgets\Provider;
 
-use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Localization\LanguageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -44,12 +43,12 @@ class WCMChartDataProvider implements ChartDataProviderInterface
         $maxCookies = $this->getNumberOfCookies('max');
         $minCookies = $this->getNumberOfCookies('min');
         $customCookies = $this->getNumberOfCookies('custom');
-        
+
         return [
             'labels' => [
-                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:widgets.stats.maxCookies').' ('.$maxCookies.')',
-                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:widgets.stats.customCookies').' ('.$customCookies.')',
-                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:widgets.stats.minCookies').' ('.$minCookies.')'
+                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:widgets.stats.maxCookies') . ' (' . $maxCookies . ')',
+                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:widgets.stats.customCookies') . ' (' . $customCookies . ')',
+                $this->languageService ->sL('LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang.xlf:widgets.stats.minCookies') . ' (' . $minCookies . ')'
             ],
             'datasets' => [
                 [

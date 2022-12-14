@@ -1,4 +1,5 @@
 <?php
+
 namespace Waconcookiemanagement\WaconCookieManagement\Domain\Model;
 
 /***
@@ -24,14 +25,14 @@ class Stat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $cookieconfig = '';
 
-        /**
+    /**
      * seite
      *
      * @var string
      */
     protected $seite = '';
 
-   
+
     /**
      * Returns the cookieconfig
      *
@@ -53,7 +54,7 @@ class Stat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->cookieconfig = $cookieconfig;
     }
 
-   
+
     /**
      * Returns the seite
      *
@@ -75,14 +76,13 @@ class Stat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->seite = $seite;
     }
 
-/**
-* @var \DateTime
-*/
-protected $creationDate;
+    /**
+    * @var \DateTime
+    */
+    protected $creationDate;
 
-public function getCreationDate(): \DateTime
-{
-    return $this->creationDate;
-}
-   
+    public function getCreationDate(): \DateTime
+    {
+        return $this->creationDate;
+    }
 }
