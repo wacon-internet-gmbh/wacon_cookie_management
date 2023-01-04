@@ -63,6 +63,13 @@ plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays = {$plugi
         ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
     }
 [END]
+lib.fluidLoadRecord = RECORDS
+lib.fluidLoadRecord {
+    source.data = current:1
+    source.intval = 1
+    dontCheckPid = 1
+    tables = tt_content
+}
 
 page.includeJSFooter{
     waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js

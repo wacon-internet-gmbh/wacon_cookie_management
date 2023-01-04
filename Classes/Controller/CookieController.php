@@ -235,8 +235,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function showAction()
     {
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;; 
-      $content2 = $this->settings['bild']?? null;;
-
+      $content2 = $this->settings['bild']?? null;
+      $nocookiecontentarray = null;
+      $cookiecontentarray = null;
+      if(array_key_exists('nocookiecontent',$this->settings))$nocookiecontentarray = explode(',',$this->settings['nocookiecontent'])?? null;
       $cObj = $this->configurationManager->getContentObject();
       $uid = $cObj->data['uid'];
       if(strpos($cookie,'setwcm')===0){
@@ -244,16 +246,23 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       }
       $cookiearray = explode('ts',$cookie);
       $content1 = '';
-      if ($cookiearray[0]=='max') 
-      $content1=$this->settings['script'];
+      if ($cookiearray[0]=='max') {
+        $content1=$this->settings['script']?? null;
+        if(array_key_exists('cookiecontent',$this->settings))$cookiecontentarray = explode(',',$this->settings['cookiecontent'])?? null;
+      }
       else{
        $res=explode("c",$cookiearray[0]);
          foreach($res as $value){
-           if($value == $this->settings['cookie'])$content1=$this->settings['script']?? null;
+           if($value == $this->settings['cookie']){
+            $content1=$this->settings['script']?? null;
+            if(array_key_exists('nocookiecontent',$this->settings))$cookiecontentarray = explode(',',$this->settings['cookiecontent'])?? null;
+           }
          }
        }
         $this->view->assign('cookietext', $this->settings['text']);
         $this->view->assign('content1', $content1);
+        $this->view->assign('cookiecontentarray', $cookiecontentarray);
+        $this->view->assign('nocookiecontentarray', $nocookiecontentarray);
         $this->view->assign('content2', $content2);
         $this->view->assign('uid', $uid);
         $this->view->assign('cookieuid', $this->settings['cookie']);
