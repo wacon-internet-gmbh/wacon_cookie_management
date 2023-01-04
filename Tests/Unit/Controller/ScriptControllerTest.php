@@ -1,4 +1,5 @@
 <?php
+
 namespace Waconcookiemanagement\WaconCookieManagement\Tests\Unit\Controller;
 
 /**
@@ -32,7 +33,6 @@ class ScriptControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function listActionFetchesAllScriptsFromRepositoryAndAssignsThemToView()
     {
-
         $allScripts = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();

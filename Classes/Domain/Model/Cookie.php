@@ -1,4 +1,5 @@
 <?php
+
 namespace Waconcookiemanagement\WaconCookieManagement\Domain\Model;
 
 /***

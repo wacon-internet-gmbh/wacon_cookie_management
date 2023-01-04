@@ -1,4 +1,5 @@
 <?php
+
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_stat',
@@ -84,7 +85,7 @@ return [
                     'allowLanguageSynchronization' => true,
                 ],
             ],
-         ],        
+         ],
          'hidden' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:pages.hidden_toggle',
@@ -149,7 +150,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        
-    
+
+
     ],
 ];

@@ -1,4 +1,5 @@
 <?php
+
 defined('TYPO3_MODE') || die('Access denied.');
 
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
@@ -14,7 +15,6 @@ ExtensionUtility::registerPlugin(
     'Waconcookiemanagement.WaconCookieManagement',
     'Script',
     'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_script.name'
-    
 );
 
 ExtensionUtility::registerPlugin(
