@@ -59,6 +59,54 @@
 				<source>Year</source>
 				<target>Jahr</target>
 			</trans-unit>
+			<trans-unit id="month.january">
+				<source>January</source>
+				<target>Januar</target>
+			</trans-unit>
+			<trans-unit id="month.february">
+				<source>February</source>
+				<target>Februar</target>
+			</trans-unit>
+			<trans-unit id="month.march">
+				<source>March</source>
+				<target>März</target>
+			</trans-unit>
+			<trans-unit id="month.april">
+				<source>April</source>
+				<target>April</target>
+			</trans-unit>
+			<trans-unit id="month.may">
+				<source>May</source>
+				<target>Mai</target>
+			</trans-unit>
+			<trans-unit id="month.june">
+				<source>June</source>
+				<target>Juni</target>
+			</trans-unit>
+			<trans-unit id="month.july">
+				<source>July</source>
+				<target>Juli</target>
+			</trans-unit>
+			<trans-unit id="month.august">
+				<source>August</source>
+				<target>August</target>
+			</trans-unit>
+			<trans-unit id="month.september">
+				<source>September</source>
+				<target>September</target>
+			</trans-unit>
+			<trans-unit id="month.october">
+				<source>October</source>
+				<target>Oktober</target>
+			</trans-unit>
+			<trans-unit id="month.november">
+				<source>November</source>
+				<target>November</target>
+			</trans-unit>
+			<trans-unit id="month.december">
+				<source>December</source>
+				<target>Dezember</target>
+			</trans-unit>
 			<trans-unit id="stats.pleaseselect">
 				<source>Please select</source>
 				<target>Bitte auswählen</target>
