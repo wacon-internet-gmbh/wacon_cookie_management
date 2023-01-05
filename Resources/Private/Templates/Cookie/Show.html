@@ -25,21 +25,23 @@
 		</f:if>
 	</f:then>
 <f:else>
-	<f:if condition="{cookietext}">
+	
 		<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
 			<f:if condition="{content2}">
 				<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
         			<f:image image="{preview}" title="{preview.title}"  />
 				</f:for>	
 			</f:if>
-			<p>{cookietext}</p>
+			<f:if condition="{cookietext}"><p>{cookietext}</p></f:if>
+			
 		</div>
-	</f:if>
+	
 	<f:if condition="{nocookiecontentarray}">
 			<f:for each="{nocookiecontentarray}" as="cookiecontent">
 				<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
 			</f:for>
 		</f:if>
+	
 </f:else>
 </f:if>
 	</f:section>

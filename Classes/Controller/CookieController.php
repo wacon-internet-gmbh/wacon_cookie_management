@@ -71,7 +71,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
       if (array_key_exists("statisticsDays",$this->settings)){$statisticDay = (int)$this->settings['statisticsDays'];}
       else $statisticDay = 0;
-      $this->statRepository->deleteOldRecords($statisticDay);
+      if (array_key_exists("cookieStorage",$this->settings)){$storagePid = (int)$this->settings['cookieStorage'];}
+      else $storagePid = 0;
+      \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);
+      //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($statisticDay);
       $change = $this->settings['change'];
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       if(strpos((string) $cookie,'setwcm')===0){
@@ -84,8 +87,9 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
           else $newStat->setCookieconfig('custom');
         
           $newStat->setSeite($GLOBALS["TSFE"]->id);
-          $newStat->setPid($GLOBALS['TSFE']->rootLine[0]['uid']);
+          $newStat->setPid($storagePid);
           $this->statRepository->add($newStat);
+          $this->statRepository->deleteOldRecords($statisticDay);
         }
         $cookies0 = $this->cookieRepository->findByKategorie(0);
       }
@@ -153,6 +157,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function cookielistAction()
     {
       $change = $this->settings['change'];
+      if (array_key_exists("cookieStorage",$this->settings)){$storagePid = (int)$this->settings['cookieStorage'];}
+      else $storagePid = 0;
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       if(strpos((string) $cookie,'setwcm')===0){
         
@@ -163,10 +169,9 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
           elseif($cookieneu=='max') $newStat->setCookieconfig('max');
           else $newStat->setCookieconfig('custom');
           $newStat->setSeite($GLOBALS["TSFE"]->id);
- 
-          $newStat->setPid($GLOBALS['TSFE']->rootLine[0]['uid']);
-        
+          $newStat->setPid($storagePid);
           $this->statRepository->add($newStat);
+          $this->statRepository->deleteOldRecords($statisticDay);
         }
         $cookies0 = $this->cookieRepository->findByKategorie(0);
         
