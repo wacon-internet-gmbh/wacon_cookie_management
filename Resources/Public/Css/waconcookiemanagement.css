@@ -85,6 +85,11 @@
     padding-bottom: 20px;
     text-align: center;
 }
+#CookieBox .cookie-info ul {
+    text-align: left;
+    padding:0;
+    padding-left:1rem;
+}
 
 #CookieBox p {
     font-size:1.1rem;
