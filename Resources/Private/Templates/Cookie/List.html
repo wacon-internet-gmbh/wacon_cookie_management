@@ -25,9 +25,9 @@
     <p ><f:if condition="{teaser}"><f:then>{teaser}</f:then><f:else><f:translate key="cookiefreigabe.intro" /></f:else></f:if></p>
 	
 
-    <p class="cookie-accept" tabindex="0" ><a class="cookie-btn cursor none" data-cookie-accept ><f:translate key="cookiefreigabe.accept" /></a></p>
-    <p class="cookie-management" tabindex="0"><a class="cursor" id="data-cookie-individual"  ><f:translate key="cookiefreigabe.individual" /></a></p>
-    <p class="cookie-refuse" tabindex="0"><a class="cursor" id="data-cookie-refuse"  ><f:translate key="cookiefreigabe.min" /></a></p>   
+    <p class="cookie-accept-container" tabindex="0" ><a class="cookie-accept cookie-btn cursor none" data-cookie-accept ><f:translate key="cookiefreigabe.accept" /></a></p>
+    <p class="cookie-management-container" tabindex="0"><a class="cookie-management cursor" id="data-cookie-individual"  ><f:translate key="cookiefreigabe.individual" /></a></p>
+    <p class="cookie-refuse-container" tabindex="0"><a class="cookie-refuse cursor" id="data-cookie-refuse"  ><f:translate key="cookiefreigabe.min" /></a></p>   
 <p class="text-right cookie-legal">
      <f:if condition="dataprotection"><f:link.page tabindex="0" pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if> 
      <f:if condition="imprint"><f:link.page tabindex="0" pageUid="{imprint}"><f:translate key="cookiefreigabe.imprint" /></f:link.page></f:if>

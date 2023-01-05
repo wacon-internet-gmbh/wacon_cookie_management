@@ -111,12 +111,12 @@
 }
 #CookieBox .cookie-refuse .cookie-btn {background:#ccc;}
 
-#CookieBox .cookie-accept {
+#CookieBox .cookie-accept-container {
     text-align: center;
     cursor: pointer;
 }
 
-#CookieBox .cookie-accept a {
+#CookieBox  a.cookie-accept {
     padding:10px 50px;
 }
 
@@ -141,11 +141,11 @@
 #CookieBox .cookie-management,
 #CookieBox .cookie-refuse {
     margin:10px auto;
-    width: 65%;
+  
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
-    padding: px;
+    padding: 5px 50px;
     background-color: #ccc;
 }
 .waconcookiemanagementlist #CookieBox .cookie-refuse {
@@ -347,6 +347,7 @@ width:100%;margin:25px 0 0 0;
     float: right;
     margin-right:30px;
 }
+#CookieBox .cookie-refuse-container, #CookieBox .cookie-accept-container, #CookieBox .cookie-management-container{text-align:center;}
 
 #CookieBox .cookie-fix .cookieback,
 #CookieBox .cookie-fix .cookie-refuse {

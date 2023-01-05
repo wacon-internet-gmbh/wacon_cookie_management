@@ -73,8 +73,6 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       else $statisticDay = 0;
       if (array_key_exists("cookieStorage",$this->settings)){$storagePid = (int)$this->settings['cookieStorage'];}
       else $storagePid = 0;
-      \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);
-      //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($statisticDay);
       $change = $this->settings['change'];
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       if(strpos((string) $cookie,'setwcm')===0){
