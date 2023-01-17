@@ -35,3 +35,9 @@ ExtensionManagementUtility::addPiFlexFormValue(
     'waconcookiemanagement_cookiefreigabe',
     'FILE:EXT:wacon_cookie_management/Configuration/FlexForms/Cookie.xml'
 );
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['waconcookiemanagement_cookielist'] = 'pi_flexform';
+ExtensionManagementUtility::addPiFlexFormValue(
+    // plugin signature: <extension key without underscores> '_' <plugin name in lowercase>
+    'waconcookiemanagement_cookielist',
+    'FILE:EXT:wacon_cookie_management/Configuration/FlexForms/Cookielist.xml'
+);

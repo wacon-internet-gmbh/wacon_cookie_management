@@ -14,6 +14,8 @@ CREATE TABLE tx_waconcookiemanagement_domain_model_cookie (
 	laufzeit varchar(255) DEFAULT '' NOT NULL,
 	datenschutzlink varchar(255) DEFAULT '' NOT NULL,
 	host varchar(255) DEFAULT '' NOT NULL,
+	nocookietext text,
+	nocookieimage int(11) unsigned NOT NULL default '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
