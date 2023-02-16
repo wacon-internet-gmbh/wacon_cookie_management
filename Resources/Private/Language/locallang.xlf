@@ -39,7 +39,7 @@
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
 				<source>Host</source>
 			</trans-unit>
-			
+
 		
 			<trans-unit id="stats.month">
 				<source>Month</source>

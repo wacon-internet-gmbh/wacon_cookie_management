@@ -64,12 +64,12 @@
 				<target>WCM Cookie - Freigabe</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookielist.name">
-				<source>WCM Cookie - Freigabe</source>
-				<target>WCM Cookie - Freigabe in Contentelement</target>
+				<source>WCM Cookie - list of cookies</source>
+				<target>WCM Cookie - Liste</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookielist.description">
-				<source>WCM Freigabe der Cookies</source>
-				<target>WCM Cookie - Freigabe</target>
+				<source>WCM Cookie - contentelement shows list of all cookies</source>
+				<target>WCM Cookie - Contentelement zeigt Liste aller Cookies</target>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.name">
 				<source>WCM Include external ressource</source>

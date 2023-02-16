@@ -39,13 +39,6 @@
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
 				<source>Link to Privacy Policy</source>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookieimage">
-				<source>Default image, if cookie is not accepted</source>
-			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookietext">
-				<source>Default text, if cookie is not accepted</source>
-			</trans-unit>
-
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
 				<source>Server name</source>
 			</trans-unit>
@@ -56,10 +49,10 @@
 				<source>WCM Cookie configuration - link and popup</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookielist.name">
-				<source>WCM Cookie -configuration</source>
+				<source>WCM Cookie - list of cookies</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookielist.description">
-				<source>WCM Cookie configuration - contentelement</source>
+				<source>WCM Cookie - contentelement shows list of all cookies</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.name">
 				<source>WCM Include external ressource</source>
