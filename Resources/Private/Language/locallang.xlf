@@ -39,6 +39,13 @@
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
 				<source>Host</source>
 			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookieimage">
+				<source>Default image, if cookie is not accepted</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookietext">
+				<source>Default text, if cookie is not accepted</source>
+			</trans-unit>
+
 
 		
 			<trans-unit id="stats.month">

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
+          product-name="bootstrap_package">
+        <header/>
+        <body>
+
+            <trans-unit id="settings.script.cookie">
+                <source>Benötigter Cookie</source>
+            </trans-unit>
+            <trans-unit id="settings.script.text">
+                <source>Text (wird angezeigt, wenn Cookie nicht erlaubt)</source>
+            </trans-unit>
+            <trans-unit id="settings.script.script">
+                <source>Eingebundenes Script</source>
+            </trans-unit>
+            <trans-unit id="settings.script.bild">
+                <source>Bild (wird angezeigt, wenn Cookie nicht erlaubt)</source>
+            </trans-unit>
+            <trans-unit id="settings.cookiefreigabe.nurlink">
+                <source>Nur Link zur Cookiefreigabe einfügen</source>
+            </trans-unit>
+            <trans-unit id="settings.cookiefreigabe.imprint">
+                <source>Link zum Impressum</source>
+            </trans-unit>
+             <trans-unit id="settings.cookiefreigabe.change">
+                <source>Letzte Änderung an den Cookies</source>
+            </trans-unit>
+             <trans-unit id="settings.cookiefreigabe.header">
+                <source>Überschrift in Cookiebox</source>
+            </trans-unit>
+            <trans-unit id="settings.cookiefreigabe.teaser">
+                <source>Einleitender Text in Cookiebox</source>
+            </trans-unit>
+            <trans-unit id="settings.cookiefreigabe.linktext">
+                <source>Text für Link zu Cookiefreigabe</source>
+            </trans-unit>
+            <trans-unit id="settings.cookiefreigabe.dataprotection">
+                <source>Link zur Datenschutzerklärung</source>
+            </trans-unit>
+
+
+   </body>
+    </file>
+</xliff>

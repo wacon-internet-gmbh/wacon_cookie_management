@@ -32,7 +32,7 @@
 				<f:if condition="{content2}">
 					<f:then>
 						<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
-							<f:image image="{preview}" title="{preview.title}"alt="{preview.alternative}/>
+							<f:image image="{preview}" title="{preview.title}" alt="{preview.alternative}"/>
 							<f:variable name="needimage">0</f:variable>
 						</f:for>
 					</f:then>
