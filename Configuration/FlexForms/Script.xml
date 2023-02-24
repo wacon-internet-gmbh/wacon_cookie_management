@@ -42,6 +42,7 @@
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookiecontent</label>
                            <config>
   				                <type>group</type>
+                                <internal_type>db</internal_type>
 				                <allowed>tt_content</allowed>
   				                <rows>8</rows>
 			                </config>
@@ -113,6 +114,7 @@
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookiecontent</label>
                            <config>
   				                <type>group</type>
+                                <internal_type>db</internal_type>
 				                <allowed>tt_content</allowed>
   				                <rows>8</rows>
 			                </config>
