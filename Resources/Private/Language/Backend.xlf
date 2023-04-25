@@ -14,10 +14,10 @@
                 <source>Script</source>
             </trans-unit>
             <trans-unit id="settings.script.cookiecontent">
-                <source>Contentelements (if Cookie allowed)</source>
+                <source>Contentelements (if Cookie is accepted)</source>
             </trans-unit>
              <trans-unit id="settings.script.nocookiecontent">
-                <source>Contentelements (if Cookie not allowed)</source>
+                <source>Contentelements (if Cookie is not accepted)</source>
             </trans-unit>
             <trans-unit id="settings.script.bild">
                 <source>Show image if Cookie is not accepted</source>

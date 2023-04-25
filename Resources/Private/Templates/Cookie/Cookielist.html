@@ -38,7 +38,7 @@
             <f:for each="{cookies0}" as="cookie">
           <div class="cookie-info cookieinfo-{cookie.uid}">
             <p><b>{cookie.bezeichnung}</b></p>
-            <f:if condition="{cookie.zweck}"><f:format.raw>{cookie.zweck}</f:format.raw></f:if>
+            <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
             <table>
 	          <f:if condition="{cookie.anbieter}"><tr><td><f:translate key="cookiefreigabe.anbieter" />:</td><td>{cookie.anbieter}</td></tr></f:if>
    	          <f:if condition="{cookie.cookiename}"><tr><td><f:translate key="cookiefreigabe.cookiename" />:</td><td>{cookie.cookiename}</td></tr></f:if>
@@ -58,7 +58,7 @@
           <f:for each="{cookies1}" as="cookie">
             <div class="cookie-info cookieinfo-{cookie.uid}">
               <p><b>{cookie.bezeichnung}</b></p>
-              <f:if condition="{cookie.zweck}"><f:format.raw>{cookie.zweck}</f:format.raw></f:if>
+              <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
 	            <f:if condition="{cookie.anbieter}"><tr><td><f:translate key="cookiefreigabe.anbieter" />:</td><td>{cookie.anbieter}</td></tr></f:if>
 			    <f:if condition="{cookie.cookiename}"><tr><td><f:translate key="cookiefreigabe.cookiename" />:</td><td>{cookie.cookiename}</td></tr></f:if>
@@ -78,7 +78,7 @@
         <f:for each="{cookies2}" as="cookie">
             <div class="cookie-info cookieinfo-{cookie.uid}">
               <p><b>{cookie.bezeichnung}</b></p>
-              <f:if condition="{cookie.zweck}"><f:format.raw>{cookie.zweck}</f:format.raw></f:if>
+              <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
 	            <f:if condition="{cookie.anbieter}"><tr><td><f:translate key="cookiefreigabe.anbieter" />:</td><td>{cookie.anbieter}</td></tr></f:if>
      	        <f:if condition="{cookie.cookiename}"><tr><td><f:translate key="cookiefreigabe.cookiename" />:</td><td>{cookie.cookiename}</td></tr></f:if>
@@ -98,7 +98,7 @@
          <f:for each="{cookies3}" as="cookie">
             <div class="cookie-info cookieinfo-{cookie.uid}">
                <p><b>{cookie.bezeichnung}</b></p>
-              <f:if condition="{cookie.zweck}"><f:format.raw>{cookie.zweck}</f:format.raw></f:if>
+              <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
 	            <f:if condition="{cookie.anbieter}"><tr><td><f:translate key="cookiefreigabe.anbieter" />:</td><td>{cookie.anbieter}</td></tr></f:if>
        	        <f:if condition="{cookie.cookiename}"><tr><td><f:translate key="cookiefreigabe.cookiename" />:</td><td>{cookie.cookiename}</td></tr></f:if>
