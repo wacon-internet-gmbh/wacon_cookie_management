@@ -88,6 +88,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
           $newStat->setSeite($GLOBALS["TSFE"]->id);
           $newStat->setPid($cookieStorage);
           $this->statRepository->add($newStat);
+          if(array_key_exists('BE_USER',$GLOBALS))
           $this->statRepository->deleteOldRecords($statisticDay);
         }
         $cookies0 = $this->cookieRepository->findByKategorie(0);
