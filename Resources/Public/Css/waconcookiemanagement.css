@@ -78,20 +78,20 @@
     font-size:1.6rem;
 }
 
-#CookieBox ul {
+#CookieBox ul , #CookieBox2 ul {
     margin: 0;
     padding: 0;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
 }
-#CookieBox .cookie-info ul {
+#CookieBox .cookie-info ul, #CookieBox2 .cookie-infolist ul {
     text-align: left;
     padding:0;
     padding-left:1rem;
 }
 
-#CookieBox p {
+#CookieBox p, #CookieBox2 p {
     font-size:1.1rem;
     margin:0 auto 10px;
 }
@@ -186,17 +186,18 @@
 }
 
 #CookieBox .cookie-on,
-#CookieBox .cookie-off {
+#CookieBox .cookie-off, #CookieBox2 .cookie-on,
+#CookieBox2 .cookie-off {
     float: left;
     cursor: pointer;
     margin-right: 5px;
 }
 
-#CookieBox .cookie-on {
+#CookieBox .cookie-on,#CookieBox2 .cookie-on {
     display: none;
 }
 
-#CookieBox .intro .cookie-legal {
+#CookieBox .intro .cookie-legal,#CookieBox2 .intro .cookie-legal {
     margin-top:50px;
     width:100%;
 }
@@ -233,7 +234,7 @@
     padding: 10px;
     margin:25px 30px;
 }
-.waconcookiemanagementlist #CookieBox .category {
+.waconcookiemanagementlist #CookieBox2 .category {
     background: #eeeeee;
     padding: 10px;
     margin:25px 0px;
@@ -245,23 +246,23 @@
 
 
 
-#CookieBox .cookie-info {
+#CookieBox .cookie-info, #CookieBox2 .cookie-infolist {
     background: #fff;
     padding: 10px;
 }
 
-#CookieBox .cookie-info table {
+#CookieBox .cookie-info table, #CookieBox2 .cookie-infolist table {
     border-collapse: collapse;
     border-spacing: 0px;
     width: 100%;
 }
 
-#CookieBox .cookie-info td {
+#CookieBox .cookie-info td, #CookieBox2 .cookie-infolist td {
     padding: 3px 10px 3px 0;
     border-top: #eeeeee solid 1px;
 }
 
-#CookieBox .cookie-info p {
+#CookieBox .cookie-info p, #CookieBox2 .cookie-infolist p {
     margin-top: 0;
 }
 

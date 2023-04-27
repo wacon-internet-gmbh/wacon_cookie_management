@@ -17,7 +17,7 @@
 		<f:flashMessages />
     
 <div class="waconcookiemanagementlist">
-<div id="CookieBox" class="cookiemanagement">
+<div id="CookieBox2" class="cookiemanagementlist">
   <div class="middle-center">
    <div class="intro">
     
@@ -27,7 +27,7 @@
 
  
   </div>  
-  <div class="box-cookie-management">
+  <div class="box-cookie-management-list">
     
 	<div class="box-cookie-management-in">
     <p><f:translate key="cookiefreigabe.intro2" /></p>
@@ -36,7 +36,7 @@
       <h3><f:translate key="cookiefreigabe.notwendig" /></h3>
       <p><f:translate key="cookiefreigabe.notwendigdesc" /></p>
             <f:for each="{cookies0}" as="cookie">
-          <div class="cookie-info cookieinfo-{cookie.uid}">
+          <div class="cookie-infolist cookieinfo-{cookie.uid}">
             <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
               <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
               
@@ -59,7 +59,7 @@
        <h3><f:translate key="cookiefreigabe.statistik" /></h3>
         <p><f:translate key="cookiefreigabe.statistikdesc" /></p>
           <f:for each="{cookies1}" as="cookie">
-            <div class="cookie-info cookieinfo-{cookie.uid}">
+            <div class="cookie-infolist cookieinfo-{cookie.uid}">
               <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
               <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
               <p><b>{cookie.bezeichnung}</b></p>
@@ -81,7 +81,7 @@
        <h3><f:translate key="cookiefreigabe.marketing" /></h3>
         <p><f:translate key="cookiefreigabe.marketingdesc" /></p>
         <f:for each="{cookies2}" as="cookie">
-            <div class="cookie-info cookieinfo-{cookie.uid}">
+            <div class="cookie-infolist cookieinfo-{cookie.uid}">
               <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
               <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
               
@@ -104,7 +104,7 @@
          <h3><f:translate key="cookiefreigabe.extern" /></h3>
         <p><f:translate key="cookiefreigabe.externdesc" /></p>
          <f:for each="{cookies3}" as="cookie">
-            <div class="cookie-info cookieinfo-{cookie.uid}">
+            <div class="cookie-infolist cookieinfo-{cookie.uid}">
               <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
               <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
               
