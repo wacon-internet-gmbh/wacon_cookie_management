@@ -20,10 +20,7 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
-     persistence {
-       
-       storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.storagePid}
-    }
+   
 }
 
 plugin.tx_waconcookiemanagement_cookielist {
@@ -47,10 +44,7 @@ plugin.tx_waconcookiemanagement_cookielist {
         statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
-    persistence {
-       
-       storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.storagePid}
-    }
+
 }
 
 plugin.tx_waconcookiemanagement_script {
@@ -73,10 +67,7 @@ plugin.tx_waconcookiemanagement_script {
         statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
-     persistence {
-       
-       storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.storagePid}
-    }
+
 }
 
 # Module configuration

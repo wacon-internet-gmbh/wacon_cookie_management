@@ -13,9 +13,8 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int; label=Activate statistics (Store data für xxx days)
         statisticsDays = 365
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int; label=StoragePid for statistic data
-        cookieStorage = 0
-         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int; label=StoragePid for cookie data
-        storagePid = 0
+        cookieStorage = 
+
     }
 }
 

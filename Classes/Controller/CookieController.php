@@ -88,8 +88,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
           $newStat->setSeite($GLOBALS["TSFE"]->id);
           $newStat->setPid($cookieStorage);
           $this->statRepository->add($newStat);
-          if(array_key_exists('BE_USER',$GLOBALS))
-          $this->statRepository->deleteOldRecords($statisticDay);
+          if(array_key_exists('BE_USER',$GLOBALS)){
+          $this->statRepository->deleteOldRecords($statisticDay);}
         }
         $cookies0 = $this->cookieRepository->findByKategorie(0);
       }
@@ -162,23 +162,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       else $cookieStorage = 0;
       if (array_key_exists("statisticsDays",$this->settings)){$statisticDay = (int)$this->settings['statisticsDays'];}
       else $statisticDay = 0;
-      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
-      if(strpos((string) $cookie,'setwcm')===0){
-        
-        if($statisticDay>0){
-          $cookieneu = substr($cookie,6,3);
-          $newStat = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Waconcookiemanagement\WaconCookieManagement\Domain\Model\Stat::class);
-          if($cookieneu=='min') $newStat->setCookieconfig('min');
-          elseif($cookieneu=='max') $newStat->setCookieconfig('max');
-          else $newStat->setCookieconfig('custom');
-          $newStat->setSeite($GLOBALS["TSFE"]->id);
-          $newStat->setPid($cookieStorage);
-          $this->statRepository->add($newStat);
-          $this->statRepository->deleteOldRecords($statisticDay);
-        }
-        $cookies0 = $this->cookieRepository->findByKategorie(0);
-        
-      }
+      
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       $cookiearray = explode('ts',(string) $cookie);
       if($change && !is_null($cookiearray['1'] ?? null)){
