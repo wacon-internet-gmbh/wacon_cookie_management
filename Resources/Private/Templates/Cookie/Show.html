@@ -15,20 +15,48 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-<f:if condition="{content1}">
-<f:then><f:format.raw>{content1}</f:format.raw></f:then>
-<f:else>
-	<f:if condition="{cookietext}">
-		<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
-			<f:if condition="{content2}">
-				<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
-        			<f:image image="{preview}" title="{preview.title}"  />
-				</f:for>	
+	<f:if condition="{content1}||{cookiecontentarray}">
+		<f:then>
+			<f:if condition="{content1}"><f:format.raw>{content1}</f:format.raw></f:if>
+			<f:if condition="{cookiecontentarray}">
+				<f:for each="{cookiecontentarray}" as="cookiecontent">
+					<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
+				</f:for>
 			</f:if>
-			<p>{cookietext}</p>
-		</div>
+		</f:then>
+		
+		<f:else>
+		
+			<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
+				<f:variable name="needimage">1</f:variable>
+				<f:if condition="{content2}">
+					<f:then>
+						<f:for each="{t:FAL(uid=uid, field='image', table='tt_content')}" as="preview">
+							<f:image image="{preview}" title="{preview.title}" alt="{preview.alternative}"/>
+							<f:variable name="needimage">0</f:variable>
+						</f:for>
+					</f:then>
+					
+				</f:if>
+				<f:if condition="{needimage}">
+						
+					<f:if condition="{mycookie.nocookieimage}">
+						<f:image image="{mycookie.nocookieimage}" title="{mycookie.nocookieimage.title}" alt="{mycookie.nocookieimage.alternative}" />
+					</f:if>
+							
+						
+					</f:if>
+				<f:if condition="{cookietext}">
+					<f:then><p>{cookietext}</p></f:then>
+					<f:else><f:format.raw>{mycookie.nocookietext}</f:format.raw></f:else>
+				</f:if>
+			</div>
+			<f:if condition="{nocookiecontentarray}">
+				<f:for each="{nocookiecontentarray}" as="cookiecontent">
+					<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
+				</f:for>
+			</f:if>
+		</f:else>
 	</f:if>
-</f:else>
-</f:if>
 	</f:section>
 </html>

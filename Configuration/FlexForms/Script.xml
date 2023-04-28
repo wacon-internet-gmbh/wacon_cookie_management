@@ -12,45 +12,55 @@
                         <TCEforms>
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie</label>
                            <config>
-  <type>select</type>
-  <renderType>selectSingle</renderType>
-  <items type="array">
-    <numIndex index="0" type="array">
-      <numIndex index="0"></numIndex>
-      <numIndex index="1"></numIndex>
-    </numIndex>
-  </items>
-  <foreign_table>tx_waconcookiemanagement_domain_model_cookie</foreign_table>
- <foreign_table_where>
-     AND kategorie  > 0
-  </foreign_table_where>
- </config>                      
-  </TCEforms>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                    <numIndex index="0"></numIndex>
+                                    <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                                <foreign_table>tx_waconcookiemanagement_domain_model_cookie</foreign_table>
+                                <foreign_table_where>
+                                    AND kategorie  > 0
+                                </foreign_table_where>
+                            </config>                      
+                        </TCEforms>
                     </settings.cookie>
                     <settings.script>
                         <TCEforms>
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script</label>
                            <config>
-  				<type>text</type>
-				<cols>24</cols>
-  				<rows>8</rows>
-			   </config>
+  				                <type>text</type>
+				                <cols>24</cols>
+  				                <rows>8</rows>
+			                </config>
                         </TCEforms>
                     </settings.script>
-
-    <settings.text>
+                    <settings.cookiecontent>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookiecontent</label>
+                           <config>
+  				                <type>group</type>
+                                <internal_type>db</internal_type>
+				                <allowed>tt_content</allowed>
+  				                <rows>8</rows>
+			                </config>
+                        </TCEforms>
+                    </settings.cookiecontent>
+                    <settings.text>
                         <TCEforms>
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.text</label>
                            <config>
-  				<type>input</type>
-			   </config>
+  				                <type>input</type>
+			                </config>
                         </TCEforms>
                     </settings.text>
                     <settings.bild>
                         <TCEforms>
                             <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.bild</label>
-                                      <config>
-                                               <type>inline</type>
+                            <config>
+                                <type>inline</type>
                                 <foreign_table>sys_file_reference</foreign_table>
                                 <foreign_field>uid_foreign</foreign_field>
                                 <foreign_sortby>sorting_foreign</foreign_sortby>
@@ -96,10 +106,20 @@
                                         <delete>1</delete>
                                     </enabledControls>
                                 </appearance>
-            </config>                        </TCEforms>
+                            </config>
+                        </TCEforms>
                     </settings.bild>
-
-
+                    <settings.nocookiecontent>
+                        <TCEforms>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookiecontent</label>
+                           <config>
+  				                <type>group</type>
+                                <internal_type>db</internal_type>
+				                <allowed>tt_content</allowed>
+  				                <rows>8</rows>
+			                </config>
+                        </TCEforms>
+                    </settings.nocookiecontent>
                 </el>
             </ROOT>
         </sDEF>

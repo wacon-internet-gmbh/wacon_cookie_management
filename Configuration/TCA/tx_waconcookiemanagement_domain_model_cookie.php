@@ -8,7 +8,6 @@ return [
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
         'languageField' => 'sys_language_uid',
-        'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
         'enablecolumns' => [
@@ -19,29 +18,26 @@ return [
         'searchFields' => 'bezeichnung,kategorie,anbieter,zweck,cookiename,laufzeit,datenschutzlink,host',
         'iconfile' => 'EXT:wacon_cookie_management/Resources/Public/Icons/Extension.png'
     ],
-    'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, bezeichnung, kategorie, anbieter, zweck, cookiename, laufzeit, datenschutzlink, host',
-    ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, bezeichnung, kategorie, anbieter, zweck, cookiename, laufzeit, datenschutzlink, host, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, bezeichnung, kategorie, anbieter, zweck, cookiename, laufzeit, datenschutzlink, host, nocookieimage, nocookietext, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'special' => 'languages',
-                'items' => [
-                    [
-                        'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
-                        -1,
-                        'flags-multiple'
-                    ]
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'special' => 'languages',
+                    'items' => [
+                        [
+                            'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
+                            -1,
+                            'flags-multiple'
+                        ]
+                    ],
+                    'default' => 0,
                 ],
-                'default' => 0,
             ],
-        ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
             'exclude' => true,
@@ -156,7 +152,7 @@ return [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 15,
-                'eval' => 'trim'
+                'enableRichtext' => true,
             ]
         ],
         'cookiename' => [
@@ -195,6 +191,63 @@ return [
                 'eval' => 'trim'
             ],
         ],
-    
+        'nocookieimage' => [
+	        'exclude' => true,
+	        'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookieimage',
+	        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+			    'image',
+			    [
+			        'appearance' => [
+			            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+			        ],
+			        'overrideChildTca' => [
+                        'types' => [
+						'0' => array(
+							'showitem' => '
+							--palette--;;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => array(
+							'showitem' => '
+							--palette--;;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => array(
+							'showitem' => '
+							--palette--;;imageoverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => array(
+							'showitem' => '
+							--palette--;;audioOverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => array(
+							'showitem' => '
+							--palette--;;videoOverlayPalette,
+							--palette--;;filePalette'
+						),
+						\TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => array(
+							'showitem' => '
+							--palette--;;imageoverlayPalette,
+							--palette--;;filePalette'
+						)
+						]
+						],
+			        'maxitems' => 1
+			    ],
+			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+			),
+	    ],
+        'nocookietext' => [
+	        'exclude' => true,
+	        'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookietext',
+	        'config' => [
+			    'type' => 'text',
+			    'cols' => 40,
+			    'rows' => 15,
+			    'enableRichtext' => true,
+			],
+	    ],
     ],
 ];

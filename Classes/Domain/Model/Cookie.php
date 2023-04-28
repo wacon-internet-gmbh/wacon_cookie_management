@@ -73,6 +73,23 @@ class Cookie extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $host = '';
 
+      /**
+     * nocookietext
+     *
+     * @var string
+     */
+    protected $nocookietext = '';
+
+
+     
+    /**
+     * nocookieimage
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $nocookieimage = null;
+
     /**
      * Returns the bezeichnung
      *
@@ -239,5 +256,47 @@ class Cookie extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setHost($host)
     {
         $this->host = $host;
+    }
+
+    /**
+     * Returns the nocookietext
+     *
+     * @return string $nocookietext
+     */
+    public function getNocookietext()
+    {
+        return $this->nocookietext;
+    }
+
+    /**
+     * Sets the nocookietext
+     *
+     * @param string $nocookietext
+     * @return void
+     */
+    public function setNocookietext($nocookietext)
+    {
+        $this->nocookietext = $nocookietext;
+    }
+
+    /**
+     * Returns the nocookieimage
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $nocookieimage
+     */
+    public function getNocookieimage()
+    {
+        return $this->nocookieimage;
+    }
+
+    /**
+     * Sets the nocookieimage
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $nocookieimage
+     * @return void
+     */
+    public function setNocookieimage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $nocookieimage)
+    {
+        $this->nocookieimage = $nocookieimage;
     }
 }

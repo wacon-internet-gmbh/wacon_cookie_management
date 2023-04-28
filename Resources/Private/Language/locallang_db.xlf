@@ -49,10 +49,10 @@
 				<source>WCM Cookie configuration - link and popup</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookielist.name">
-				<source>WCM Cookie -configuration</source>
+				<source>WCM Cookie - list of cookies</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_cookielist.description">
-				<source>WCM Cookie configuration - contentelement</source>
+				<source>WCM Cookie - contentelement shows list of all cookies</source>
 			</trans-unit>
 			<trans-unit id="tx_wacon_cookie_management_script.name">
 				<source>WCM Include external ressource</source>
@@ -60,6 +60,13 @@
 			<trans-unit id="tx_wacon_cookie_management_script.description">
 				<source>WCM Include external ressource</source>
 			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookieimage">
+				<source>Default image, if cookie is not accepted</source>
+			</trans-unit>
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookietext">
+				<source>Default text, if cookie is not accepted</source>
+			</trans-unit>
+
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
 				<source>Cookie Reports</source>
 			</trans-unit>
@@ -68,6 +75,42 @@
 			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
 				<source>Page</source>
+			</trans-unit>
+				<trans-unit id="month.january">
+				<source>January</source>
+			</trans-unit>
+			<trans-unit id="month.february">
+				<source>February</source>
+			</trans-unit>
+			<trans-unit id="month.march">
+				<source>March</source>
+			</trans-unit>
+			<trans-unit id="month.april">
+				<source>April</source>
+			</trans-unit>
+			<trans-unit id="month.may">
+				<source>May</source>
+			</trans-unit>
+			<trans-unit id="month.june">
+				<source>June</source>
+			</trans-unit>
+			<trans-unit id="month.july">
+				<source>July</source>
+			</trans-unit>
+			<trans-unit id="month.august">
+				<source>August</source>
+			</trans-unit>
+			<trans-unit id="month.september">
+				<source>September</source>
+			</trans-unit>
+			<trans-unit id="month.october">
+				<source>October</source>
+			</trans-unit>
+			<trans-unit id="month.november">
+				<source>November</source>
+			</trans-unit>
+			<trans-unit id="month.december">
+				<source>December</source>
 			</trans-unit>
 		</body>
 	</file>

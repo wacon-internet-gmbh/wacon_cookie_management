@@ -24,7 +24,7 @@ class Stat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $cookieconfig = '';
 
-        /**
+    /**
      * seite
      *
      * @var string

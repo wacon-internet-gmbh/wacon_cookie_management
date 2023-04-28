@@ -89,25 +89,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                           <td>{reports.2-> f:count()}</td>
                          </tr>
                     </table>
-                    <h2><f:translate key="stats.entry" /></h2>
-                    <table class="table">
-                      <tr>
-                        <td><f:translate key="stats.link" /></td>
-                        <td><f:translate key="stats.total" /></td>
-                        <td><f:translate key="stats.all" /></td>
-                        <td><f:translate key="stats.none" /></td>
-                        <td><f:translate key="stats.custom" /></td>
-                       </tr>
-                      <f:for each="{pages}" as="page">
-                        <tr>
-                          <td>{page.page}</td>
-                          <td>{page.count}</td>
-                          <td>{page.countmax}</td>
-                          <td>{page.countmin}</td>
-                          <td>{page.countcustom}</td>
-                         </tr>
-                      </f:for>
-                   </table>
+                    
                     
    </f:then><f:else><p><f:translate key="stats.noresult" /></p></f:else></f:if>
    <p class="text-muted text-center">powered by WACON Internet GmbH</p>
