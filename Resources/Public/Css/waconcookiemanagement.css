@@ -283,7 +283,8 @@ width:100%;margin:25px 0 0 0;
 
 .waconcookiemanagementlist  #CookieBox .intro p {width:100%;}
 #CookieBox .deactivated,
-#CookieBox .activated {
+#CookieBox .activated,#CookieBox2 .deactivated,
+#CookieBox2 .activated {
     width: 40px;
     height: 20px;
     border-radius: 10px;
@@ -291,12 +292,13 @@ width:100%;margin:25px 0 0 0;
     display: inline-block;
 }
 
-#CookieBox .activated {
+#CookieBox .activated,#CookieBox2 .activated  {
     background: #8dc63f;
 }
 
 #CookieBox .off,
-#CookieBox .on {
+#CookieBox .on ,#CookieBox2 .off,
+#CookieBox2 .on{
     cursor: pointer;
     display: block;
     float: left;
@@ -307,11 +309,11 @@ width:100%;margin:25px 0 0 0;
     border-radius: 8px;
 }
 
-#CookieBox .on {
+#CookieBox .on,#CookieBox2 .on {
     float:right;
 }
 
-#CookieBox .arrow {
+#CookieBox .arrow ,#CookieBox2 .arrow {
     border: .5rem solid #333;
     font-size: 0;
     line-height: 0;
@@ -321,14 +323,14 @@ width:100%;margin:25px 0 0 0;
     display: inline-block;
 }
 
-#CookieBox .arrow.down {
+#CookieBox .arrow.down, #CookieBox2 .arrow.down {
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
     margin-bottom: -5px;
 }
 
-#CookieBox .arrow.up {
+#CookieBox .arrow.up,#CookieBox2 .arrow.up {
     border-top-color: transparent;
     border-right-color: transparent;
     border-left-color: transparent;
