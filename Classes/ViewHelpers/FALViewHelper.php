@@ -21,10 +21,11 @@ class FALViewHelper extends AbstractViewHelper
         $table = $arguments['table'] != NULL ? $arguments['table'] : 'tt_content';
         $field = $arguments['field'];
         $uid = intval($arguments['uid']);
-
+        
         $fileRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\FileRepository::class);
+        
         $fileObjects = $fileRepository->findByRelation($table, $field, $uid);
-
+        
         return $fileObjects;
     }
 }

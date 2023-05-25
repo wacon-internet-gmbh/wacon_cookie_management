@@ -17,7 +17,6 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
     }
 
     settings{
-        statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
    
@@ -41,7 +40,6 @@ plugin.tx_waconcookiemanagement_cookielist {
     }
    
     settings{
-        statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
 
@@ -64,23 +62,12 @@ plugin.tx_waconcookiemanagement_script {
         requireCHashArgumentForActionArguments = 1
     }
     settings{
-        statisticsDays = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays}
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
 
 }
 
-# Module configuration
-module.tx_waconcookiemanagement_report {
-    persistence {
-        storagePid = {$module.tx_waconcookiemanagement_report.persistence.storagePid}
-    }
-    view {
-        templateRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Templates/
-        partialRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Partials/
-        layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Backend/Layouts/
-    }
-}
+
  
 [{$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery} == 1]
     page.includeJS{

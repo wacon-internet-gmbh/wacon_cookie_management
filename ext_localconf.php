@@ -1,11 +1,10 @@
 <?php
-
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 call_user_func(
     function(){
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
+            'wacon_cookie_management',
             'Cookiefreigabe',
             [
                 \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'list',
@@ -16,7 +15,7 @@ call_user_func(
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
+            'wacon_cookie_management',
             'Script',
             [
                 \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'show',
@@ -27,14 +26,14 @@ call_user_func(
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Waconcookiemanagement.WaconCookieManagement',
+            'wacon_cookie_management',
             'Cookielist',
             [
                 \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'cookielist',
             ],
             // non-cacheable actions
             [
-                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => ''
+           
             ]
         );
 

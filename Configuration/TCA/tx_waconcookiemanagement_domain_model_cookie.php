@@ -7,6 +7,9 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
+        'security' =>[
+            'ignorePageTypeRestriction' => true,
+        ],
         'languageField' => 'sys_language_uid',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
@@ -194,50 +197,11 @@ return [
         'nocookieimage' => [
 	        'exclude' => true,
 	        'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookieimage',
-	        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-			    'image',
-			    [
-			        'appearance' => [
-			            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-			        ],
-			        'overrideChildTca' => [
-                        'types' => [
-						'0' => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => array(
-							'showitem' => '
-							--palette--;;audioOverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => array(
-							'showitem' => '
-							--palette--;;videoOverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						)
-						]
-						],
-			        'maxitems' => 1
-			    ],
-			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-			),
+	        'config' => [
+                'type' => 'file',
+                'maxitems' => 1,
+                'allowed' => 'common-image-types'
+            ],
 	    ],
         'nocookietext' => [
 	        'exclude' => true,
