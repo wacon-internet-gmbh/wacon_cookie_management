@@ -1,24 +1,24 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 ExtensionUtility::registerPlugin(
-    'Waconcookiemanagement.WaconCookieManagement',
+    'wacon_cookie_management',
     'Cookiefreigabe',
     'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookiefreigabe.name'
 );
 
 ExtensionUtility::registerPlugin(
-    'Waconcookiemanagement.WaconCookieManagement',
+    'wacon_cookie_management',
     'Script',
     'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_script.name'
     
 );
 
 ExtensionUtility::registerPlugin(
-    'Waconcookiemanagement.WaconCookieManagement',
+    'wacon_cookie_management',
     'Cookielist',
     'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.name'
 );

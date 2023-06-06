@@ -42,55 +42,18 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     }
 
     /**
-     * statRepository
-     *
-     * @var \Waconcookiemanagement\WaconCookieManagement\Domain\Repository\StatRepository
-
-     */
-    protected $statRepository = null;
-
-         /**
-     * Inject statRepository 
-     *
-     * @param  \Waconcookiemanagement\WaconCookieManagement\Domain\Repository\StatRepository $statRepository
-     * @return void
-     */
-    
-    public function injectStatRepository(\Waconcookiemanagement\WaconCookieManagement\Domain\Repository\StatRepository $statRepository) {
-      $this->statRepository = $statRepository;
-   }
-
-
-
-    /**
      * action list
      *
      * @return void
      */
     public function listAction()
     {
-      if (array_key_exists("statisticsDays",$this->settings)){$statisticDay = (int)$this->settings['statisticsDays'];}
-      else $statisticDay = 0;
       if (array_key_exists("cookieStorage",$this->settings)){$cookieStorage = (int)$this->settings['cookieStorage'];}
       else $cookieStorage = 0;
       if(array_key_exists("change",$this->settings))$change = $this->settings['change'];
       else $change = 0;
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       if(strpos((string) $cookie,'setwcm')===0){
-        
-        if($statisticDay>0){
-          $cookieneu = substr($cookie,6,3);
-          $newStat = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Waconcookiemanagement\WaconCookieManagement\Domain\Model\Stat::class);
-          if($cookieneu=='min') $newStat->setCookieconfig('min');
-          elseif($cookieneu=='max') $newStat->setCookieconfig('max');
-          else $newStat->setCookieconfig('custom');
-        
-          $newStat->setSeite($GLOBALS["TSFE"]->id);
-          $newStat->setPid($cookieStorage);
-          $this->statRepository->add($newStat);
-          if(array_key_exists('BE_USER',$GLOBALS)){
-          $this->statRepository->deleteOldRecords($statisticDay);}
-        }
         $cookies0 = $this->cookieRepository->findByKategorie(0);
       }
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
@@ -145,7 +108,9 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       $this->view->assign('cookie1check', $cookie1check);
       $this->view->assign('cookie2check', $cookie2check);
       $this->view->assign('cookie3check', $cookie3check);
-   
+      return $this->responseFactory->createResponse()
+      ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+      ->withBody($this->streamFactory->createStream($this->view->render()));
 
     }
 
@@ -160,8 +125,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       else $change = 0;
       if (array_key_exists("cookieStorage",$this->settings)){$cookieStorage = (int)$this->settings['cookieStorage'];}
       else $cookieStorage = 0;
-      if (array_key_exists("statisticsDays",$this->settings)){$statisticDay = (int)$this->settings['statisticsDays'];}
-      else $statisticDay = 0;
+   
       
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       $cookiearray = explode('ts',(string) $cookie);
@@ -228,7 +192,9 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       $this->view->assign('cookie1check', $cookie1check);
       $this->view->assign('cookie2check', $cookie2check);
       $this->view->assign('cookie3check', $cookie3check);
-   
+      return $this->responseFactory->createResponse()
+      ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+      ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -239,7 +205,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function showAction()
     {
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;; 
-      $content2 = $this->settings['bild']?? null;
+      $content2 = $this->settings['bild'] ?? null;
+      
       $showcookie = $this->settings['cookie'];
       $nocookiecontentarray = null;
       $cookiecontentarray = null;
@@ -264,14 +231,19 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
            }
          }
        }
+     
        $mycookie = $this->cookieRepository->findByUid($showcookie);
        $this->view->assign('cookietext', $this->settings['text']);
        $this->view->assign('content1', $content1);
        $this->view->assign('cookiecontentarray', $cookiecontentarray);
        $this->view->assign('nocookiecontentarray', $nocookiecontentarray);
+       //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($content2);
        $this->view->assign('content2', $content2);
        $this->view->assign('uid', $uid);
        $this->view->assign('cookieuid', $showcookie);
        $this->view->assign('mycookie', $mycookie);
+       return $this->responseFactory->createResponse()
+        ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+        ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 }

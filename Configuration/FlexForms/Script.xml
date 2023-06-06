@@ -111,7 +111,7 @@
                     </settings.bild>
                     <settings.nocookiecontent>
                         <TCEforms>
-                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookiecontent</label>
+                            <label>LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.nocookiecontent</label>
                            <config>
   				                <type>group</type>
                                 <internal_type>db</internal_type>

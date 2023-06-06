@@ -7,6 +7,9 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
+        'security' =>[
+            'ignorePageTypeRestriction' => true,
+        ],
         'languageField' => 'sys_language_uid',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
@@ -194,50 +197,65 @@ return [
         'nocookieimage' => [
 	        'exclude' => true,
 	        'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookieimage',
-	        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-			    'image',
-			    [
-			        'appearance' => [
-			            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-			        ],
-			        'overrideChildTca' => [
-                        'types' => [
-						'0' => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => array(
-							'showitem' => '
-							--palette--;;audioOverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => array(
-							'showitem' => '
-							--palette--;;videoOverlayPalette,
-							--palette--;;filePalette'
-						),
-						\TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => array(
-							'showitem' => '
-							--palette--;;imageoverlayPalette,
-							--palette--;;filePalette'
-						)
-						]
-						],
-			        'maxitems' => 1
-			    ],
-			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-			),
+	        'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'sys_file_reference',
+                'foreign_field' => 'uid_foreign',
+                'foreign_sortby' => 'sorting_foreign',
+                'foreign_table_field' => 'tablenames',
+                'foreign_match_fields' => [
+                    'fieldname' => 'inline_1',
+                ],
+                'foreign_label' => 'uid_local',
+                'foreign_selector' => 'uid_local',
+                'overrideChildTca' => [
+                    'columns' => [
+                        'uid_local' => [
+                            'config' => [
+                                'appearance' => [
+                                    'elementBrowserType' => 'file',
+                                    'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
+                                ],
+                            ],
+                        ],
+                        'crop' => [
+                            'description' => 'field description',
+                        ],
+                    ],
+                    'types' => [
+                        2 => [
+                            'showitem' => '
+                                --palette--;;imageoverlayPalette,
+                                --palette--;;filePalette',
+                        ],
+                    ],
+                ],
+                'filter' => [
+                    [
+                        'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
+                        'parameters' => [
+                            'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
+                            'disallowedFileExtensions' => '',
+                        ],
+                    ],
+                ],
+                'appearance' => [
+                    'useSortable' => true,
+                    'headerThumbnail' => [
+                        'field' => 'uid_local',
+                        'height' => '45m',
+                    ],
+                    'enabledControls' => [
+                        'info' => true,
+                        'new' => false,
+                        'dragdrop' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'delete' => true,
+                    ],
+                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                ],
+            ],
 	    ],
         'nocookietext' => [
 	        'exclude' => true,
