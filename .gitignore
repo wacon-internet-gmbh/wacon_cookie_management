@@ -1,3 +1,6 @@
 /vendor/
 *.idea
 /.idea/
+
+# Documentation
+/Documentation-GENERATED-temp/
