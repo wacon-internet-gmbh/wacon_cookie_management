@@ -29,17 +29,18 @@
 		
 			<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
 				<f:variable name="needimage">1</f:variable>
-				<f:if condition="{content2}">
-					<f:then>
-						<f:for each="{t:FAL(uid=uid, field='settings.bild', table='tt_content')}" as="preview">
-							<f:image image="{preview}" title="{preview.title}" alt="{preview.alternative}"/>
-							<f:variable name="needimage">0</f:variable>
-						</f:for>
-					</f:then>
+
+				<f:if condition="{image}">
+					<f:for each="{image}" as="imagearray">
+						<f:for each="{imagearray}" as="img">
+							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
+						<f:variable name="needimage">0</f:variable>
+					</f:for>
+					</f:for>
 					
-				</f:if>
+					</f:if>
 				<f:if condition="{needimage}">
-						
+					
 					<f:if condition="{mycookie.nocookieimage}">
 						<f:image image="{mycookie.nocookieimage}" title="{mycookie.nocookieimage.title}" alt="{mycookie.nocookieimage.alternative}" />
 					</f:if>

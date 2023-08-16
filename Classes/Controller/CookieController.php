@@ -206,6 +206,19 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;; 
       $content2 = $this->settings['bild'] ?? null;
+      $filesProcessor = GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor::class);
+      $image = $filesProcessor->process(
+          $this->configurationManager->getContentObject(),
+          [],
+          [
+              'references.' => [
+                  'fieldName' => 'image',
+                  'table' => 'tt_content',
+              ],
+              'as' => 'image',
+          ],
+          []
+      );
       
       $showcookie = $this->settings['cookie'];
       $nocookiecontentarray = null;
@@ -240,6 +253,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($content2);
        $this->view->assign('content2', $content2);
        $this->view->assign('uid', $uid);
+       $this->view->assign('image', $image);
        $this->view->assign('cookieuid', $showcookie);
        $this->view->assign('mycookie', $mycookie);
        return $this->responseFactory->createResponse()
