@@ -204,7 +204,6 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function showAction()
     {
-<<<<<<< HEAD
       $cookie = $_COOKIE['waconcookiemanagement'] ?? null;; 
       $content2 = $this->settings['bild'] ?? null;
       $filesProcessor = GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor::class);
@@ -220,10 +219,6 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
           ],
           []
       );
-=======
-      $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
-      $content2 = $this->settings['bild'] ?? '';
->>>>>>> 17030fac2fc3ee03c99c7320550a3becf32fd897
       
       $showcookie = $this->settings['cookie'];
       $nocookiecontentarray = null;
