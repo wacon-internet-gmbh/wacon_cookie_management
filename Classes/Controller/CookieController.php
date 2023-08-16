@@ -219,6 +219,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
           ],
           []
       );
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
+      $content2 = $this->settings['bild'] ?? '';
       
       $showcookie = $this->settings['cookie'];
       $nocookiecontentarray = null;
