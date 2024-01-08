@@ -52,11 +52,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       else $cookieStorage = 0;
       if(array_key_exists("change",$this->settings))$change = $this->settings['change'];
       else $change = 0;
-      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
       if(strpos((string) $cookie,'setwcm')===0){
         $cookies0 = $this->cookieRepository->findByKategorie(0);
       }
-      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
       $cookiearray = explode('ts',(string) $cookie);
       if($change && !is_null($cookiearray['1'] ?? null)){
         if (substr((string) $cookiearray['1'],0,10) < $change)
@@ -127,7 +126,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
       else $cookieStorage = 0;
    
       
-      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
       $cookiearray = explode('ts',(string) $cookie);
       if($change && !is_null($cookiearray['1'] ?? null)){
         if (substr((string) $cookiearray['1'],0,10) < $change)
@@ -204,7 +203,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      */
     public function showAction()
     {
-      $cookie = $_COOKIE['waconcookiemanagement'] ?? null;; 
+      $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
       $content2 = $this->settings['bild'] ?? null;
       $filesProcessor = GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor::class);
       $image = $filesProcessor->process(
