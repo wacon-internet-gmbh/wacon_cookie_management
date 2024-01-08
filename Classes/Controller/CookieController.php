@@ -62,18 +62,24 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             setcookie("waconcookiemanagement", "",time()-1);
       }
 
-      $header = $this->settings['header'];
-      $this->view->assign('header', $header);
-      $teaser = $this->settings['teaser'];
-      $this->view->assign('teaser', $teaser);
-      $linktext = $this->settings['linktext'];
-      $this->view->assign('linktext', $linktext);
- 	      $imprint = $this->settings['imprint'];
+        $header = $this->settings['header'] ?? '';
+        $this->view->assign('header', $header);
+
+        $teaser = $this->settings['teaser'] ?? '';
+        $this->view->assign('teaser', $teaser);
+
+        $linktext = $this->settings['linktext'] ?? '';
+        $this->view->assign('linktext', $linktext);
+
+        $imprint = $this->settings['imprint'] ?? '';
         $this->view->assign('imprint', $imprint);
- 	      $dataprotection = $this->settings['dataProtection'];
+
+        $dataprotection = $this->settings['dataProtection'] ?? '';
         $this->view->assign('dataprotection', $dataprotection );
-        $nurlink = $this->settings['nurLink'];
+
+        $nurlink = $this->settings['nurLink'] ?? '';
         $this->view->assign('cookieanzeige', $nurlink);
+
         $cookies0 = $this->cookieRepository->findByKategorie(0);
         $this->view->assign('cookies0', $cookies0);
         $cookies1 = $this->cookieRepository->findByKategorie(1);
