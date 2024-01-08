@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z" product-name="wacon_cookie_management">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z"
+		  product-name="wacon_cookie_management">
 		<header/>
 		<body>
 			<trans-unit id="bezeichnung.description">

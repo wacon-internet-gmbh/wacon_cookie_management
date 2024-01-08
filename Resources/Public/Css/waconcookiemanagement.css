@@ -20,26 +20,30 @@
 }
 
 .cookie-set.script img {
-        max-width:100%;height:auto;
-   /* filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
-    -webkit-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
-    -moz-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);*/
+    max-width: 100%;
+    height: auto;
+    /* filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
+     -webkit-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
+     -moz-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);*/
 }
-.cookie-information{margin-bottom:20px;}
+
+.cookie-information {
+    margin-bottom: 20px;
+}
 
 #CookieBox p,
 #CookieBox h1,
 #CookieBox h2,
 #CookieBox h3 {
-    color:#333333;
+    color: #333333;
     text-transform: none;
     text-decoration: none;
     font-style: normal;
 }
 
 #CookieBox a {
-    color:#333333;
-    font-size:16px;
+    color: #333333;
+    font-size: 16px;
     text-transform: none;
     text-decoration: none;
 }
@@ -63,7 +67,7 @@
     position: relative;
     width: 100%;
     top: 0%;
-    left:0%;
+    left: 0%;
     max-width: 100%;
     max-height: auto;
     overflow: auto;
@@ -75,25 +79,26 @@
 #CookieBox h2 {
     text-align: center;
     font-weight: 600;
-    font-size:1.6rem;
+    font-size: 1.6rem;
 }
 
-#CookieBox ul , #CookieBox2 ul {
+#CookieBox ul, #CookieBox2 ul {
     margin: 0;
     padding: 0;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
 }
+
 #CookieBox .cookie-info ul, #CookieBox2 .cookie-infolist ul {
     text-align: left;
-    padding:0;
-    padding-left:1rem;
+    padding: 0;
+    padding-left: 1rem;
 }
 
 #CookieBox p, #CookieBox2 p {
-    font-size:1.1rem;
-    margin:0 auto 10px;
+    font-size: 1.1rem;
+    margin: 0 auto 10px;
 }
 
 #CookieBox .cookie-btn {
@@ -107,29 +112,32 @@
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
-    margin:15px auto;
+    margin: 15px auto;
 }
 
 #CookieBox .cookie-btn:hover {
     color: white;
     text-decoration: none;
 }
-#CookieBox .cookie-refuse .cookie-btn {background:#ccc;}
+
+#CookieBox .cookie-refuse .cookie-btn {
+    background: #ccc;
+}
 
 #CookieBox .cookie-accept-container {
     text-align: center;
     cursor: pointer;
 }
 
-#CookieBox  a.cookie-accept {
-    padding:10px 50px;
+#CookieBox a.cookie-accept {
+    padding: 10px 50px;
 }
 
 #CookieBox .cookieclose {
     cursor: pointer;
-    position:absolute;
-    top:15px;
-    right:15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     border-radius: 4px;
     border: 1px solid #333;
     background: #333;
@@ -140,22 +148,24 @@
 }
 
 #CookieBox .intro p {
-    width:75%;
+    width: 75%;
 }
 
 #CookieBox .cookie-management,
 #CookieBox .cookie-refuse {
-    margin:10px auto;
-  
+    margin: 10px auto;
+
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
     padding: 5px 50px;
     background-color: #ccc;
 }
+
 .waconcookiemanagementlist #CookieBox .cookie-refuse {
     background-color: transparent;
 }
+
 #CookieBox .text-center {
     text-align: center;
 }
@@ -193,19 +203,19 @@
     margin-right: 5px;
 }
 
-#CookieBox .cookie-on,#CookieBox2 .cookie-on {
+#CookieBox .cookie-on, #CookieBox2 .cookie-on {
     display: none;
 }
 
-#CookieBox .intro .cookie-legal,#CookieBox2 .intro .cookie-legal {
-    margin-top:50px;
-    width:100%;
+#CookieBox .intro .cookie-legal, #CookieBox2 .intro .cookie-legal {
+    margin-top: 50px;
+    width: 100%;
 }
 
 #CookieBox .cookie-legal a {
     display: inline-block;
     padding: 0;
-    font-size:.9rem;
+    font-size: .9rem;
     margin-right: 30px;
     color: #333333;
     text-decoration: none;
@@ -232,18 +242,19 @@
 #CookieBox .category {
     background: #eeeeee;
     padding: 10px;
-    margin:25px 30px;
+    margin: 25px 30px;
 }
+
 .waconcookiemanagementlist #CookieBox2 .category {
     background: #eeeeee;
     padding: 10px;
-    margin:25px 0px;
+    margin: 25px 0px;
 }
+
 #CookieBox .category h3 {
     margin-top: 0;
     font-size: 1.25rem;
 }
-
 
 
 #CookieBox .cookie-info, #CookieBox2 .cookie-infolist {
@@ -272,18 +283,24 @@
 }
 
 #CookieBox .box-cookie-management-in > p {
-    width:80%;
-}
-.waconcookiemanagementlist #CookieBox  .box-cookie-management{
-    display:block;
-}
-.waconcookiemanagementlist #CookieBox .box-cookie-management-in > p {
-width:100%;margin:25px 0 0 0;
+    width: 80%;
 }
 
-.waconcookiemanagementlist  #CookieBox .intro p {width:100%;}
+.waconcookiemanagementlist #CookieBox .box-cookie-management {
+    display: block;
+}
+
+.waconcookiemanagementlist #CookieBox .box-cookie-management-in > p {
+    width: 100%;
+    margin: 25px 0 0 0;
+}
+
+.waconcookiemanagementlist #CookieBox .intro p {
+    width: 100%;
+}
+
 #CookieBox .deactivated,
-#CookieBox .activated,#CookieBox2 .deactivated,
+#CookieBox .activated, #CookieBox2 .deactivated,
 #CookieBox2 .activated {
     width: 40px;
     height: 20px;
@@ -292,13 +309,13 @@ width:100%;margin:25px 0 0 0;
     display: inline-block;
 }
 
-#CookieBox .activated,#CookieBox2 .activated  {
+#CookieBox .activated, #CookieBox2 .activated {
     background: #8dc63f;
 }
 
 #CookieBox .off,
-#CookieBox .on ,#CookieBox2 .off,
-#CookieBox2 .on{
+#CookieBox .on, #CookieBox2 .off,
+#CookieBox2 .on {
     cursor: pointer;
     display: block;
     float: left;
@@ -309,11 +326,11 @@ width:100%;margin:25px 0 0 0;
     border-radius: 8px;
 }
 
-#CookieBox .on,#CookieBox2 .on {
-    float:right;
+#CookieBox .on, #CookieBox2 .on {
+    float: right;
 }
 
-#CookieBox .arrow ,#CookieBox2 .arrow {
+#CookieBox .arrow, #CookieBox2 .arrow {
     border: .5rem solid #333;
     font-size: 0;
     line-height: 0;
@@ -330,7 +347,7 @@ width:100%;margin:25px 0 0 0;
     margin-bottom: -5px;
 }
 
-#CookieBox .arrow.up,#CookieBox2 .arrow.up {
+#CookieBox .arrow.up, #CookieBox2 .arrow.up {
     border-top-color: transparent;
     border-right-color: transparent;
     border-left-color: transparent;
@@ -341,25 +358,30 @@ width:100%;margin:25px 0 0 0;
 #CookieBox .cookie-fix {
     display: none;
     overflow: auto;
-    padding:20px 0 0 0;
+    padding: 20px 0 0 0;
 }
+
 .waconcookiemanagementlist #CookieBox .cookie-fix {
-    display:block;
+    display: block;
 }
+
 #CookieBox .cookie-fix .cookie-save {
     float: left;
-    margin-left:30px;
+    margin-left: 30px;
 }
 
 #CookieBox .cookie-fix .text-back-right {
     float: right;
-    margin-right:30px;
+    margin-right: 30px;
 }
-#CookieBox .cookie-refuse-container, #CookieBox .cookie-accept-container, #CookieBox .cookie-management-container{text-align:center;}
+
+#CookieBox .cookie-refuse-container, #CookieBox .cookie-accept-container, #CookieBox .cookie-management-container {
+    text-align: center;
+}
 
 #CookieBox .cookie-fix .cookieback,
 #CookieBox .cookie-fix .cookie-refuse {
-    display:block;
+    display: block;
     margin: 10px auto;
     text-align: center;
     cursor: pointer;
@@ -367,7 +389,7 @@ width:100%;margin:25px 0 0 0;
     padding: 5px 20px;
     background-color: #ccc;
     white-space: nowrap;
-    width:auto;
+    width: auto;
 }
 
 #CookieBox .cookie-fix .cookie-legal {
@@ -386,12 +408,13 @@ width:100%;margin:25px 0 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #333333;
     text-align: center;
-    background-color: rgb(255,255,255,0.8);
-    margin:0 auto;
-    padding:40px;border-radius:5px;    
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 5px;
 }
 
 .cookie-set {
@@ -399,7 +422,7 @@ width:100%;margin:25px 0 0 0;
 }
 
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
     #CookieBox {
         left: 2%;
         width: 96%;
@@ -409,9 +432,9 @@ width:100%;margin:25px 0 0 0;
     }
 }
 
-@media(max-width: 786px) {
+@media (max-width: 786px) {
     #CookieBox .cookie-fix .text-back-right {
-        width:87%;
+        width: 87%;
     }
 
 }

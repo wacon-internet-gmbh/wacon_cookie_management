@@ -1,4 +1,5 @@
 <?php
+
 namespace Waconcookiemanagement\WaconCookieManagement\Domain\Model;
 
 /***
@@ -73,7 +74,7 @@ class Cookie extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $host = '';
 
-      /**
+    /**
      * nocookietext
      *
      * @var string
@@ -81,7 +82,6 @@ class Cookie extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $nocookietext = '';
 
 
-     
     /**
      * nocookieimage
      *

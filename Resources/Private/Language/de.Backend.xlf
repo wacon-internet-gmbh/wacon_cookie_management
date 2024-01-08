@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
-          product-name="bootstrap_package">
-        <header/>
-            <body>
-            <trans-unit id="settings.script.cookie">
-                <target>Benötigter Cookie</target>
-            </trans-unit>
-            <trans-unit id="settings.script.text">
-                <target>Text (wird angezeigt, wenn Cookie nicht erlaubt)</target>
-            </trans-unit>
-            <trans-unit id="settings.script.script">
-                <target>Eingebundenes Script</target>
-            </trans-unit>
-            <trans-unit id="settings.script.bild">
-                <target>Bild (wird angezeigt, wenn Cookie nicht erlaubt)</target>
-            </trans-unit>
-            <trans-unit id="settings.cookiefreigabe.nurlink">
-                <target>Nur Link zur Cookiefreigabe einfügen</target>
-            </trans-unit>
-            <trans-unit id="settings.cookiefreigabe.imprint">
-                <target>Link zum Impressum</target>
-            </trans-unit>
-             <trans-unit id="settings.cookiefreigabe.change">
-                <target>Letzte Änderung an den Cookies</target>
-            </trans-unit>
-             <trans-unit id="settings.cookiefreigabe.header">
-                <target>Überschrift in Cookiebox</target>
-            </trans-unit>
-            <trans-unit id="settings.cookiefreigabe.teaser">
-                <target>Einleitender Text in Cookiebox</target>
-            </trans-unit>
-            <trans-unit id="settings.cookiefreigabe.linktext">
-                <target>Text für Link zu Cookiefreigabe</target>
-            </trans-unit>
-            <trans-unit id="settings.cookiefreigabe.dataprotection">
-                <target>Link zur Datenschutzerklärung</target>
-            </trans-unit>
-            <trans-unit id="settings.registration.title">
-                <target>Einstellungen</target>
-            </trans-unit>
-        </body>
-    </file>
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
+		  product-name="bootstrap_package">
+		<header/>
+		<body>
+			<trans-unit id="settings.script.cookie">
+				<target>Benötigter Cookie</target>
+			</trans-unit>
+			<trans-unit id="settings.script.text">
+				<target>Text (wird angezeigt, wenn Cookie nicht erlaubt)</target>
+			</trans-unit>
+			<trans-unit id="settings.script.script">
+				<target>Eingebundenes Script</target>
+			</trans-unit>
+			<trans-unit id="settings.script.bild">
+				<target>Bild (wird angezeigt, wenn Cookie nicht erlaubt)</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.nurlink">
+				<target>Nur Link zur Cookiefreigabe einfügen</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.imprint">
+				<target>Link zum Impressum</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.change">
+				<target>Letzte Änderung an den Cookies</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.header">
+				<target>Überschrift in Cookiebox</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.teaser">
+				<target>Einleitender Text in Cookiebox</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.linktext">
+				<target>Text für Link zu Cookiefreigabe</target>
+			</trans-unit>
+			<trans-unit id="settings.cookiefreigabe.dataprotection">
+				<target>Link zur Datenschutzerklärung</target>
+			</trans-unit>
+			<trans-unit id="settings.registration.title">
+				<target>Einstellungen</target>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

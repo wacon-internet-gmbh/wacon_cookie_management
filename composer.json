@@ -1,34 +1,34 @@
 {
-    "name": "waconcookiemanagement/wacon-cookie-management",
-    "type": "typo3-cms-extension",
-    "description": "Different cookies are allowed individually. Differentiation into necessary and optional cookies",
-    "license": "GPL-2.0-or-later",    
-    "authors": [
-        {
-            "name": "Kerstin Schmitt",
-            "role": "Developer"
-        }
-    ],
-    "homepage": "https://extensions.typo3.org/extension/wacon_cookie_management",
-    "support": {
-        "source": "https://github.com/wacon-internet-gmbh/wacon_cookie_management",
-        "issues": "https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues"
-    },
-    "require": {
-        "typo3/cms-core": "^11.5 || ^12.4",
-        "php": "^7.4 || ^8"
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "wacon_cookie_management"
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Waconcookiemanagement\\WaconCookieManagement\\": "Classes/"
-        }
-    },
-    "replace": {
-        "typo3-ter/wacon-cookie-management": "self.version"
-    }
+	"name": "waconcookiemanagement/wacon-cookie-management",
+	"type": "typo3-cms-extension",
+	"description": "Different cookies are allowed individually. Differentiation into necessary and optional cookies",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Kerstin Schmitt",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://extensions.typo3.org/extension/wacon_cookie_management",
+	"support": {
+		"source": "https://github.com/wacon-internet-gmbh/wacon_cookie_management",
+		"issues": "https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues"
+	},
+	"require": {
+		"typo3/cms-core": "^11.5 || ^12.4",
+		"php": "^7.4 || ^8"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "wacon_cookie_management"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Waconcookiemanagement\\WaconCookieManagement\\": "Classes/"
+		}
+	},
+	"replace": {
+		"typo3-ter/wacon-cookie-management": "self.version"
+	}
 }

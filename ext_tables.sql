@@ -2,7 +2,6 @@
 # Table structure for table 'tx_waconcookiemanagement_domain_model_cookie'
 #
 CREATE TABLE tx_waconcookiemanagement_domain_model_cookie (
-
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
@@ -25,8 +24,6 @@ CREATE TABLE tx_waconcookiemanagement_domain_model_cookie (
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
 
-
-
 	sys_language_uid int(11) DEFAULT '0' NOT NULL,
 	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
@@ -36,7 +33,6 @@ CREATE TABLE tx_waconcookiemanagement_domain_model_cookie (
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
-
 );
 
 #

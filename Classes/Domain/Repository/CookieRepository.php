@@ -1,4 +1,5 @@
 <?php
+
 namespace Waconcookiemanagement\WaconCookieManagement\Domain\Repository;
 
 /***
@@ -17,4 +18,4 @@ namespace Waconcookiemanagement\WaconCookieManagement\Domain\Repository;
  */
 class CookieRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+}

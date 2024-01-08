@@ -2,7 +2,7 @@
 defined('TYPO3') or die('Access denied.');
 
 call_user_func(
-    function(){
+    function () {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'wacon_cookie_management',
             'Cookiefreigabe',
@@ -33,7 +33,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-           
+
             ]
         );
 
@@ -75,7 +75,7 @@ call_user_func(
             }'
         );
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
+
         $iconRegistry->registerIcon(
             'wacon_cookie_management-plugin-cookiefreigabe',
             \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
@@ -87,6 +87,6 @@ call_user_func(
             \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
             ['source' => 'EXT:wacon_cookie_management/Resources/Public/Icons/user_plugin_script.svg']
         );
-		
+
     }
 );

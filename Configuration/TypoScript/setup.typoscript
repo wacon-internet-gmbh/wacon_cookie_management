@@ -1,4 +1,3 @@
-
 plugin.tx_waconcookiemanagement_cookiefreigabe {
     view {
         templateRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Templates/
@@ -8,6 +7,7 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_waconcookiemanagement_cookiefreigabe.view.layoutRootPath}
     }
+
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -16,10 +16,9 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         requireCHashArgumentForActionArguments = 1
     }
 
-    settings{
+    settings {
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
-   
 }
 
 plugin.tx_waconcookiemanagement_cookielist {
@@ -31,6 +30,7 @@ plugin.tx_waconcookiemanagement_cookielist {
         layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_waconcookiemanagement_cookiefreigabe.view.layoutRootPath}
     }
+
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -38,11 +38,10 @@ plugin.tx_waconcookiemanagement_cookielist {
         # Should be on by default, but can be disabled if all action in the plugin are uncached
         requireCHashArgumentForActionArguments = 1
     }
-   
-    settings{
+
+    settings {
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
-
 }
 
 plugin.tx_waconcookiemanagement_script {
@@ -54,6 +53,7 @@ plugin.tx_waconcookiemanagement_script {
         layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_waconcookiemanagement_script.view.layoutRootPath}
     }
+
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -61,19 +61,19 @@ plugin.tx_waconcookiemanagement_script {
         # Should be on by default, but can be disabled if all action in the plugin are uncached
         requireCHashArgumentForActionArguments = 1
     }
-    settings{
+
+    settings {
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
-
 }
 
 
- 
 [{$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery} == 1]
-    page.includeJS{
+    page.includeJS {
         ajquery = EXT:wacon_cookie_management/Resources/Public/JavaScript/jquery.min.js
     }
 [END]
+
 lib.fluidLoadRecord = RECORDS
 lib.fluidLoadRecord {
     source.data = current:1
@@ -82,10 +82,10 @@ lib.fluidLoadRecord {
     tables = tt_content
 }
 
-page.includeJSFooter{
+page.includeJSFooter {
     waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
 }
 
-page.includeCSS{
+page.includeCSS {
     waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/Css/waconcookiemanagement.css
 }

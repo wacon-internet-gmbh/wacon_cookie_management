@@ -7,7 +7,7 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
-        'security' =>[
+        'security' => [
             'ignorePageTypeRestriction' => true,
         ],
         'languageField' => 'sys_language_uid',
@@ -26,21 +26,21 @@ return [
     ],
     'columns' => [
         'sys_language_uid' => [
-                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-                'config' => [
-                    'type' => 'select',
-                    'renderType' => 'selectSingle',
-                    'special' => 'languages',
-                    'items' => [
-                        [
-                            'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
-                            -1,
-                            'flags-multiple'
-                        ]
-                    ],
-                    'default' => 0,
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'special' => 'languages',
+                'items' => [
+                    [
+                        'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
+                        -1,
+                        'flags-multiple'
+                    ]
                 ],
+                'default' => 0,
             ],
+        ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
             'exclude' => true,
@@ -195,9 +195,9 @@ return [
             ],
         ],
         'nocookieimage' => [
-	        'exclude' => true,
-	        'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookieimage',
-	        'config' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookieimage',
+            'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'sys_file_reference',
                 'foreign_field' => 'uid_foreign',
@@ -256,16 +256,16 @@ return [
                     'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
                 ],
             ],
-	    ],
+        ],
         'nocookietext' => [
-	        'exclude' => true,
-	        'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookietext',
-	        'config' => [
-			    'type' => 'text',
-			    'cols' => 40,
-			    'rows' => 15,
-			    'enableRichtext' => true,
-			],
-	    ],
+            'exclude' => true,
+            'label' => 'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_waconcookiemanagement_domain_model_cookie.nocookietext',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'enableRichtext' => true,
+            ],
+        ],
     ],
 ];

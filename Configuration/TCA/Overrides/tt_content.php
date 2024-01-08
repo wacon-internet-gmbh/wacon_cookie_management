@@ -14,7 +14,6 @@ ExtensionUtility::registerPlugin(
     'wacon_cookie_management',
     'Script',
     'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_script.name'
-    
 );
 
 ExtensionUtility::registerPlugin(
