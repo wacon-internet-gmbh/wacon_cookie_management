@@ -27,13 +27,16 @@
 		
 		<f:else>
 		
-			<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
+			
 				<f:variable name="needimage">1</f:variable>
 
 				<f:if condition="{image}">
+                   
 					<f:for each="{image}" as="imagearray">
 						<f:for each="{imagearray}" as="img">
-							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
+                             <div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
+							<f:image image="{img}" title="{img.title}" alt="{img.alternate}" />
+                             </div>
 						<f:variable name="needimage">0</f:variable>
 					</f:for>
 					</f:for>
@@ -42,19 +45,21 @@
 				<f:if condition="{needimage}">
 					
 					<f:if condition="{mycookie.nocookieimage}">
+                        <div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
 						<f:image image="{mycookie.nocookieimage}" title="{mycookie.nocookieimage.title}" alt="{mycookie.nocookieimage.alternative}" />
+                            </div>
 					</f:if>
 							
 						
 					</f:if>
 				<f:if condition="{cookietext}">
-					<f:then><p>{cookietext}</p></f:then>
-					<f:else><f:format.raw>{mycookie.nocookietext}</f:format.raw></f:else>
+					<f:then><div class="cookie-set cookiecontent cookieuid-{cookieuid} script"><p>{cookietext}</p></div></f:then>
+					<f:else><f:if><div class="cookie-set cookiecontent cookieuid-{cookieuid} script"><f:format.raw>{mycookie.nocookietext}</f:format.raw></div></f:if></f:else>
 				</f:if>
-			</div>
 			<f:if condition="{nocookiecontentarray}">
 				<f:for each="{nocookiecontentarray}" as="cookiecontent">
-					<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
+                    <f:if condition=""><div class="cookie-set cookiecontent cookieuid-{cookieuid} script"><f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject></div></f:if>
+					
 				</f:for>
 			</f:if>
 		</f:else>
