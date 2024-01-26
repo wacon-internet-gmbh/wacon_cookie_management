@@ -1,6 +1,6 @@
 /* DOCUMENT INFORMATION
     - Document: Stylesheet for WACON COOKIE CONSENT BOX
-    - Version:  1.1.4
+    - Version:  4.1.0
     - Client:   WACON Internet GmbH
     - Author:   Kerstin Schmitt / Oliver Best
 */
@@ -33,12 +33,20 @@
 
 #CookieBox p,
 #CookieBox h1,
-#CookieBox h2,
-#CookieBox h3 {
+#CookieBox h2,#CookieBox .h2,
+#CookieBox h3, #CookieBox .h3{
     color: #333333;
     text-transform: none;
     text-decoration: none;
     font-style: normal;
+}
+#CookieBox .h2{
+    font-size:120%;
+    margin-bottom:6rem;
+}
+#CookieBox .h3{
+    font-size:110%;
+    margin-bottom:6rem;
 }
 
 #CookieBox a {
