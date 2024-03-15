@@ -31,14 +31,16 @@
 				<f:variable name="needimage">1</f:variable>
 
 				<f:if condition="{image}">
-					<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
+					
 					<f:for each="{image}" as="imagearray">
 						<f:for each="{imagearray}" as="img">
+							<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
 							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
+						</div>
 						<f:variable name="needimage">0</f:variable>
 					</f:for>
 					</f:for>
-					</div>
+					
 					</f:if>
 				<f:if condition="{needimage}">
 					
