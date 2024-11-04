@@ -6,6 +6,8 @@ use TYPO3\CMS\Extbase\Annotation\Inject;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Resource\FileReference;
+use TYPO3\CMS\Core\Resource\FileRepository;
 
 /***
  *
@@ -23,6 +25,8 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
  */
 class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
+    
     /**
      * cookieRepository
      *
@@ -41,7 +45,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $this->cookieRepository = $cookieRepository;
     }
-
+    public function __construct(
+        private readonly FileRepository $fileRepository,
+    ) {}
+    
     /**
      * action list
      *
@@ -212,26 +219,19 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
         $content2 = $this->settings['bild'] ?? null;
-        $filesProcessor = GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor::class);
-        $image = $filesProcessor->process(
-            $this->configurationManager->getContentObject(),
-            [],
-            [
-                'references.' => [
-                    'fieldName' => 'image',
-                    'table' => 'tt_content',
-                ],
-                'as' => 'image',
-            ],
-            []
-        );
+
+        $currentContentObject = $this->request->getAttribute('currentContentObject');
+        // ID of current tt_content record
+        $uid = $currentContentObject->data['uid'];
+       
+        /** @var FileReference[] $fileObjects */
+        $fileObjects = $this->fileRepository->findByRelation('tt_content', 'settings.bild', $uid );
 
         $showcookie = $this->settings['cookie'];
         $nocookiecontentarray = null;
         $cookiecontentarray = null;
         if (array_key_exists('nocookiecontent', $this->settings)) $nocookiecontentarray = explode(',', $this->settings['nocookiecontent']) ?? null;
-        $cObj = $this->configurationManager->getContentObject();
-        $uid = $cObj->data['uid'];
+
         if (strpos($cookie, 'setwcm') === 0) {
             $cookie = substr($cookie, 6);
         }
@@ -255,14 +255,27 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('content1', $content1);
         $this->view->assign('cookiecontentarray', $cookiecontentarray);
         $this->view->assign('nocookiecontentarray', $nocookiecontentarray);
-        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($content2);
+       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($fileObjects);
         $this->view->assign('content2', $content2);
-        $this->view->assign('uid', $uid);
-        $this->view->assign('image', $image);
+        $this->view->assign('images', $fileObjects);
         $this->view->assign('cookieuid', $showcookie);
         $this->view->assign('mycookie', $mycookie);
         return $this->responseFactory->createResponse()
             ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
             ->withBody($this->streamFactory->createStream($this->view->render()));
+    }
+
+    public function render(): string
+    {
+        $request = $this->getRequest($this->renderingContext);
+        return $request !== null ? 'Request found' : 'No request found';
+    }
+
+    private function getRequest(): ServerRequestInterface|null
+    {
+        if ($this->renderingContext->hasAttribute(ServerRequestInterface::class)) {
+            return $this->renderingContext->getAttribute(ServerRequestInterface::class);
+        }
+        return null;
     }
 }

@@ -67,52 +67,49 @@
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookietext">
 				<source>Default text, if cookie is not accepted</source>
 			</trans-unit>
-
-			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
-				<source>Cookie Reports</source>
+			<trans-unit id="settings.script.cookie">
+				<source>Required Cookie</source>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
-				<source>Cookie Konfiguration</source>
+			<trans-unit id="settings.script.text">
+				<source>Show text if Cookie is not accepted</source>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
-				<source>Page</source>
+			<trans-unit id="settings.script.script">
+				<source>Script</source>
 			</trans-unit>
-			<trans-unit id="month.january">
-				<source>January</source>
+			<trans-unit id="settings.script.cookiecontent">
+				<source>Contentelements (if Cookie is accepted)</source>
 			</trans-unit>
-			<trans-unit id="month.february">
-				<source>February</source>
+			<trans-unit id="settings.script.nocookiecontent">
+				<source>Contentelements (if Cookie is not accepted)</source>
 			</trans-unit>
-			<trans-unit id="month.march">
-				<source>March</source>
+			<trans-unit id="settings.script.bild">
+				<source>Show image if Cookie is not accepted</source>
 			</trans-unit>
-			<trans-unit id="month.april">
-				<source>April</source>
+			<trans-unit id="settings.cookiefreigabe.nurlink">
+				<source>Only Show link to cookie box</source>
 			</trans-unit>
-			<trans-unit id="month.may">
-				<source>May</source>
+			<trans-unit id="settings.cookiefreigabe.imprint">
+				<source>Imprint url</source>
 			</trans-unit>
-			<trans-unit id="month.june">
-				<source>June</source>
+			<trans-unit id="settings.cookiefreigabe.change">
+				<source>Last change in cookie configuration</source>
 			</trans-unit>
-			<trans-unit id="month.july">
-				<source>July</source>
+			<trans-unit id="settings.cookiefreigabe.header">
+				<source>Header in cookie box</source>
 			</trans-unit>
-			<trans-unit id="month.august">
-				<source>August</source>
+			<trans-unit id="settings.cookiefreigabe.teaser">
+				<source>Teaser in cookie box</source>
 			</trans-unit>
-			<trans-unit id="month.september">
-				<source>September</source>
+			<trans-unit id="settings.cookiefreigabe.linktext">
+				<source>Text link to cookie settings</source>
 			</trans-unit>
-			<trans-unit id="month.october">
-				<source>October</source>
+			<trans-unit id="settings.cookiefreigabe.dataprotection">
+				<source>Privacy source url</source>
 			</trans-unit>
-			<trans-unit id="month.november">
-				<source>November</source>
+			<trans-unit id="settings.registration.title">
+				<source>Settings</source>
 			</trans-unit>
-			<trans-unit id="month.december">
-				<source>December</source>
-			</trans-unit>
+	
 		</body>
 	</file>
 </xliff>

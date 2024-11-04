@@ -3,35 +3,40 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
+               
                     <sheetTitle>
                         LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.registration.title
                     </sheetTitle>
-                </TCEforms>
+                
                 <type>array</type>
                 <el>
                     <settings.nurLink>
-                        <TCEforms>
+                       
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.nurlink
                             </label>
-                            <config>
-                                <type>check</type>
-                            </config>
-                        </TCEforms>
+                             <config>
+                            <type>check</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:core/Resources/Private/Language/Backend.xlf:labels.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                        
                     </settings.nurLink>
                     <settings.header>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.header
                             </label>
                             <config>
                                 <type>input</type>
                             </config>
-                        </TCEforms>
+                        
                     </settings.header>
                     <settings.teaser>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.teaser
                             </label>
@@ -40,20 +45,20 @@
                                 <cols>30</cols>
                                 <rows>3</rows>
                             </config>
-                        </TCEforms>
+                       
                     </settings.teaser>
                     <settings.linktext>
-                        <TCEforms>
+                       
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.linktext
                             </label>
                             <config>
                                 <type>input</type>
                             </config>
-                        </TCEforms>
+                        
                     </settings.linktext>
                     <settings.dataProtection>
-                        <TCEforms>
+                       
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.dataprotection
                             </label>
@@ -66,11 +71,11 @@
                                 <minitems>0</minitems>
                                 <show_thumbs>1</show_thumbs>
                             </config>
-                        </TCEforms>
+                        
                     </settings.dataProtection>
 
                     <settings.imprint>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.imprint
                             </label>
@@ -83,10 +88,10 @@
                                 <minitems>0</minitems>
                                 <show_thumbs>1</show_thumbs>
                             </config>
-                        </TCEforms>
+                       
                     </settings.imprint>
                     <settings.change>
-                        <TCEforms>
+                       
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.change
                             </label>
@@ -95,7 +100,7 @@
                                 <renderType>inputDateTime</renderType>
                                 <eval>datetime</eval>
                             </config>
-                        </TCEforms>
+                       
                     </settings.change>
 
                 </el>

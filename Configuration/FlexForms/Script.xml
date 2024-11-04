@@ -3,15 +3,15 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
+               
                     <sheetTitle>
                         LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.registration.title
                     </sheetTitle>
-                </TCEforms>
+                
                 <type>array</type>
                 <el>
                     <settings.cookie>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookie
                             </label>
@@ -29,10 +29,10 @@
                                     AND kategorie > 0
                                 </foreign_table_where>
                             </config>
-                        </TCEforms>
+                       
                     </settings.cookie>
                     <settings.script>
-                        <TCEforms>
+                       
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script
                             </label>
@@ -41,10 +41,10 @@
                                 <cols>24</cols>
                                 <rows>8</rows>
                             </config>
-                        </TCEforms>
+                       
                     </settings.script>
                     <settings.cookiecontent>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.cookiecontent
                             </label>
@@ -54,20 +54,20 @@
                                 <allowed>tt_content</allowed>
                                 <rows>8</rows>
                             </config>
-                        </TCEforms>
+                       
                     </settings.cookiecontent>
                     <settings.text>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.text
                             </label>
                             <config>
                                 <type>input</type>
                             </config>
-                        </TCEforms>
+                        
                     </settings.text>
                     <settings.bild>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.bild
                             </label>
@@ -120,10 +120,10 @@
                                     </enabledControls>
                                 </appearance>
                             </config>
-                        </TCEforms>
+                        
                     </settings.bild>
                     <settings.nocookiecontent>
-                        <TCEforms>
+                        
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.nocookiecontent
                             </label>
@@ -133,7 +133,7 @@
                                 <allowed>tt_content</allowed>
                                 <rows>8</rows>
                             </config>
-                        </TCEforms>
+                        
                     </settings.nocookiecontent>
                 </el>
             </ROOT>

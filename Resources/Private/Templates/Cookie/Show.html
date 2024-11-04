@@ -1,6 +1,6 @@
 {namespace t=Waconcookiemanagement\WaconCookieManagement\ViewHelpers}
 
-<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
 
 	This Template is responsible for displaying a single view for a domain object
@@ -30,15 +30,15 @@
 			
 				<f:variable name="needimage">1</f:variable>
 
-				<f:if condition="{image}">
+				<f:if condition="{images}">
 					
-					<f:for each="{image}" as="imagearray">
-						<f:for each="{imagearray}" as="img">
+					<f:for each="{images}" as="img">
+						
 							<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
 							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
 						</div>
 						<f:variable name="needimage">0</f:variable>
-					</f:for>
+				
 					</f:for>
 					
 					</f:if>
