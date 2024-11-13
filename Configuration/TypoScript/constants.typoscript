@@ -11,6 +11,12 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
     settings {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=boolean; label=Load jQuery
         includeJQuery = 1
+
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int+; label=Cookie Storage
+        cookieStorage =
+
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int+; label=Storage for Header scripts
+        headerScriptStorage =
     }
 }
 

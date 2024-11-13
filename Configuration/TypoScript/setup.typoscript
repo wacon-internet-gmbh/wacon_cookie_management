@@ -89,3 +89,24 @@ page.includeJSFooter {
 page.includeCSS {
     waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/Css/waconcookiemanagement.css
 }
+
+
+[{$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.headerScriptStorage} > 0]
+lib.contentElement {
+    templateRootPaths {
+        20241113 = EXT:wacon_cookie_management/Resources/Private/Templates/Content/
+    }
+}
+page.headerData.20241113 = CONTENT
+page.headerData.20241113 {
+    table = tt_content
+    select {
+        pidInList = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.headerScriptStorage}
+    }
+
+    renderObj < tt_content
+    renderObj {
+        list.templateName = NoLayout
+    }
+}
+[END]
