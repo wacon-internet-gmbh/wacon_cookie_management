@@ -10,6 +10,21 @@
                 
                 <type>array</type>
                 <el>
+                <settings.direct>
+                       
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.direct
+                            </label>
+                             <config>
+                            <type>check</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:core/Resources/Private/Language/Backend.xlf:labels.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                        
+                    </settings.direct>
                     <settings.cookie>
                         
                             <label>

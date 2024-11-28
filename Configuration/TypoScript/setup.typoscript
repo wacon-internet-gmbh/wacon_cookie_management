@@ -97,8 +97,11 @@ lib.contentElement {
         20241113 = EXT:wacon_cookie_management/Resources/Private/Templates/Content/
     }
 }
-page.headerData.20241113 = CONTENT
-page.headerData.20241113 {
+page.headerData.20241113 = COA 
+page.headerData.20241113.10 = TEXT 
+page.headerData.20241113.10.value = 
+page.headerData.20241113.20 = CONTENT
+page.headerData.20241113.20 {
     table = tt_content
     select {
         pidInList = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.headerScriptStorage}
@@ -109,4 +112,6 @@ page.headerData.20241113 {
         list.templateName = NoLayout
     }
 }
+page.headerData.20241113.30 = TEXT 
+page.headerData.20241113.30.value = 
 [END]

@@ -10,6 +10,9 @@
 			<trans-unit id="settings.script.text">
 				<source>Show text if Cookie is not accepted</source>
 			</trans-unit>
+			<trans-unit id="settings.script.direct">
+				<source>Direct accepted</source>
+			</trans-unit>
 			<trans-unit id="settings.script.script">
 				<source>Script</source>
 			</trans-unit>

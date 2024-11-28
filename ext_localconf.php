@@ -27,6 +27,17 @@ call_user_func(
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'wacon_cookie_management',
+            'Headerscript',
+            [
+                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'headerscript',
+            ],
+            // non-cacheable actions
+            [
+                \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'headerscript',
+            ]
+        );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'wacon_cookie_management',
             'Cookielist',
             [
                 \Waconcookiemanagement\WaconCookieManagement\Controller\CookieController::class => 'cookielist',
@@ -67,6 +78,15 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = waconcookiemanagement_script
+                            }
+                        }
+                        headerscript {
+                            iconIdentifier = wacon_cookie_management-plugin-script
+                            title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_headerscript.name
+                            description = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_headerscript.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = waconcookiemanagement_headerscript
                             }
                         }
                     }

@@ -140,7 +140,6 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $cookieStorage = (int)$this->settings['cookieStorage'];
         } else $cookieStorage = 0;
 
-
         $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
         $cookiearray = explode('ts', (string)$cookie);
         if ($change && !is_null($cookiearray['1'] ?? null)) {
@@ -182,7 +181,6 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
         $cookies3 = $this->cookieRepository->findByKategorie(3);
         $this->view->assign('cookies3', $cookies3);
-        // $this->view->assign('cookieanzeige', '1');
         if ($cookiearray['0'] == "max") {
             $cookie1check = 1;
             $cookie2check = 1;
@@ -219,6 +217,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
         $content2 = $this->settings['bild'] ?? null;
+        $direct = $this->settings['direct'] ?? null;
 
         $currentContentObject = $this->request->getAttribute('currentContentObject');
         // ID of current tt_content record
@@ -232,20 +231,23 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $cookiecontentarray = null;
         if (array_key_exists('nocookiecontent', $this->settings)) $nocookiecontentarray = explode(',', $this->settings['nocookiecontent']) ?? null;
 
+        $content1 = '';
+
         if (strpos($cookie, 'setwcm') === 0) {
             $cookie = substr($cookie, 6);
         }
         $cookiearray = explode('ts', $cookie);
         $content1 = '';
+        $active = 0;
+        $content1 = $this->settings['script'] ?? null;
+        if (array_key_exists('cookiecontent', $this->settings)) $cookiecontentarray = explode(',', $this->settings['cookiecontent']) ?? null;
         if ($cookiearray[0] == 'max') {
-            $content1 = $this->settings['script'] ?? null;
-            if (array_key_exists('cookiecontent', $this->settings)) $cookiecontentarray = explode(',', $this->settings['cookiecontent']) ?? null;
+            $active = 1;
         } else {
             $res = explode("c", $cookiearray[0]);
             foreach ($res as $value) {
                 if ($value == $this->settings['cookie']) {
-                    $content1 = $this->settings['script'] ?? null;
-                    if (array_key_exists('nocookiecontent', $this->settings)) $cookiecontentarray = explode(',', $this->settings['cookiecontent']) ?? null;
+                    $active = 1;
                 }
             }
         }
@@ -253,13 +255,50 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $mycookie = $this->cookieRepository->findByUid($showcookie);
         $this->view->assign('cookietext', $this->settings['text']);
         $this->view->assign('content1', $content1);
+        $this->view->assign('active', $active);
+        $this->view->assign('uid', $uid);
         $this->view->assign('cookiecontentarray', $cookiecontentarray);
         $this->view->assign('nocookiecontentarray', $nocookiecontentarray);
-       // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($fileObjects);
         $this->view->assign('content2', $content2);
         $this->view->assign('images', $fileObjects);
         $this->view->assign('cookieuid', $showcookie);
         $this->view->assign('mycookie', $mycookie);
+        $this->view->assign('direct', $direct);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
+    }
+
+     /**
+     * action show
+     *
+     * @return void
+     */
+    public function headerscriptAction()
+    {
+        $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
+        if (strpos($cookie, 'setwcm') === 0) {
+            $cookie = substr($cookie, 6);
+        }
+        $cookiearray = explode('ts', $cookie);
+        $showcookie = $this->settings['cookie'] ?? null;
+        $content1 = $this->settings['script'] ?? null;
+        $content1 = '';
+        $active = 0;
+        $content1 = $this->settings['script'] ?? null;
+         if ($cookiearray[0] == 'max') {
+            $active = 1;
+        } else {
+            $res = explode("c", $cookiearray[0]);
+            foreach ($res as $value) {
+                if ($value == $this->settings['cookie']) {
+                    $active = 1;
+                }
+            }
+        }
+        $this->view->assign('active', $active);
+        $this->view->assign('content1', $content1);
+        $this->view->assign('cookieuid', $showcookie);
         return $this->responseFactory->createResponse()
             ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
             ->withBody($this->streamFactory->createStream($this->view->render()));

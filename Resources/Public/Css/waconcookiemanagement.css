@@ -19,12 +19,9 @@
     font-weight: 300;
 }
 
-.cookie-set.script img {
+.cookie-set.script img , .cookie-set-direct.script img {
     max-width: 100%;
     height: auto;
-    /* filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
-     -webkit-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);
-     -moz-filter: grayscale(100%) blur(5px) brightness(300%) saturate(0%) contrast(50%);*/
 }
 
 .cookie-information {
@@ -406,7 +403,7 @@
     clear: both
 }
 
-.cookie-set.script {
+.cookie-set.script , .cookie-set-direct.script{
     cursor: pointer;
     position: relative;
     min-height: 50px;
@@ -414,7 +411,7 @@
     text-align: center;
 }
 
-.cookie-set.script p {
+.cookie-set.script p , .cookie-set-direct.script p{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -427,7 +424,7 @@
     border-radius: 5px;
 }
 
-.cookie-set {
+.cookie-set, .cookie-set-direct {
     cursor: pointer
 }
 

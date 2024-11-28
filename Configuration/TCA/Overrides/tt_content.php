@@ -22,6 +22,12 @@ ExtensionUtility::registerPlugin(
     'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.name'
 );
 
+ExtensionUtility::registerPlugin(
+    'wacon_cookie_management',
+    'Headerscript',
+    'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_headerscript.name'
+);
+
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['waconcookiemanagement_script'] = 'pi_flexform';
 ExtensionManagementUtility::addPiFlexFormValue(
     // plugin signature: <extension key without underscores> '_' <plugin name in lowercase>
@@ -33,6 +39,12 @@ ExtensionManagementUtility::addPiFlexFormValue(
     // plugin signature: <extension key without underscores> '_' <plugin name in lowercase>
     'waconcookiemanagement_cookiefreigabe',
     'FILE:EXT:wacon_cookie_management/Configuration/Flexforms/Cookie.xml'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['waconcookiemanagement_headerscript'] = 'pi_flexform';
+ExtensionManagementUtility::addPiFlexFormValue(
+    // plugin signature: <extension key without underscores> '_' <plugin name in lowercase>
+    'waconcookiemanagement_headerscript',
+    'FILE:EXT:wacon_cookie_management/Configuration/Flexforms/Headerscript.xml'
 );
 /*
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['waconcookiemanagement_cookielist'] = 'pi_flexform';

@@ -1,7 +1,6 @@
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     var maxage = "max-age=" + 24 * 60 * 60 * 365;
-
     document.cookie = cname + "=setwcm" + cvalue + "ts" + Date.now() + ";" + maxage + ";path=/";
 }
 
@@ -20,52 +19,61 @@ function getCookie(cname) {
     return "";
 }
 
-$(document).ready(function () {
-    $('.waconcookiemanagement').prependTo("body");
+
+function reloadCookies()
+{
+    history.go(0);
+}
+
+function loadCookies()
+{
     var res = getCookie("waconcookiemanagement");
     resc = res.split("ts");
     wert = resc[0];
-    if (wert != "") {
-        if (wert == "setwcmmax") {
-            $(".cookie-on").show();
-            $(".cookie-off").hide();
-        } else {
-            res = wert.split("c");
-            jQuery.each(res, function (i, val) {
-                if (val == 'max') {
-                } else {
-                    $(".cookie-on.cookie" + val).show();
-                    $(".cookie-off.cookie" + val).hide();
-                }
-            });
-        }
+    params = [];
+    if (wert == "setwcmmax") {
+        $(".cookie-on").show();
+        $(".cookie-off").hide();
+        params['max'] =1;
     } else {
+        res = wert.split("c");
+        jQuery.each(res, function (i, val) {
+            if (val == 'max') {
+            } else {
+                $(".cookie-on.cookie" + val).show();
+                $(".cookie-off.cookie" + val).hide();
+                params[val] =1;
+            }
+        });
+    }
+}
+$(document).ready(function () {
+    $('.waconcookiemanagement').prependTo("body");
+    loadCookies();
+    if (wert == "") {
         if (!$(".waconcookiemanagement").hasClass("firsthidden")) {
             $(".waconcookiemanagement").show();
             $(".waconcookiemanagement").focus();
             $(".cookieclose").hide();
         }
     }
-
-    $(".cookie-set").click(function (event) {
+    $(".cookie-set-direct").click(function (event) {
         event.preventDefault();
         var res = getCookie("waconcookiemanagement");
         resc = res.split("ts");
         wert = resc[0];
-        if (wert != "") {
-            if (wert == "max") {
-                $(".cookie-on").show();
-                $(".cookie-off").hide();
-            } else {
-                res = wert.split("c");
-                jQuery.each(res, function (i, val) {
-                    $(".cookie-on.cookie" + val).show();
-                    $(".cookie-off.cookie" + val).hide();
-                });
-            }
-        }
+        params = [];
+        res = wert.split("c");
+        var id = $(this).attr('data-id');
+        wert += "c" + id;
+        setCookie("waconcookiemanagement", wert, Date.now());
+        reloadCookies();
+    });
+
+    $(".cookie-set").click(function (event) {
+        event.preventDefault();
         $(".waconcookiemanagement").show();
-        $(".waconcookiemanagement").focus();
+        $(".waconcookiemanagement .cookie-accept").focus();
         if ($(this).hasClass('cookiecontent')) {
             $(".box-cookie-management").show();
             $(".box-cookie-management").focus();
@@ -79,67 +87,20 @@ $(document).ready(function () {
             if (neuHeight < 300) {
                 $('#CookieBox').css("overflow", "auto");
             }
-
             $(".intro").hide();
-            var children = $(".waconcookiemanagement .box-cookie-management").find('.cookie-info');
-            for (var i = 0; i < children.length; i++) {
-                if ($(this).hasClass("cookieuid-" + i)) {
-                    $(".cookieinfo-" + i).parent().show();
-                    $(".cookieinfo-" + i).parent().prev().hide();
-                    $(".cookie-on.cookie" + i).show();
-                    $(".cookie-off.cookie" + i).hide();
-                }
-            }
+            var cid = $(this).attr("data-id");
+            var child= $(".waconcookiemanagement .box-cookie-management").find('.cookieinfo-' + cid);
+            child.parent().show();
+            child.parent().prev().hide();
+            child.find(".cookie-on").show();
+            child.find(".cookie-off").hide();
         }
     });
 
     $(".cookie-set").keypress(function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            var res = getCookie("waconcookiemanagement");
-            resc = res.split("ts");
-            wert = resc[0];
-            if (wert != "") {
-                if (wert == "max") {
-                    $(".cookie-on").show();
-                    $(".cookie-off").hide();
-                } else {
-                    res = wert.split("c");
-                    jQuery.each(res, function (i, val) {
-                        $(".cookie-on.cookie" + val).show();
-                        $(".cookie-off.cookie" + val).hide();
-                    });
-                }
-            }
-            $(".waconcookiemanagement").show();
-
-            $(".cookie-accept").focus();
-            if ($(this).hasClass('cookiecontent')) {
-                $(".box-cookie-management").show();
-                $(".box-cookie-management").focus();
-                $(".cookie-fix").show();
-                var varGes = $('#CookieBox').height();
-                var varFix = $('.cookie-fix').height();
-                var neuHeight = varGes - varFix - 100;
-
-                if (neuHeight >= 300) {
-                    $('.box-cookie-management').height(neuHeight);
-                }
-                if (neuHeight < 300) {
-                    $('#CookieBox').css("overflow", "auto");
-                }
-
-                $(".intro").hide();
-                var children = $(".waconcookiemanagement .box-cookie-management").find('.cookie-info');
-                for (var i = 0; i < children.length; i++) {
-                    if ($(this).hasClass("cookieuid-" + i)) {
-                        $(".cookieinfo-" + i).parent().show();
-                        $(".cookieinfo-" + i).parent().prev().hide();
-                        $(".cookie-on.cookie" + i).show();
-                        $(".cookie-off.cookie" + i).hide();
-                    }
-                }
-            }
+            $(this).click();
         }
     });
 
@@ -158,8 +119,8 @@ $(document).ready(function () {
             wert = "min";
         }
         setCookie("waconcookiemanagement", wert, Date.now());
-        $(".waconcookiemanagement").hide();
-        location.reload();
+        reloadCookies();
+       
     });
 
     $(".cookie-save").keypress(function (event) {
@@ -173,8 +134,7 @@ $(document).ready(function () {
     $(".cookie-accept").click(function (event) {
         event.preventDefault();
         setCookie("waconcookiemanagement", "max", Date.now());
-        $(".waconcookiemanagement").hide();
-        location.reload();
+        reloadCookies();
     });
 
     $(".cookie-accept").keypress(function (event) {
@@ -188,8 +148,7 @@ $(document).ready(function () {
     $(".cookie-refuse").click(function (event) {
         event.preventDefault();
         setCookie("waconcookiemanagement", "min", Date.now());
-        $(".waconcookiemanagement").hide();
-        location.reload();
+        reloadCookies();
     });
 
     $(".cookie-refuse").keypress(function (event) {
@@ -200,9 +159,11 @@ $(document).ready(function () {
         }
     });
 
-    $(".cookie-management").click(function () {
+    $(".cookie-management").click(function (event) {
+        event.preventDefault();
         $(".box-cookie-management").show();
-        $(".box-cookie-management").focus();
+        $(".cookieclose").focus();
+
         $(".cookie-fix").show();
         var varGes = $('#CookieBox').height();
         var varFix = $('.cookie-fix').height();

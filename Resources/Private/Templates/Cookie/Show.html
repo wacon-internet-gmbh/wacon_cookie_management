@@ -1,7 +1,7 @@
 {namespace t=Waconcookiemanagement\WaconCookieManagement\ViewHelpers}
 
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:layout name="Default" />
+<f:layout name="Default" />
 
 	This Template is responsible for displaying a single view for a domain object
 
@@ -14,64 +14,57 @@
 
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-	<f:section name="content">
-	<f:if condition="{content1}||{cookiecontentarray}">
-		<f:then>
-			<f:if condition="{content1}"><f:format.raw>{content1}</f:format.raw></f:if>
-			<f:if condition="{cookiecontentarray}">
-				<f:for each="{cookiecontentarray}" as="cookiecontent">
-					<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
-				</f:for>
-			</f:if>
-		</f:then>
-		
-		<f:else>
-		
-			
+<f:section name="content">
+	<f:if condition="{direct}">
+		<f:then><f:variable name="cookieset">cookie-set-direct</f:variable></f:then>
+		<f:else><f:variable name="cookieset">cookie-set</f:variable></f:else>
+	</f:if>
+	<f:spaceless>
+	<div class="wcmcontainer wcm-{uid}" cookie-uid="{cookieuid}">
+		<f:if condition="{active}">
+			<f:then>
+				<f:if condition="{content1}"><f:format.raw>{content1}</f:format.raw></f:if>
+				<f:if condition="{cookiecontentarray}">
+					<f:for each="{cookiecontentarray}" as="cookiecontent">
+						<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
+					</f:for>
+				</f:if>
+			</f:then>
+			<f:else>
 				<f:variable name="needimage">1</f:variable>
-
 				<f:if condition="{images}">
-					
-					<f:for each="{images}" as="img">
-						
-							<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
+					<f:for each="{images}" as="img">		
+						<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" data-id="{cookieuid}">
 							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
 						</div>
 						<f:variable name="needimage">0</f:variable>
-				
 					</f:for>
-					
-					</f:if>
-				<f:if condition="{needimage}">
-					
+				</f:if>
+				<f:if condition="{needimage}">		
 					<f:if condition="{mycookie.nocookieimage}">
-						<div class="cookie-set cookiecontent cookieuid-{cookieuid} script">
-						<f:image image="{mycookie.nocookieimage}" title="{mycookie.nocookieimage.title}" alt="{mycookie.nocookieimage.alternative}" />
-					</div>
+						<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" data-id="{cookieuid}">
+							<f:image image="{mycookie.nocookieimage}" title="{mycookie.nocookieimage.title}" alt="{mycookie.nocookieimage.alternative}" />
+						</div>
 					</f:if>
-							
-				
-					</f:if>
+				</f:if>
 				<f:if condition="{cookietext}">
-					<f:then><div class="cookie-set cookiecontent cookieuid-{cookieuid} script"><p>{cookietext}</p></div></f:then>
+					<f:then><div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" data-id="{cookieuid}"><p>{cookietext}</p></div></f:then>
 					<f:else>
 						<f:if condition="{mycookie.nocookietext}">
-							<div class="cookie-set cookiecontent cookieuid-{cookieuid} script"><f:format.raw>{mycookie.nocookietext}</f:format.raw></div>
+							<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" data-id="{cookieuid}"><f:format.raw>{mycookie.nocookietext}</f:format.raw></div>
 						</f:if></f:else>
-				</f:if>
-	
-			<f:if condition="{nocookiecontentarray}">
-				
-				<f:for each="{nocookiecontentarray}" as="cookiecontent">
-					<f:if condition="{cookiecontent}">
-					<div class="cookie-set cookiecontent cookieuid-{cookieuid} script test1">
-					<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
-					</div>
-				</f:if>
-				</f:for>
-				
+					</f:if>
+					<f:if condition="{nocookiecontentarray}">
+						<f:for each="{nocookiecontentarray}" as="cookiecontent">
+							<f:if condition="{cookiecontent}">
+								<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script " data-id="{cookieuid}">
+									<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
+								</div>
+							</f:if>
+						</f:for>
+					</f:if>
+				</f:else>
 			</f:if>
-		</f:else>
-	</f:if>
+		</div></f:spaceless>
 	</f:section>
 </html>

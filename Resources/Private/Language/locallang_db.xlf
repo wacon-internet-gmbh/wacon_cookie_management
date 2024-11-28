@@ -61,6 +61,12 @@
 			<trans-unit id="tx_wacon_cookie_management_script.description">
 				<source>WCM Include external ressource</source>
 			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_headerscript.name">
+				<source>WCM Include  script in header</source>
+			</trans-unit>
+			<trans-unit id="tx_wacon_cookie_management_headerscript.description">
+				<source>WCM Include script in header</source>
+			</trans-unit>
 			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.nocookieimage">
 				<source>Default image, if cookie is not accepted</source>
 			</trans-unit>
