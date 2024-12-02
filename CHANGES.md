@@ -1,3 +1,8 @@
+## Version 6.0.0
+- [FEATURE] New plugin "headerscript" to avoid html-Tags
+- [FEATURE] Better accessibility
+- [BUGFIX] Avoid reload
+
 ## Version 5.1.0
 - [FEATURE] New constant editor field: headerScriptStorage, which automaticall adds content elements on colPos 0 in the html head without any html wrapping, only pure settings.script from Flexform
 - [BUGFIX] Add missing constant editor field for cookieStorage, which is read in setup
