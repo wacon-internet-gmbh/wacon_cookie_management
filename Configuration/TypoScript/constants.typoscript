@@ -13,10 +13,10 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         includeJQuery = 1
 
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int+; label=Cookie Storage
-        cookieStorage =
+        cookieStorage = 0
 
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe; type=int+; label=Storage for Header scripts
-        headerScriptStorage =
+        headerScriptStorage = 0
     }
 }
 

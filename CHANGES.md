@@ -1,3 +1,6 @@
+## Version 6.0.1
+- [BUGFIX] Default for Headerscript-Storage
+
 ## Version 6.0.0
 - [FEATURE] New plugin "headerscript" to avoid html-Tags
 - [FEATURE] Better accessibility
