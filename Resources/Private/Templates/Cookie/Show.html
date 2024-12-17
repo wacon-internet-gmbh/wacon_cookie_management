@@ -57,7 +57,7 @@
 					<f:if condition="{nocookiecontentarray}">
 						<f:for each="{nocookiecontentarray}" as="cookiecontent">
 							<f:if condition="{cookiecontent}">
-								<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script " tabindex="0" data-id="{cookieuid}">
+								<div class="{cookieset} cookiecontent cookieuid-{cookieuid} " tabindex="0" data-id="{cookieuid}">
 									<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
 								</div>
 							</f:if>
