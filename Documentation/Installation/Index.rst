@@ -37,36 +37,4 @@ Include the WCM Template in your Site Template:
 
 	Include static Template Wacon Cookie Management
 	
-Define your cookies
-===============
 
-Create a new folder for your cookies and scripts (here "WCM").
-
-Go to the list module an create a "Cookie" record for each cookie you use on your website
-
-
-.. figure:: ../Images/wcm_screenshot8.jpg
-   :class: with-shadow
-   :alt: New Cookie record
-   :width: 300px
-
-	Define new cookie
-	
-Fill out the fields as accurate as possible
-
-.. figure:: ../Images/wcm_screenshot7.jpg
-   :class: with-shadow
-   :alt: Cookie information
-   :width: 500px
-
-	Fields of a Cookie record
-
-Edit Cookie information when needed
-
-.. figure:: ../Images/wcm_screenshot6.jpg
-   :class: with-shadow
-   :alt: Edit Cookie information
-   :width: 500px
-
-	Edit Cookie information
-	

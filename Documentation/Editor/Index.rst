@@ -24,7 +24,7 @@ Create or edit a cookie record and supply the required information:
 
 
 
-Use the plugin
+Use the plugin for content/script in <body>
 ==========
 Prevent external content to load without consent by using the plugin "Include external resource":
 
@@ -37,6 +37,7 @@ Prevent external content to load without consent by using the plugin "Include ex
 	
 Fill out the fields:
 
+- Direct accepted - the cookie is activated direct by click, you have to write this in the field "Show text if Cookie is not accepted"
 - Choose the corresponding Cookie record
 - Copy the script or html code in the field "Script"
 - Deliver text to be shown if the resource is not accepted yet by the visitor
@@ -50,24 +51,12 @@ Fill out the fields:
 
 	Define external resource
 	
-Show statistics
+Use the plugin for script in <head>
 ==========
-Since TYPO3 v10 you can analyze the usage of the cookie settings with a dashboard widget:
+Prevent external content to load without consent by using the plugin "WCM Include script in header":
+	
+Fill out the fields:
 
-
-.. important::
-    You need to have the EXT:dashboard installed to view the widgets.
-
-
-.. figure:: ../Images/wcm_screenshot4.jpg
-   :class: with-shadow
-   :alt: Dashboard integration
-   :width: 500px
-
-Click on "details" to select the information by month:
-
-
-.. figure:: ../Images/wcm_screenshot11.jpg
-   :class: with-shadow
-   :alt: Cookie counter
-   :width: 500px
+- Choose the corresponding Cookie record
+- Copy the script or html code in the field "Script"
+- Tell the Plugin where your Cookie records are stored

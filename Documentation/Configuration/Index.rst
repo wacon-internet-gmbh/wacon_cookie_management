@@ -15,19 +15,46 @@ This extensions loads its own jQuery file. You can disable it by adding the foll
 .. code-block:: typoscript
     plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery = 0
 
-Limit the amount of days, the cookie consents will be stored inside the database
-================================================================================
+Define your cookies
+===============
 
-You can now set how long user consent is stored in the database.
-This can help to keep the database-tables as small as possible.
+Create a new folder for your cookies (here "WCM").
 
-This setting is available inside TypoScript
+Set the folder in TypoScript inside your
+`constants.typoscript` or by editing the constants inside the constant editor in the Template module.
 
 .. code-block:: typoscript
-    plugin.tx_waconcookiemanagement_cookiefreigabe.settings.statisticsDays = 30
+    plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage = {your pid}
 
-.. info::
-    This is by default set to 365 days.
+Go to the list module an create a "Cookie" record for each cookie you use on your website
+
+
+.. figure:: ../Images/wcm_screenshot8.jpg
+   :class: with-shadow
+   :alt: New Cookie record
+   :width: 300px
+
+	Define new cookie
+	
+Fill out the fields as accurate as possible
+
+.. figure:: ../Images/wcm_screenshot7.jpg
+   :class: with-shadow
+   :alt: Cookie information
+   :width: 500px
+
+	Fields of a Cookie record
+
+Edit Cookie information when needed
+
+.. figure:: ../Images/wcm_screenshot6.jpg
+   :class: with-shadow
+   :alt: Edit Cookie information
+   :width: 500px
+
+	Edit Cookie information
+	
+
 
 Adding links inside bodytext for displaying the cookie consent box
 ==================================================================
@@ -59,3 +86,16 @@ This example surrounds the `<p>`-Tag with an extra class `cookie-set`. f.e.: `<p
     For example you can use a `<span>`-Tag like `<span class="cookie-set">Cookies</span>`.
 
     Be aware that you might need other settings than explained here.
+
+
+Define folder for scripts in <head>-Tag
+=======================================
+
+Create a new folder for your scripts you want to include in the <head>.
+
+Set the folder in TypoScript inside your
+`constants.typoscript` or by editing the constants inside the constant editor in the Template module.
+
+.. code-block:: typoscript
+    plugin.tx_waconcookiemanagement_cookiefreigabe.settings.headerScriptStorage = {your pid}
+

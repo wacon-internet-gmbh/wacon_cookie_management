@@ -64,10 +64,3 @@ The layout, position, content, images and options can be fully customized. Here 
 
    "Frosted glass effect" to visualize a required consent
    
-.. figure:: ../Images/wcm_screenshot4.jpg
-   :class: with-shadow
-   :alt: Dashboard integration
-   :width: 500px
-
-   Dashboard integration with counter for "Allow all cookies", "Allow only necessary cookies", "Individual cookie settings"
-
