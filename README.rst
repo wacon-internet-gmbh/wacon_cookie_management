@@ -9,6 +9,9 @@ WCM is a typo3 extension that enables website visitors to control and manage the
 
 Minimal Dependencies
 ====================
+* TYPO3 CMS 12.4 or 13.4 for Wacon Cookie Management(WCM) 6.x
+* TYPO3 CMS 12.4 or 13.4 for Wacon Cookie Management(WCM) 5.x
+* TYPO3 CMS 11.5 or 12.4 for Wacon Cookie Management(WCM) 4.x
 * TYPO3 CMS 10.4 or 11.5 for Wacon Cookie Management(WCM) 3.x
 * TYPO3 CMS 9.5 or 10.4 for Wacon Cookie Management(WCM) 2.x
 * TYPO3 CMS 7.6 or 9.5 for Wacon Cookie Management(WCM) 1.x
@@ -52,6 +55,15 @@ Each external script that is used by the website and is responsible for a cookie
 2. Define the needed cookie
 3. Define the JavaScript-Code that is proposed to be added to the page if this cookie is enabled
 4. If you wish to show disabled elements (e.g. represented by a frosted glas effect) like googleMaps, Twitter Time etc. you can define an appropriate image and a short text(e.g. "click here to enable me")
+
+Include external scripts inheader
+----------------------------------
+
+Each external script that is used by the website and is responsible for a cookie you defined in your cookie folder has to be encapsulated with the plugin "Externes Script einbinden":
+1. Create a plugin content element "Externes Header-Script einbinden"
+2. Define the needed cookie
+3. Define the JavaScript-Code that is proposed to be added to the page if this cookie is enabled
+
 
 License
 -------

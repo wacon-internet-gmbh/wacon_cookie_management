@@ -1,3 +1,7 @@
+## Version 6.0.2
+- [BUGFIX] Styling Contentelements (if Cookie is not accepted)
+- [FEATURE] Changes in Documentation
+
 ## Version 6.0.1
 - [BUGFIX] Default for Headerscript-Storage
 
@@ -16,4 +20,4 @@
 - [IMPORTANT] Support for TYPO3 12+13
 
 # 5.0.1
-- [Bugfix] Change folder name Flexforms
+- [BUGFIX] Change folder name Flexforms
