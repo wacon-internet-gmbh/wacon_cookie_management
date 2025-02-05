@@ -220,8 +220,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $direct = $this->settings['direct'] ?? null;
 
         $currentContentObject = $this->request->getAttribute('currentContentObject');
-        // ID of current tt_content record
-        $uid = $currentContentObject->data['uid'];
+        // ID of current tt_content record, if available 
+        $uid = $currentContentObject->data['uid'] ?? 0;
        
         /** @var FileReference[] $fileObjects */
         $fileObjects = $this->fileRepository->findByRelation('tt_content', 'settings.bild', $uid );
