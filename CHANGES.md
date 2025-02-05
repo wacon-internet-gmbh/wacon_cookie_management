@@ -1,3 +1,6 @@
+## Version 6.0.3
+- [BUGFIX] Sets fallback value for tt_content uid
+
 ## Version 6.0.2
 - [BUGFIX] Styling Contentelements (if Cookie is not accepted)
 - [FEATURE] Changes in Documentation
