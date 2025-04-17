@@ -1,3 +1,6 @@
+## Version 6.1.0
+- [BUGFIX] Add site set configuration
+
 ## Version 6.0.3
 - [BUGFIX] Sets fallback value for tt_content uid
 

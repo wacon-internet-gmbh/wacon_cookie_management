@@ -1,0 +1,56 @@
+categories:
+  WCM:
+    label: 'Wacon Cookie Management' # (1)
+  WCM.templates:
+    label: 'Templates' # (2)
+    parent: WCM
+  WCM.setting:
+    label: 'Settings'
+    parent: WCM
+
+settings:
+  plugin.tx_waconcookiemanagement_script.view.templateRootPath:
+    label: 'Templates Scripte'
+    default: 'EXT:wacon_cookie_management/Resources/Private/Templates/'
+    type: string
+    category: WCM.templates
+  plugin.tx_waconcookiemanagement_script.view.partialRootPath:
+    label: 'Partials Scripte'
+    default: 'EXT:wacon_cookie_management/Resources/Private/Partials/'
+    type: string
+    category: WCM.templates
+  plugin.tx_waconcookiemanagement_script.view.layoutRootPath:
+    label: 'Layouts Scripte'
+    default: 'EXT:wacon_cookie_management/Resources/Private/Layouts/'
+    type: string
+    category: WCM.templates
+  plugin.tx_waconcookiemanagement_cookiefreigabe.view.templateRootPath:
+    label: 'Templates Cookiebox'
+    default: 'EXT:wacon_cookie_management/Resources/Private/Templates/'
+    type: string
+    category: WCM.templates
+  plugin.tx_waconcookiemanagement_cookiefreigabe.view.partialRootPath:
+    label: 'Partials Cookiebox'
+    default: 'EXT:wacon_cookie_management/Resources/Private/Partials/'
+    type: string
+    category: WCM.templates
+  plugin.tx_waconcookiemanagement_cookiefreigabe.view.layoutRootPath:
+    label: 'Layouts Cookiebox'
+    default: 'EXT:wacon_cookie_management/Resources/Private/Layouts/'
+    type: string
+    category: WCM.templates
+  plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery:
+    label: 'Load jQuery'
+    default: true
+    type: bool
+    category: WCM.setting
+  plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage:
+    label: 'Cookie Storage'
+    default: 0
+    type: int
+    category: WCM.setting
+  plugin.tx_waconcookiemanagement_cookiefreigabe.settings.headerScriptStorage:
+    label: 'Storage for Header scripts'
+    default: 0
+    type: int
+    category: WCM.setting
