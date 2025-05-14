@@ -16,8 +16,8 @@
 		
 		<f:flashMessages />
     <div class="cookie-set" tabindex="0"><f:if condition="{linktext}"><f:then>{linktext}</f:then><f:else><f:translate key="cookiefreigabe.setcookie" /></f:else></f:if></div>
-<div class="waconcookiemanagement <f:if condition="{cookieanzeige}"><f:then>firsthidden</f:then><f:else></f:else></f:if>">
-<div id="CookieBox" class="cookiemanagement">
+<section class="waconcookiemanagement <f:if condition='{cookieanzeige}'><f:then>firsthidden</f:then><f:else></f:else></f:if>" aria-label="cookie-consent">
+<div id="CookieBox" class="cookiemanagement" >
   <div class="middle-center">
    <div class="intro">
     <div tabindex="0" class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
@@ -155,7 +155,7 @@
    
   </div>
 </div>
-</div>
 
+</section>
 </f:section>
 </html>
