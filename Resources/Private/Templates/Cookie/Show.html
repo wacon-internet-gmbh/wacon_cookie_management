@@ -36,14 +36,13 @@
 				
 					
 				<f:if condition="{images}">
-					<f:variable name="setlink">
 					<f:for each="{images}" as="img">		
-					
+					<f:variable name="setlink"><f:format.raw>{setlink}</f:format.raw>
 							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
-						
+						</f:variable>
 						<f:variable name="needimage">0</f:variable>
 					</f:for>
-					</f:variable>
+					
 				</f:if>
 				<f:if condition="{needimage}">		
 					<f:if condition="{mycookie.nocookieimage}">
@@ -64,16 +63,17 @@
 						</f:if></f:else>
 					</f:if>
 					<f:if condition="{nocookiecontentarray}">
-						<f:variable name="setlink">
-						<f:format.raw>{setlink}</f:format.raw>
+						
 						<f:for each="{nocookiecontentarray}" as="cookiecontent">
 							<f:if condition="{cookiecontent}">
-								
+								<f:variable name="setlink">
+						<f:format.raw>{setlink}</f:format.raw>
 									<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
-							
+							</f:variable>
 							</f:if>
-						</f:for></f:variable>
+						</f:for>
 					</f:if>
+					
 					<f:if condition="{setlink}">
 					<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" tabindex="0" data-id="{cookieuid}" role="button" aria-label="{mycookie.nocookietext} {cookietext}"><f:format.raw>{setlink}</f:format.raw>
 					</div></f:if>
