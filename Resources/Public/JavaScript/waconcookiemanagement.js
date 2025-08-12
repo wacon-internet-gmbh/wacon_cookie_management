@@ -111,7 +111,7 @@ $(document).ready(function () {
             if ($(this).find(".cookie-id").hasClass("cookie-on")) {
                 var className = $(this).attr('class');
                 var classarray = className.split("-");
-                alert(classarray['2']);
+    
                 wert += "c" + classarray['2'];
             }
         });
