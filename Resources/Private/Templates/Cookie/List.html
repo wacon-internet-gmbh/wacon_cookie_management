@@ -16,25 +16,25 @@
 		
 		<f:flashMessages />
     <div class="cookie-set" tabindex="0"><f:if condition="{linktext}"><f:then>{linktext}</f:then><f:else><f:translate key="cookiefreigabe.setcookie" /></f:else></f:if></div>
-<section class="waconcookiemanagement <f:if condition='{cookieanzeige}'><f:then>firsthidden</f:then><f:else></f:else></f:if>" aria-label="cookie-consent">
+<section class="waconcookiemanagement <f:if condition='{cookieanzeige}'><f:then>firsthidden</f:then><f:else><f:if condition='{pageid} == {dataprotection}'><f:then>firsthidden</f:then></f:if></f:else></f:if>" aria-label="cookie-consent">
 <div id="CookieBox" class="cookiemanagement" >
   <div class="middle-center">
    <div class="intro">
-    <div tabindex="0" class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
+    <div tabindex="0" class="cookieclose" aria-label="<f:translate key='cookiefreigabe.close'/>"  role="button"></div>
     <p class="h2"><f:if condition="{header}"><f:then>{header}</f:then><f:else><f:translate key="cookiefreigabe.header" /></f:else></f:if></p>
     <p ><f:if condition="{teaser}"><f:then>{teaser}</f:then><f:else><f:translate key="cookiefreigabe.intro" /></f:else></f:if></p>
 	
 
-    <p class="cookie-accept-container" ><a href="" class="cookie-accept cookie-btn cursor none" data-cookie-accept ><f:translate key="cookiefreigabe.accept" /></a></p>
-    <p class="cookie-management-container" ><a href="" class="cookie-management cursor" id="data-cookie-individual"  ><f:translate key="cookiefreigabe.individual" /></a></p>
-    <p class="cookie-refuse-container" ><a href="" class="cookie-refuse cursor" id="data-cookie-refuse"  ><f:translate key="cookiefreigabe.min" /></a></p>   
+    <p class="cookie-accept-container" ><a href="" class="cookie-accept cookie-btn cursor none" id="data-cookie-accept" role="button"><f:translate key="cookiefreigabe.accept" /></a></p>
+    <p class="cookie-management-container" ><a href="" class="cookie-management cookie-btn cursor" id="data-cookie-individual"  role="button" ><f:translate key="cookiefreigabe.individual" /></a></p>
+    <p class="cookie-refuse-container" ><a href="" class="cookie-refuse  cookie-btn cursor" id="data-cookie-refuse"  role="button" ><f:translate key="cookiefreigabe.min" /></a></p>   
 <p class="text-right cookie-legal">
      <f:if condition="dataprotection"><f:link.page pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if> 
      <f:if condition="imprint"><f:link.page  pageUid="{imprint}"><f:translate key="cookiefreigabe.imprint" /></f:link.page></f:if>
    </p>
   </div>  
   <div class="box-cookie-management">
-    <div tabindex="0" class="cookieclose"><f:translate key="cookiefreigabe.close" /></div>
+    <div tabindex="0" class="cookieclose" aria-label="<f:translate key='cookiefreigabe.close'/>"></div>
 	<div class="box-cookie-management-in">
     <p class="h2"><f:translate key="cookiefreigabe.header2" /></p>
     <p><f:translate key="cookiefreigabe.intro2" /></p>
@@ -42,9 +42,8 @@
     <div class="category">      
       <p class="h3"><f:translate key="cookiefreigabe.notwendig" /></p>
       <p><f:translate key="cookiefreigabe.notwendigdesc" /></p>
-      <p tabindex="0" class="text-center info-show cookie-n" ><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+      <p tabindex="0" class="text-center cookie-acc cookie-n info-show" data-hide="<f:translate key='cookiefreigabe.cookiehide' />"  data-show="<f:translate key='cookiefreigabe.cookieshow' />" aria-expanded="false"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
       <div class="info-text">
-        <p tabindex="0" class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
         <f:for each="{cookies0}" as="cookie">
           <div class="cookie-info cookieinfo-{cookie.uid}">
             <p><b>{cookie.bezeichnung}</b></p>
@@ -63,17 +62,15 @@
   </f:if>
     <f:if condition="{cookies1}">
       <div class="category">
-        <div tabindex="0" class="cookie-off cookiecat cookiecat-s"  <f:if condition="{cookie1check}">style="display:none"</f:if>><div class="deactivated"><span class="off"></span></div></div>
-        <div tabindex="0" class="cookie-on cookiecat cookiecat-s"  <f:if condition="{cookie1check}">style="display:block"</f:if>><div class="activated"><span class="on"></span></div></div>
+        <div tabindex="0" class="<f:if condition='{cookie1check}'><f:then>cookie-on</f:then><f:else>cookie-off</f:else></f:if> cookiecat cookiecat-s" role="switch" <f:if condition='{cookie1check}'><f:then>aria-checked="true"</f:then><f:else>aria-checked="false"</f:else></f:if>><div class="activated"><span class="on"></span></div></div>
+       
         <p class="h3"><f:translate key="cookiefreigabe.statistik" /></p>
         <p><f:translate key="cookiefreigabe.statistikdesc" /></p>
-        <p tabindex="0" class="text-center info-show cookie-s" ><f:translate key="cookiefreigabe.cookieshow" /> <span class="arrow down"></span></p>
-        <div class="info-text">
-          <p tabindex="0" class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
+         <p tabindex="0" class="text-center cookie-acc cookie-s info-show" data-hide="<f:translate key='cookiefreigabe.cookiehide' />"  data-show="<f:translate key='cookiefreigabe.cookieshow' />" aria-expanded="false"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+     <div class="info-text">
           <f:for each="{cookies1}" as="cookie">
             <div class="cookie-info cookieinfo-{cookie.uid}">
-              <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+              <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off" role="switch" aria-checked="false"><div class="activated"><span class="on"></span></div></div>
               <p><b>{cookie.bezeichnung}</b></p>
               <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
@@ -90,17 +87,15 @@
     </f:if>
     <f:if condition="{cookies2}">
       <div class="category">
-        <div tabindex="0" class="cookie-off cookiecat cookiecat-m"  <f:if condition="{cookie2check}">style="display:none"</f:if>><div class="deactivated"><span class="off"></span></div></div>
-        <div tabindex="0" class="cookie-on cookiecat cookiecat-m"  <f:if condition="{cookie2check}">style="display:block"</f:if>><div class="activated"><span class="on"></span></div></div>
+        <div tabindex="0" class="<f:if condition='{cookie2check}'><f:then>cookie-on</f:then><f:else>cookie-off</f:else></f:if> cookiecat cookiecat-m" role="switch" <f:if condition='{cookie2check}'><f:then>aria-checked="true"</f:then><f:else>aria-checked="false"</f:else></f:if>><div class="activated"><span class="on"></span></div></div>
         <p class="h3"><f:translate key="cookiefreigabe.marketing" /></p>
         <p><f:translate key="cookiefreigabe.marketingdesc" /></p>
-        <p tabindex="0" class="text-center info-show" cookie-m><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
-        <div class="info-text">
-          <p tabindex="0" class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
+        <p tabindex="0" class="text-center cookie-acc cookie-m info-show" data-hide="<f:translate key='cookiefreigabe.cookiehide' />"  data-show="<f:translate key='cookiefreigabe.cookieshow' />" aria-expanded="false"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+      <div class="info-text">
+          
           <f:for each="{cookies2}" as="cookie">
             <div class="cookie-info cookieinfo-{cookie.uid}">
-              <div tabindex="0"  class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0"  class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+              <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off"  role="switch" aria-checked="false"><div class="activated"><span class="on"></span></div></div>
               <p><b>{cookie.bezeichnung}</b></p>
               <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
@@ -117,17 +112,14 @@
     </f:if>
     <f:if condition="{cookies3}">
       <div class="category">
-        <div tabindex="0" class="cookie-off cookiecat cookiecat-e"  <f:if condition="{cookie3check}">style="display:none"</f:if>> <div class="deactivated"><span class="off"></span></div></div>
-        <div tabindex="0" class="cookie-on cookiecat cookiecat-e"  <f:if condition="{cookie3check}">style="display:block"</f:if>> <div class="activated"><span class="on"></span></div></div>
+        <div tabindex="0" class="<f:if condition='{cookie3check}'><f:then>cookie-on</f:then><f:else>cookie-off</f:else></f:if> cookiecat cookiecat-e" role="switch" <f:if condition='{cookie3check}'><f:then>aria-checked="true"</f:then><f:else>aria-checked="false"</f:else></f:if>><div class="activated"><span class="on"></span></div></div>
         <p class="h3"><f:translate key="cookiefreigabe.extern" /></p>
         <p><f:translate key="cookiefreigabe.externdesc" /></p>
-        <p tabindex="0" class="text-center info-show cookie-e"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
+      <p tabindex="0" class="text-center cookie-acc cookie-e info-show" data-hide="<f:translate key='cookiefreigabe.cookiehide' />"  data-show="<f:translate key='cookiefreigabe.cookieshow' />" aria-expanded="false"><f:translate key="cookiefreigabe.cookieshow" /><span class="arrow down"></span></p>
         <div class="info-text">
-          <p tabindex="0" class="text-center info-hide"><f:translate key="cookiefreigabe.cookiehide" /><span class="arrow up"></span></p>
           <f:for each="{cookies3}" as="cookie">
             <div class="cookie-info cookieinfo-{cookie.uid}">
-              <div tabindex="0"  class="cookie-off cookie{cookie.uid}"> <div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0" class="cookie-on cookie{cookie.uid}"> <div class="activated"><span class="on"></span></div></div>
+             <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off"  role="switch" aria-checked="false"><div class="activated"><span class="on"></span></div></div>
               <p><b>{cookie.bezeichnung}</b></p>
               <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
@@ -145,8 +137,8 @@
     </div>
    </div>
    <div class="cookie-fix">  
-	  <p class="text-center cookie-save"><a tabindex="0" class="cookie-btn cursor" data-cookie-accept><f:translate key="cookiefreigabe.save" /></a></p>
-      <p class="text-back-right"><a class="cookieback" tabindex="0"><f:translate key="cookiefreigabe.back" /></a><a tabindex="0" class="cookie-refuse" ><f:translate key="cookiefreigabe.min" /></a></p>   
+	  <p class=" cookie-save"><a tabindex="0" class="cookie-btn cursor text-center" id="data-cookie-accept" role="button"><f:translate key="cookiefreigabe.save"   /></a></p>
+      <p class="text-back-right"><a class="cookieback cookie-btn" tabindex="0" role="button"><f:translate key="cookiefreigabe.back" /></a><a tabindex="0" class="cookie-refuse cookie-btn" role="button" ><f:translate key="cookiefreigabe.min" /></a></p>   
 	  <p class="text-right cookie-legal">
      <f:if condition="dataprotection"  ><f:link.page tabindex="0" pageUid="{dataprotection}"><f:translate key="cookiefreigabe.dataprotection" /></f:link.page></f:if> 
      <f:if condition="imprint"  ><f:link.page pageUid="{imprint}"><f:translate key="cookiefreigabe.imprint" /></f:link.page></f:if>

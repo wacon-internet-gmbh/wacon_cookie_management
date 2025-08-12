@@ -111,8 +111,9 @@
     display: inline-block;
     font-family: inherit;
     font-size: 1.1rem;
+    min-width:80%;
     font-weight: bold;
-    padding: .5em 1em;
+    padding: .5rem 1rem;
     text-decoration: none;
     background: #558217;
     border-radius: 15px;
@@ -135,24 +136,44 @@
     cursor: pointer;
 }
 
-#CookieBox a.cookie-accept {
-    padding: 10px 50px;
-}
+
 
 #CookieBox .cookieclose {
     cursor: pointer;
     position: absolute;
     top: 15px;
     right: 15px;
+    width:30px;
+    height:30px;
     border-radius: 4px;
     border: 1px solid #333;
     background: #333;
-    padding: 2px 9px;
-    font-family: Verdana, sans-serif;
-    font-size: 26px;
-    color: #fff;
 }
 
+
+#CookieBox .cookieclose:before,#CookieBox .cookieclose:after{
+    content:'';
+    position:absolute;
+    width:26px;
+    height:4px;
+    background-color:white;
+    border-radius:2px;
+    top:12px;
+
+}
+
+#CookieBox .cookieclose:before{
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    transform:rotate(45deg);
+    left:1px;
+}
+#CookieBox .cookieclose:after{
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    right:1px;
+}
 #CookieBox .intro p {
     width: 75%;
 }
@@ -160,16 +181,6 @@
 #CookieBox .cookie-management,
 #CookieBox .cookie-refuse {
     margin: 10px auto;
-
-    text-align: center;
-    cursor: pointer;
-    border-radius: 15px;
-    padding: 5px 50px;
-    background-color: #ccc;
-}
-
-.waconcookiemanagementlist #CookieBox .cookie-refuse {
-    background-color: transparent;
 }
 
 #CookieBox .text-center {
@@ -183,22 +194,19 @@
 
 #CookieBox .text-back-right a {
     display: inline-block;
-    padding: 0 5px;
+    
     margin-right: 10px;
-    color: #333333;
     text-decoration: none;
 }
 
 #CookieBox .cookieback {
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    width: 80%;
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #ccc;
+
 }
 
 #CookieBox .cookie-on,
@@ -209,11 +217,10 @@
     margin-right: 5px;
 }
 
-#CookieBox .cookie-on, #CookieBox2 .cookie-on {
-    display: none;
-}
+
 
 #CookieBox .intro .cookie-legal, #CookieBox2 .intro .cookie-legal {
+    padding: 0px 30px;
     margin-top: 50px;
     width: 100%;
 }
@@ -306,8 +313,8 @@
     width: 100%;
 }
 
-#CookieBox .deactivated,
-#CookieBox .activated, #CookieBox2 .deactivated,
+
+#CookieBox .activated,
 #CookieBox2 .activated {
     width: 40px;
     height: 20px;
@@ -316,12 +323,11 @@
     display: inline-block;
 }
 
-#CookieBox .activated, #CookieBox2 .activated {
+#CookieBox .cookie-on .activated, #CookieBox2 .cookie-on .activated {
     background: #558217;
 }
 
-#CookieBox .off,
-#CookieBox .on, #CookieBox2 .off,
+#CookieBox .on,
 #CookieBox2 .on {
     cursor: pointer;
     display: block;
@@ -333,7 +339,7 @@
     border-radius: 8px;
 }
 
-#CookieBox .on, #CookieBox2 .on {
+#CookieBox .cookie-on .on, #CookieBox2 .cookie-on .on {
     float: right;
 }
 
@@ -366,6 +372,7 @@
     display: none;
     overflow: auto;
     padding: 20px 0 0 0;
+    margin: 25px 30px;
 }
 
 .waconcookiemanagementlist #CookieBox .cookie-fix {
@@ -374,12 +381,13 @@
 
 #CookieBox .cookie-fix .cookie-save {
     float: left;
-    margin-left: 30px;
+    width:50%;
+    
 }
 
 #CookieBox .cookie-fix .text-back-right {
     float: right;
-    margin-right: 30px;
+    width:50%;
 }
 
 #CookieBox .cookie-refuse-container, #CookieBox .cookie-accept-container, #CookieBox .cookie-management-container {
@@ -389,14 +397,12 @@
 #CookieBox .cookie-fix .cookieback,
 #CookieBox .cookie-fix .cookie-refuse {
     display: block;
-    margin: 10px auto;
+    margin-top: 10px ;
+    margin-bottom: 10px ;
     text-align: center;
     cursor: pointer;
-    border-radius: 15px;
-    padding: 5px 20px;
-    background-color: #ccc;
+width:80%;
     white-space: nowrap;
-    width: auto;
 }
 
 #CookieBox .cookie-fix .cookie-legal {

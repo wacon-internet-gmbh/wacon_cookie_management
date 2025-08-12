@@ -32,16 +32,16 @@ function loadCookies()
     wert = resc[0];
     params = [];
     if (wert == "setwcmmax") {
-        $(".cookie-on").show();
-        $(".cookie-off").hide();
+        $("cookiecat").addClass('cookie-on');
+        $("cookiecat").removeClass('cookie-off');
         params['max'] =1;
     } else {
         res = wert.split("c");
         jQuery.each(res, function (i, val) {
             if (val == 'max') {
             } else {
-                $(".cookie-on.cookie" + val).show();
-                $(".cookie-off.cookie" + val).hide();
+                $(".cookie-id.cookie" + val).addClass('cookie-on');
+                $(".cookie-id.cookie" + val).removeClass('cookie-off');
                 params[val] =1;
             }
         });
@@ -92,8 +92,7 @@ $(document).ready(function () {
             var child= $(".waconcookiemanagement .box-cookie-management").find('.cookieinfo-' + cid);
             child.parent().show();
             child.parent().prev().hide();
-            child.find(".cookie-on").show();
-            child.find(".cookie-off").hide();
+            child.find(".cookie-id").removeClass('cookie-off').addClass('cookie-on').attr('aria-checked',true);
         }
     });
 
@@ -109,9 +108,10 @@ $(document).ready(function () {
         wert = "";
 
         $('.cookie-info').each(function () {
-            if ($(this).find(".cookie-on").css("display") == "block") {
+            if ($(this).find(".cookie-id").hasClass("cookie-on")) {
                 var className = $(this).attr('class');
                 var classarray = className.split("-");
+                alert(classarray['2']);
                 wert += "c" + classarray['2'];
             }
         });
@@ -202,15 +202,14 @@ $(document).ready(function () {
         }
     });
 
-    $(".show-n").click(function (event) {
+    $(".cookiecat").click(function (event) {
         event.preventDefault();
-        $(".box-cookie-management").show();
-        $(".cookie-n").next().show();
-        $(".cookie-n").hide();
-        $(".intro").hide();
+        //alert($(this).attr('class'));
+        if($(this).hasClass('cookie-off')) $(this).parent().find(".cookie-off").removeClass('cookie-off').addClass('cookie-on').attr('aria-checked',true);
+        else $(this).parent().find(".cookie-on").removeClass('cookie-on').addClass('cookie-off').attr('aria-checked',false);
     });
 
-    $(".show-n").keypress(function (event) {
+    $(".cookiecat").keypress(function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
             // Trigger the button element with a click
@@ -218,100 +217,28 @@ $(document).ready(function () {
         }
     });
 
-    $(".show-m").click(function (event) {
+    $(".cookie-info .cookie-id").click(function (event) {
         event.preventDefault();
-        $(".box-cookie-management").show();
-        $(".cookie-m").next().show();
-        $(".cookie-m").hide();
-        $(".intro").hide();
-    });
-
-    $(".show-m").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
+        if($(this).hasClass('cookie-off')) {
+            $(this).removeClass('cookie-off').addClass('cookie-on').attr('aria-checked',true);
+            $(this).parent().parent().parent().find(".cookiecat").removeClass('cookie-off').addClass('cookie-on').attr('aria-checked',true);
         }
-    });
-
-    $(".show-s").click(function (event) {
-        event.preventDefault();
-        $(".box-cookie-management").show();
-        $(".cookie-s").next().show();
-        $(".cookie-s").hide();
-        $(".intro").hide();
-    });
-
-    $(".show-s").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
-        }
-    });
-
-    $(".show-e").click(function (event) {
-        event.preventDefault();
-        $(".box-cookie-management").show();
-        $(".cookie-e").next().show();
-        $(".cookie-e").hide();
-        $(".intro").hide();
-    });
-
-    $(".show-e").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
-        }
-    });
-
-    $(".cookie-on.cookiecat").click(function (event) {
-        event.preventDefault();
-        $(this).parent().find(".cookie-off").show();
-        $(this).parent().find(".cookie-on").hide();
-    });
-
-    $(".cookie-on.cookiecat").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
-        }
-    });
-
-    $(".cookie-off.cookiecat").click(function (event) {
-        event.preventDefault();
-        $(this).parent().find(".cookie-on").show();
-        $(this).parent().find(".cookie-off").hide();
-    });
-
-    $(".cookie-off.cookiecat").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
-        }
-    });
-
-    $(".cookie-info .cookie-on").click(function (event) {
-        event.preventDefault();
-        $(this).prev().show();
-        $(this).hide();
-        var children = $(this).parent().parent().children();
-        var cookieoff = 0;
-        for (var i = 0; i < children.length; i++) {
-            if (children.eq(i).find(".cookie-off").css("display") == "none") {
-                cookieoff += 1;
+        else { 
+            $(this).removeClass('cookie-on').addClass('cookie-off').attr('aria-checked',false);
+            var children = $(this).parent().parent().children();
+            var cookieon = 0;
+            for (var i = 0; i < children.length; i++) {
+                if (children.eq(i).find(".cookie-id").hasClass('cookie-on')) {
+                    cookieon += 1;
+                }
+            }
+            if (cookieon == 0) {
+                $(this).parent().parent().parent().find(".cookiecat").removeClass('cookie-on').addClass('cookie-off').attr('aria-checked',false);
             }
         }
-        if (cookieoff == 0) {
-            $(this).parent().parent().parent().find(".cookie-off.cookiecat").show();
-            $(this).parent().parent().parent().find(".cookie-on.cookiecat").hide();
-        }
     });
 
-    $(".cookie-info .cookie-on").keypress(function (event) {
+    $(".cookie-info .cookie-id").keypress(function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
             // Trigger the button element with a click
@@ -319,15 +246,25 @@ $(document).ready(function () {
         }
     });
 
-    $(".cookie-info .cookie-off").click(function (event) {
+
+
+    $(".cookie-acc").click(function (event) {
         event.preventDefault();
+        if($(this).hasClass('info-show')){
         $(this).next().show();
-        $(this).hide();
-        $(this).parent().parent().parent().find(".cookie-off.cookiecat").hide();
-        $(this).parent().parent().parent().find(".cookie-on.cookiecat").show();
+        $(this).removeClass('info-show').addClass('info-hide');
+         $(this).attr('aria-expanded', true);
+        $(this).html($(this).attr('data-hide') + '<span class="arrow up"></span>');
+        }
+        else{
+            $(this).next().hide();
+        $(this).removeClass('info-hide').addClass('info-show');
+        $(this).attr('aria-expanded', false);
+        $(this).html($(this).attr('data-show') + '<span class="arrow down"></span>');
+        }
     });
 
-    $(".cookie-info .cookie-off").keypress(function (event) {
+    $(".cookie-acc").keypress(function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
             // Trigger the button element with a click
@@ -335,33 +272,7 @@ $(document).ready(function () {
         }
     });
 
-    $(".info-show").click(function (event) {
-        event.preventDefault();
-        $(this).next().show();
-        $(this).hide();
-    });
-
-    $(".info-show").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
-        }
-    });
-
-    $(".info-hide").click(function (event) {
-        event.preventDefault();
-        $(this).parent().hide();
-        $(this).parent().prev().show();
-    });
-
-    $(".info-hide").keypress(function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            // Trigger the button element with a click
-            $(this).click();
-        }
-    });
+  
 
     $(".cookieclose").click(function () {
         $(".waconcookiemanagement").hide();

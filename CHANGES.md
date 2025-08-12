@@ -1,3 +1,8 @@
+## Version 6.2.0
+- [FEATURE] Show data protection page without popup
+- [FEATURE] Equal color / size for buttons
+- [FEATURE] Define role in consent settings 
+
 ## Version 6.1.0
 - [BUGFIX] Add site set configuration
 

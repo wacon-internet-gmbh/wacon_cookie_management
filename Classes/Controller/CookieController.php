@@ -118,6 +118,8 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
                 if (in_array($check->getUid(), $cookies)) $cookie3check = 1;
             }
         }
+        $pageid = $GLOBALS['TSFE']->id;
+        $this->view->assign('pageid', $pageid);
         $this->view->assign('cookie1check', $cookie1check);
         $this->view->assign('cookie2check', $cookie2check);
         $this->view->assign('cookie3check', $cookie3check);

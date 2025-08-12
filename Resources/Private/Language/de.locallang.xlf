@@ -334,8 +334,8 @@
 			</trans-unit>
 			<trans-unit id="cookiefreigabe.close">
 
-				<source>X</source>
-				<target>X</target>
+				<source>Close</source>
+				<target>Schließen</target>
 			</trans-unit>
 
 

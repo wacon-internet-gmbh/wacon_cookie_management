@@ -170,7 +170,7 @@
 			</trans-unit>
 			<trans-unit id="cookiefreigabe.close">
 				<source>CLOSE</source>
-				<target>X</target>
+				<target>CLOSE</target>
 			</trans-unit>
 		</body>
 	</file>

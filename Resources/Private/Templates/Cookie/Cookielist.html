@@ -37,8 +37,7 @@
       <p><f:translate key="cookiefreigabe.notwendigdesc" /></p>
             <f:for each="{cookies0}" as="cookie">
           <div class="cookie-infolist cookieinfo-{cookie.uid}">
-            <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+            <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off"><div class="activated"><span class="on"></span></div></div>
               
             <p><b>{cookie.bezeichnung}</b></p>
             <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
@@ -60,8 +59,7 @@
         <p><f:translate key="cookiefreigabe.statistikdesc" /></p>
           <f:for each="{cookies1}" as="cookie">
             <div class="cookie-infolist cookieinfo-{cookie.uid}">
-              <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+              <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off"  role="switch" aria-checked="false"><div class="activated"><span class="on"></span></div></div>
               <p><b>{cookie.bezeichnung}</b></p>
               <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
@@ -82,8 +80,7 @@
         <p><f:translate key="cookiefreigabe.marketingdesc" /></p>
         <f:for each="{cookies2}" as="cookie">
             <div class="cookie-infolist cookieinfo-{cookie.uid}">
-              <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
+               <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off"  role="switch" aria-checked="false"><div class="activated"><span class="on"></span></div></div>
               
               <p><b>{cookie.bezeichnung}</b></p>
               <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
@@ -105,9 +102,7 @@
         <p><f:translate key="cookiefreigabe.externdesc" /></p>
          <f:for each="{cookies3}" as="cookie">
             <div class="cookie-infolist cookieinfo-{cookie.uid}">
-              <div tabindex="0" class="cookie-off cookie{cookie.uid}"><div class="deactivated"><span class="off"></span></div></div>
-              <div tabindex="0" class="cookie-on cookie{cookie.uid}"><div class="activated"><span class="on"></span></div></div>
-              
+               <div tabindex="0" class="cookie-id cookie{cookie.uid}  cookie-off"  role="switch" aria-checked="false"><div class="activated"><span class="on"></span></div></div>
                <p><b>{cookie.bezeichnung}</b></p>
               <f:if condition="{cookie.zweck}"><f:format.html>{cookie.zweck}</f:format.html></f:if>
               <table>
