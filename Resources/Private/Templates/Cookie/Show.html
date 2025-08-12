@@ -32,37 +32,51 @@
 			</f:then>
 			<f:else>
 				<f:variable name="needimage">1</f:variable>
+				<f:variable name="setlink"></f:variable>
+				
+					
 				<f:if condition="{images}">
+					<f:variable name="setlink">
 					<f:for each="{images}" as="img">		
-						<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" tabindex="0" data-id="{cookieuid}">
+					
 							<f:image image="{img}" title="{img.title}" alt="{img.alternate}"/>
-						</div>
+						
 						<f:variable name="needimage">0</f:variable>
 					</f:for>
+					</f:variable>
 				</f:if>
 				<f:if condition="{needimage}">		
 					<f:if condition="{mycookie.nocookieimage}">
-						<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" tabindex="0" data-id="{cookieuid}">
+						<f:variable name="setlink">
+						<f:format.raw>{setlink}</f:format.raw>
 							<f:image image="{mycookie.nocookieimage}" title="{mycookie.nocookieimage.title}" alt="{mycookie.nocookieimage.alternative}" />
-						</div>
+						</f:variable>
 					</f:if>
 				</f:if>
 				<f:if condition="{cookietext}">
-					<f:then><div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" tabindex="0" data-id="{cookieuid}"><p>{cookietext}</p></div></f:then>
+					<f:then>
+						<f:variable name="setlink">
+						<f:format.raw>{setlink}</f:format.raw><p>{cookietext}</p></f:variable></f:then>
 					<f:else>
 						<f:if condition="{mycookie.nocookietext}">
-							<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" tabindex="0" data-id="{cookieuid}"><f:format.raw>{mycookie.nocookietext}</f:format.raw></div>
+							<f:variable name="setlink">
+						<f:format.raw>{setlink}</f:format.raw><f:format.raw>{mycookie.nocookietext}</f:format.raw></f:variable>
 						</f:if></f:else>
 					</f:if>
 					<f:if condition="{nocookiecontentarray}">
+						<f:variable name="setlink">
+						<f:format.raw>{setlink}</f:format.raw>
 						<f:for each="{nocookiecontentarray}" as="cookiecontent">
 							<f:if condition="{cookiecontent}">
-								<div class="{cookieset} cookiecontent cookieuid-{cookieuid} " tabindex="0" data-id="{cookieuid}">
+								
 									<f:cObject typoscriptObjectPath="lib.fluidLoadRecord">{cookiecontent}</f:cObject>
-								</div>
+							
 							</f:if>
-						</f:for>
+						</f:for></f:variable>
 					</f:if>
+					<f:if condition="{setlink}">
+					<div class="{cookieset} cookiecontent cookieuid-{cookieuid} script" tabindex="0" data-id="{cookieuid}" role="button" aria-label="{mycookie.nocookietext} {cookietext}"><f:format.raw>{setlink}</f:format.raw>
+					</div></f:if>
 				</f:else>
 			</f:if>
 		</div></f:spaceless>
