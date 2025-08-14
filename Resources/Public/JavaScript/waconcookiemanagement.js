@@ -53,7 +53,7 @@ $(document).ready(function () {
     if (wert == "") {
         if (!$(".waconcookiemanagement").hasClass("firsthidden")) {
             $(".waconcookiemanagement").show();
-            $(".waconcookiemanagement").focus();
+            $(".waconcookiemanagement .cookie-accept").focus();
             $(".cookieclose").hide();
         }
     }
