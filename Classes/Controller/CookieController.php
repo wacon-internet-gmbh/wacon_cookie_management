@@ -63,7 +63,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         else $change = 0;
         $cookie = $_COOKIE['waconcookiemanagement'] ?? '';
         if (strpos((string)$cookie, 'setwcm') === 0) {
-            $cookies0 = $this->cookieRepository->findByKategorie(0);
+            $cookies0 = $this->cookieRepository->findBy(['kategorie' => 0]);
         }
         $cookiearray = explode('ts', (string)$cookie);
         if ($change && !is_null($cookiearray['1'] ?? null)) {
@@ -89,13 +89,15 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $nurlink = $this->settings['nurLink'] ?? '';
         $this->view->assign('cookieanzeige', $nurlink);
 
-        $cookies0 = $this->cookieRepository->findByKategorie(0);
+        $cookies0 = $this->cookieRepository->findBy(['kategorie' => 0]);
+        //$cookies0 = $this->cookieRepository->findAll();
+        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($cookies0);
         $this->view->assign('cookies0', $cookies0);
-        $cookies1 = $this->cookieRepository->findByKategorie(1);
+        $cookies1 = $this->cookieRepository->findBy(['kategorie' => 1]);
         $this->view->assign('cookies1', $cookies1);
-        $cookies2 = $this->cookieRepository->findByKategorie(2);
+        $cookies2 = $this->cookieRepository->findBy(['kategorie' => 2]);
         $this->view->assign('cookies2', $cookies2);
-        $cookies3 = $this->cookieRepository->findByKategorie(3);
+        $cookies3 = $this->cookieRepository->findBy(['kategorie' => 3]);
         $this->view->assign('cookies3', $cookies3);
         // $this->view->assign('cookieanzeige', '1');
         if ($cookiearray['0'] == "max") {
@@ -118,8 +120,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
                 if (in_array($check->getUid(), $cookies)) $cookie3check = 1;
             }
         }
-        $pageid = $GLOBALS['TSFE']->id;
-        $this->view->assign('pageid', $pageid);
+        //$pageid = $GLOBALS['TSFE']->id;
+        $pageInformation = $this->request->getAttribute('frontend.page.information');
+$pageId = $pageInformation->getId();
+        $this->view->assign('pageid', $pageId);
         $this->view->assign('cookie1check', $cookie1check);
         $this->view->assign('cookie2check', $cookie2check);
         $this->view->assign('cookie3check', $cookie3check);
@@ -172,16 +176,16 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         else $nurlink = '';
         $this->view->assign('cookieanzeige', $nurlink);
 
-        $cookies0 = $this->cookieRepository->findByKategorie(0);
+        $cookies0 = $this->cookieRepository->findBy(['kategorie' => 0]);
         $this->view->assign('cookies0', $cookies0);
 
-        $cookies1 = $this->cookieRepository->findByKategorie(1);
+        $cookies1 = $this->cookieRepository->findBy(['kategorie' => 1]);
         $this->view->assign('cookies1', $cookies1);
 
-        $cookies2 = $this->cookieRepository->findByKategorie(2);
+        $cookies2 = $this->cookieRepository->findBy(['kategorie' => 2]);
         $this->view->assign('cookies2', $cookies2);
 
-        $cookies3 = $this->cookieRepository->findByKategorie(3);
+        $cookies3 = $this->cookieRepository->findBy(['kategorie' => 3]);
         $this->view->assign('cookies3', $cookies3);
         if ($cookiearray['0'] == "max") {
             $cookie1check = 1;
@@ -224,10 +228,10 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $currentContentObject = $this->request->getAttribute('currentContentObject');
         // ID of current tt_content record, if available 
         $uid = $currentContentObject->data['uid'] ?? 0;
-       
+     
         /** @var FileReference[] $fileObjects */
-        $fileObjects = $this->fileRepository->findByRelation('tt_content', 'settings.bild', $uid );
-
+        $fileObjects = $this->fileRepository->findByRelation('tt_content', 'image', $uid );
+  
         $showcookie = $this->settings['cookie'];
         $nocookiecontentarray = null;
         $cookiecontentarray = null;

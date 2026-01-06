@@ -15,7 +15,7 @@
 		"issues": "https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues"
 	},
 	"require": {
-		"typo3/cms-core": "^12.4 || ^13.4",
+		"typo3/cms-core": "^13.4 || ^14",
 		"php": "^8"
 	},
 	"extra": {

@@ -15,7 +15,9 @@ plugin.tx_waconcookiemanagement_cookiefreigabe {
         # Should be on by default, but can be disabled if all action in the plugin are uncached
         requireCHashArgumentForActionArguments = 1
     }
-
+    persistence {
+        storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}    
+    }
     settings {
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
@@ -30,7 +32,9 @@ plugin.tx_waconcookiemanagement_cookielist {
         layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_waconcookiemanagement_cookiefreigabe.view.layoutRootPath}
     }
-
+   persistence {
+        storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}    
+    }
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -53,7 +57,9 @@ plugin.tx_waconcookiemanagement_script {
         layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Layouts/
         layoutRootPaths.1 = {$plugin.tx_waconcookiemanagement_script.view.layoutRootPath}
     }
-
+   persistence {
+        storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}    
+    }
     features {
         #skipDefaultArguments = 1
         # if set to 1, the enable fields are ignored in BE context
@@ -66,7 +72,30 @@ plugin.tx_waconcookiemanagement_script {
         cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
     }
 }
+plugin.tx_waconcookiemanagement_headerscript {
+    view {
+        templateRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_waconcookiemanagement_script.view.templateRootPath}
+        partialRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_waconcookiemanagement_script.view.partialRootPath}
+        layoutRootPaths.0 = EXT:wacon_cookie_management/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_waconcookiemanagement_script.view.layoutRootPath}
+    }
+   persistence {
+        storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}    
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
 
+    settings {
+        cookieStorage = {$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.cookieStorage}
+    }
+}
 
 [{$plugin.tx_waconcookiemanagement_cookiefreigabe.settings.includeJQuery} == 1]
     page.includeJS {
@@ -105,7 +134,7 @@ page.headerData.20241113 {
 
     renderObj < tt_content
     renderObj {
-        list.templateName = NoLayout
+        waconcookiemanagement_headerscript.templateName = NoLayout
     }
 }
 
