@@ -2,7 +2,7 @@ mod {
      wizards.newContentElement.wizardItems.plugins {
                     elements {
                         cookiefreigabe {
-                            iconIdentifier = wacon_cookie_management-plugin-cookiefreigabe
+                            iconIdentifier = wacon_cookie_management-plugin
                             title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookiefreigabe.name
                             description = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookiefreigabe.description
                             tt_content_defValues {
@@ -10,7 +10,7 @@ mod {
                             }
                         }
                         cookielist {
-                            iconIdentifier = wacon_cookie_management-plugin-script
+                            iconIdentifier = wacon_cookie_management-plugin
                             title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.name
                             description = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.description
                             tt_content_defValues {
@@ -18,7 +18,7 @@ mod {
                             }
                         }
                         script {
-                            iconIdentifier = wacon_cookie_management-plugin-script
+                            iconIdentifier = wacon_cookie_management-plugin
                             title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_script.name
                             description = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_script.description
                             tt_content_defValues {
@@ -26,7 +26,7 @@ mod {
                             }
                         }
                         headerscript {
-                            iconIdentifier = wacon_cookie_management-plugin-script
+                            iconIdentifier = wacon_cookie_management-plugin
                             title = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_headerscript.name
                             description = LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_headerscript.description
                             tt_content_defValues {
