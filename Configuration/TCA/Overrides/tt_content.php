@@ -15,7 +15,7 @@ $ctypeKey = ExtensionUtility::registerPlugin(
 );
 ExtensionManagementUtility::addPiFlexFormValue(
     '*',
-    'FILE:EXT:wacon_cookie_management/Configuration/FlexForms/Cookie.xml',
+    'FILE:EXT:wacon_cookie_management/Configuration/Flexforms/Cookie.xml',
     'waconcookiemanagement_cookiefreigabe',
 );
 ExtensionManagementUtility::addToAllTCAtypes(
@@ -37,7 +37,7 @@ $ctypeKey = ExtensionUtility::registerPlugin(
 );
 ExtensionManagementUtility::addPiFlexFormValue(
     '*',
-    'FILE:EXT:wacon_cookie_management/Configuration/FlexForms/Script.xml',
+    'FILE:EXT:wacon_cookie_management/Configuration/Flexforms/Script.xml',
     'waconcookiemanagement_script',
 );
 ExtensionManagementUtility::addToAllTCAtypes(
@@ -69,7 +69,7 @@ $ctypeKey = ExtensionUtility::registerPlugin(
 );
 ExtensionManagementUtility::addPiFlexFormValue(
     '*',
-    'FILE:EXT:wacon_cookie_management/Configuration/FlexForms/Headerscript.xml',
+    'FILE:EXT:wacon_cookie_management/Configuration/Flexforms/Headerscript.xml',
     'waconcookiemanagement_headerscript',
 );
 ExtensionManagementUtility::addToAllTCAtypes(
