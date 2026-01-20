@@ -1,7 +1,10 @@
+## Version 7.0.3
+- [BUGFIX] Accept all cookies compare new value setwcmmax, see https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues/102
+
 ## Version 6.2.0
 - [FEATURE] Show data protection page without popup
 - [FEATURE] Equal color / size for buttons
-- [FEATURE] Define role in consent settings 
+- [FEATURE] Define role in consent settings
 
 ## Version 6.1.0
 - [BUGFIX] Add site set configuration
