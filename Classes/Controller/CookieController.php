@@ -26,7 +26,7 @@ use TYPO3\CMS\Core\Resource\FileRepository;
 class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
-
+    
     /**
      * cookieRepository
      *
@@ -48,7 +48,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function __construct(
         private readonly FileRepository $fileRepository,
     ) {}
-
+    
     /**
      * action list
      *
@@ -100,7 +100,7 @@ class CookieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $cookies3 = $this->cookieRepository->findBy(['kategorie' => 3]);
         $this->view->assign('cookies3', $cookies3);
         // $this->view->assign('cookieanzeige', '1');
-        if ($cookiearray['0'] == "max" || $cookiearray['0'] == "setwcmmax") {
+        if ($cookiearray['0'] == "max"|| $cookiearray['0'] == "setwcmmax") {
             $cookie1check = 1;
             $cookie2check = 1;
             $cookie3check = 1;
@@ -226,12 +226,12 @@ $pageId = $pageInformation->getId();
         $direct = $this->settings['direct'] ?? null;
 
         $currentContentObject = $this->request->getAttribute('currentContentObject');
-        // ID of current tt_content record, if available
+        // ID of current tt_content record, if available 
         $uid = $currentContentObject->data['uid'] ?? 0;
-
+     
         /** @var FileReference[] $fileObjects */
         $fileObjects = $this->fileRepository->findByRelation('tt_content', 'image', $uid );
-
+  
         $showcookie = $this->settings['cookie'];
         $nocookiecontentarray = null;
         $cookiecontentarray = null;
