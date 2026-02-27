@@ -18,7 +18,7 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 class WCMListTypeToCTypeUpdater implements UpgradeWizardInterface
 {
-  
+
      private const LIST_TYPES = [
         'waconcookiemanagement_cookiefreigabe',
         'waconcookiemanagement_script',
@@ -80,13 +80,8 @@ public function checkIfWizardIsRequired(): bool
         $records = $this->getMigrationRecords($list_type);
 
         foreach ($records as $record) {
-            $flexFormData = GeneralUtility::xml2array($record['pi_flexform']);
-            $flexForm = $this->flexFormService->convertFlexFormContentToArray($record['pi_flexform']);
-
-         
-                $targetCType = $list_type;
-                $newFlexform = $record['pi_flexform'] ?? '';
-         
+            $targetCType = $list_type;
+            $newFlexform = $record['pi_flexform'] ?? '';
 
             // Remove flexform data which do not exist in flexform of new plugin
             $this->updateContentElement($record['uid'], $targetCType, (string)$newFlexform);

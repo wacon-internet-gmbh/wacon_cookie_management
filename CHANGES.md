@@ -1,3 +1,6 @@
+## Version 7.0.4
+- [BUGFIX] WCMListTypeToCTypeUpdater: Remove unused code lines which can break due null value in pi_flexform
+
 ## Version 7.0.3
 - [BUGFIX] Accept all cookies compare new value setwcmmax, see https://github.com/wacon-internet-gmbh/wacon_cookie_management/issues/102
 
