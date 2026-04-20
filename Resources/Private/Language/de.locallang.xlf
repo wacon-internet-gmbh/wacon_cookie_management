@@ -1,58 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z"
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-02T10:25:16Z"
 		  product-name="wacon_cookie_management">
 		<header/>
 		<body>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_stat">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat" approved="yes">
 				<source>Cookie Reports</source>
 				<source>Cookie Reports</source>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.cookieconfig" approved="yes">
 				<source>Cookie Konfiguration</source>
 				<target>Cookie Konfiguration</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_stat.seite" approved="yes">
 				<source>Page</source>
 				<target>Seite</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie" approved="yes">
 				<source>Cookie</source>
 				<target>Cookie</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.bezeichnung" approved="yes">
 				<source>Description</source>
 				<target>Bezeichnung</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.kategorie" approved="yes">
 				<source>Categorie</source>
 				<target>Kategorie</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.anbieter" approved="yes">
 				<source>Provider</source>
 				<target>Anbieter</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.zweck" approved="yes">
 				<source>Purpose</source>
 				<target>Zweck</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.cookiename" approved="yes">
 				<source>Cookiename</source>
 				<target>Cookiename</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.laufzeit" approved="yes">
 				<source>Runtime</source>
 				<target>Laufzeit</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.datenschutzlink" approved="yes">
 				<source>Privacy source url</source>
 				<target>Datenschutzlink</target>
 			</trans-unit>
-			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host">
+			<trans-unit id="tx_waconcookiemanagement_domain_model_cookie.host" approved="yes">
 				<source>Host</source>
 				<target>Host</target>
 			</trans-unit>
-			<trans-unit id="stats.month">
+			<trans-unit id="stats.month" approved="yes">
 				<source>Month</source>
 				<target>Monat</target>
 			</trans-unit>
@@ -328,11 +328,11 @@
 				<target>Speichern</target>
 			</trans-unit>
 
-			<trans-unit id="cookiefreigabe.setcookie">
+			<trans-unit id="cookiefreigabe.setcookie" approved="yes">
 				<source>Cookie Settings</source>
 				<target>Cookieeinstellungen</target>
 			</trans-unit>
-			<trans-unit id="cookiefreigabe.close">
+			<trans-unit id="cookiefreigabe.close" approved="yes">
 
 				<source>Close</source>
 				<target>Schließen</target>
