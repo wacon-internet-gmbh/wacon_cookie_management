@@ -96,12 +96,25 @@ public function checkIfWizardIsRequired(): bool
         $queryBuilder = $connectionPool->getQueryBuilderForTable('tt_content');
         $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
 
-        return $queryBuilder
-            ->select('uid', 'list_type', 'pi_flexform')
+        $myarray = $queryBuilder
+            ->select('*')
             ->from('tt_content')
             ->where(
+               
                 $queryBuilder->expr()->eq(
-                    'list_type',
+                    'CType',
+                    $queryBuilder->createNamedParameter('list')
+                ),
+            )
+            ->executeQuery()
+            ->fetchAllAssociative();
+        if(count($myarray)>0){
+            		 return $queryBuilder
+            ->select('*')
+            ->from('tt_content')
+            ->where(
+               $queryBuilder->expr()->eq(
+                    $queryBuilder->quoteIdentifier('list_type'),
                     $queryBuilder->createNamedParameter($list_type)
                 ),
                 $queryBuilder->expr()->eq(
@@ -111,6 +124,9 @@ public function checkIfWizardIsRequired(): bool
             )
             ->executeQuery()
             ->fetchAllAssociative();
+        } 
+        else return array();
+              
     }
 
     protected function getTargetListType(string $switchableControllerActions): string
