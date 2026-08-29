@@ -259,7 +259,7 @@ $pageId = $pageInformation->getId();
         }
 
         $mycookie = $this->cookieRepository->findByUid($showcookie);
-        $this->view->assign('cookietext', $this->settings['text']);
+        $this->view->assign('cookietext', $this->settings['text'] ?? '');
         $this->view->assign('content1', $content1);
         $this->view->assign('active', $active);
         $this->view->assign('uid', $uid);
