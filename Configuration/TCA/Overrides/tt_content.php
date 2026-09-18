@@ -57,6 +57,18 @@ $ctypeKey = ExtensionUtility::registerPlugin(
     'plugins',
      'LLL:EXT:wacon_cookie_management/Resources/Private/Language/locallang_db.xlf:tx_wacon_cookie_management_cookielist.description'
 );
+ExtensionManagementUtility::addPiFlexFormValue(
+    '*',
+    'FILE:EXT:wacon_cookie_management/Configuration/Flexforms/Cookielist.xml',
+    'waconcookiemanagement_cookielist',
+);
+ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    '--div--;Configuration,pi_flexform,',
+    'waconcookiemanagement_cookielist',
+    'after:subheader',
+);
+
 
 $ctypeKey = ExtensionUtility::registerPlugin(
     'wacon_cookie_management',

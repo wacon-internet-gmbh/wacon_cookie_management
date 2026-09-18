@@ -138,7 +138,7 @@
                         
                     </settings.bild>
                     <settings.nocookiecontent>
-                        
+
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.nocookiecontent
                             </label>
@@ -148,8 +148,24 @@
                                 <allowed>tt_content</allowed>
                                 <rows>8</rows>
                             </config>
-                        
+
                     </settings.nocookiecontent>
+
+                    <settings.cookieStorage>
+
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookieStorage
+                            </label>
+                            <config>
+                                <type>group</type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>22</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+
+                    </settings.cookieStorage>
                 </el>
             </ROOT>
         </sDEF>

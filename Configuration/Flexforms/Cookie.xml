@@ -91,7 +91,7 @@
                        
                     </settings.imprint>
                     <settings.change>
-                       
+
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookiefreigabe.change
                             </label>
@@ -100,8 +100,24 @@
                                 <renderType>inputDateTime</renderType>
                                 <eval>datetime</eval>
                             </config>
-                       
+
                     </settings.change>
+
+                    <settings.cookieStorage>
+
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookieStorage
+                            </label>
+                            <config>
+                                <type>group</type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>22</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+
+                    </settings.cookieStorage>
 
                 </el>
             </ROOT>

@@ -40,6 +40,9 @@
 			<trans-unit id="settings.registration.title">
 				<target>Einstellungen</target>
 			</trans-unit>
+			<trans-unit id="settings.cookieStorage">
+				<target>Datensatzspeicher</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -32,7 +32,7 @@
                        
                     </settings.cookie>
                     <settings.script>
-                       
+
                             <label>
                                 LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.script.script
                             </label>
@@ -41,9 +41,25 @@
                                 <cols>24</cols>
                                 <rows>8</rows>
                             </config>
-                       
+
                     </settings.script>
-                   
+
+                    <settings.cookieStorage>
+
+                            <label>
+                                LLL:EXT:wacon_cookie_management/Resources/Private/Language/Backend.xlf:settings.cookieStorage
+                            </label>
+                            <config>
+                                <type>group</type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>22</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+
+                    </settings.cookieStorage>
+
                 </el>
             </ROOT>
         </sDEF>
