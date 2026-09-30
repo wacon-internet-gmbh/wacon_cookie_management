@@ -1,3 +1,6 @@
+## Version 7.1.2
+- [TASK] Remove outdated upgrade wizard WCMListTypeToCTypeUpdater, which failed with SQL error #1054 if the column list_type was already removed. Use WCMListTypeToCTypeUpdate instead.
+
 ## Version 7.0.4
 - [BUGFIX] WCMListTypeToCTypeUpdater: Remove unused code lines which can break due null value in pi_flexform
 
